@@ -1,0 +1,1 @@
+mathDSP.vhd,vhdl,xil_defaultlib,../../../../mandlebrot.srcs/sources_1/ip/mathDSP/sim/mathDSP.vhd,
