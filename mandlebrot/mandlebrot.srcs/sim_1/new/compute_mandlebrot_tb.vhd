@@ -96,14 +96,40 @@ begin
        stimuli_process : process
        begin
             wait for 4*clk_period;
-            cReal_sti <= "01" & x"8000";--std_logic_vector(to_signed(-1,size_c));
-            cImag_sti <= "01" & x"8000";--std_logic_vector(to_signed(1,size_c));
+            cReal_sti <= "11" & x"8000"; -- C_re = -1
+            cImag_sti <= "00" & x"8000"; -- C_im = 1
             wait for clk_period;
             start_sti <= '1';
             wait for 2* clk_period;
             start_sti <= '0';
             wait until finish_obs = '1';
-            report "One result obtained" severity note;
+            report " -> New result, nb iter = " & integer'image(to_integer(unsigned(iter_obs))) &
+                    " with Cre = " & integer'image(to_integer(unsigned(cReal_sti))) &
+                    " & with Cim = " & integer'image(to_integer(unsigned(cImag_sti))) severity note;
+            
+            wait for 4*clk_period;
+            cReal_sti <= "00" & x"1000"; -- C_re = 0.125
+            cImag_sti <= "00" & x"6000"; -- C_im = 0.75
+            wait for clk_period;
+            start_sti <= '1';
+            wait for 2* clk_period;
+            start_sti <= '0';
+            wait until finish_obs = '1';
+            report " -> New result, nb iter = " & integer'image(to_integer(unsigned(iter_obs))) &
+                    " with Cre = 0.125 & with Cim = 0.75" severity note;
+                    
+            wait for 4*clk_period;
+            cReal_sti <= "00" & x"0000"; -- C_re = 0
+            cImag_sti <= "00" & x"0000"; -- C_im = 0
+            wait for clk_period;
+            start_sti <= '1';
+            wait for 2* clk_period;
+            start_sti <= '0';
+            wait until finish_obs = '1';
+            report " -> New result, nb iter = " & integer'image(to_integer(unsigned(iter_obs))) &
+                    " with Cre = " & integer'image(to_integer(unsigned(cReal_sti))) &
+                    " & with Cim = " & integer'image(to_integer(unsigned(cImag_sti))) severity note;
+            
             wait;
        end process;
         

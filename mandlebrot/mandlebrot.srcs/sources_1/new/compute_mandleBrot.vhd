@@ -1,11 +1,11 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
+-- Company:     HES-SO - MSE
+-- Engineer:    Loïc Murith
 -- 
 -- Create Date: 04/21/2020 05:30:25 PM
 -- Design Name: 
 -- Module Name: compute_mandleBrot - Behavioral
--- Project Name: 
+-- Project Name:    LPSC project
 -- Target Devices: 
 -- Tool Versions: 
 -- Description: 
@@ -82,11 +82,11 @@ architecture Behavioral of mandelbrot_calculator is
     signal cReal_extend_s : std_logic_vector((2*SIZE)-1 downto 0);
     signal cImag_extend_s : std_logic_vector((2*SIZE)-1 downto 0);
     -- inter DSPs signals
-    signal zReal_subResOne_s : std_logic_vector((2*SIZE)-1 downto 0);
-    signal zImag_subResOne_s : std_logic_vector((2*SIZE)-1 downto 0);
-    signal zReal_subResTwo_s : std_logic_vector((2*SIZE)-1 downto 0);
-    signal zImag_subResTwo_s : std_logic_vector((2*SIZE)-1 downto 0);
-    signal finalResult_s : std_logic_vector((2*SIZE)-1 downto 0);
+    signal zReal_subResOne_s : std_logic_vector((2*SIZE) downto 0);
+    signal zImag_subResOne_s : std_logic_vector((2*SIZE) downto 0);
+    signal zReal_subResTwo_s : std_logic_vector((2*SIZE) downto 0);
+    signal zImag_subResTwo_s : std_logic_vector((2*SIZE) downto 0);
+    signal finalResult_s : std_logic_vector((2*SIZE) downto 0);
     
 
 
@@ -98,7 +98,7 @@ architecture Behavioral of mandelbrot_calculator is
         A : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
         B : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
         C : IN STD_LOGIC_VECTOR(35 DOWNTO 0);
-        P : OUT STD_LOGIC_VECTOR(35 DOWNTO 0)
+        P : OUT STD_LOGIC_VECTOR(36 DOWNTO 0)
       );
     END COMPONENT;
 
@@ -129,7 +129,7 @@ begin
         SEL => subNmult_c,
         A => zImag_s,
         B => zImag_s,
-        C => zReal_subResOne_s,
+        C => zReal_subResOne_s(2*SIZE-1 downto 0),
         P => zReal_subResTwo_s
       );
     
@@ -167,7 +167,7 @@ begin
         SEL => multNadd_c,
         A => zReal_subResTwo_s(((2*SIZE)-1)-(SIZE-COMMA) downto COMMA),
         B => zReal_subResTwo_s(((2*SIZE)-1)-(SIZE-COMMA) downto COMMA),
-        C => zImag_subResTwo_s,
+        C => zImag_subResTwo_s(2*SIZE-1 downto 0),
         P => finalResult_s
       );
     -- Isolate int part of final result
@@ -248,7 +248,7 @@ begin
                     -- outputs
                     if ((unsigned(finalIntResult_s) > sqRadius_c) OR (to_integer(cnt_iter_s) >= MAX_ITER)) then
                         if (to_integer(cnt_iter_s) >= MAX_ITER) then
-                            iterations_o <= std_logic_vector(to_unsigned(2*MAX_ITER,SIZE));--(others => '0');                -- when max iterrations has been reached, set output to zero
+                            iterations_o <= (others => '0');--std_logic_vector(to_unsigned(2*MAX_ITER,SIZE));                -- when max iterrations has been reached, set output to zero
                         else
                             iterations_o <= std_logic_vector(cnt_iter_s);   -- else, sample number of iterrations
                         end if;

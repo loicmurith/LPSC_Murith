@@ -60,7 +60,7 @@ mathDSP your_instance_name (
   .A(A),      // input wire [17 : 0] A
   .B(B),      // input wire [17 : 0] B
   .C(C),      // input wire [35 : 0] C
-  .P(P)      // output wire [35 : 0] P
+  .P(P)      // output wire [36 : 0] P
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

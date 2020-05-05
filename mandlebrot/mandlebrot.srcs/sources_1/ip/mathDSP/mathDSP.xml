@@ -1710,11 +1710,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 28 10:00:06 UTC 2020</spirit:value>
+            <spirit:value>Tue May 05 15:05:15 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c15d19fe</spirit:value>
+            <spirit:value>9:78ddfc8e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1739,11 +1739,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 28 10:00:12 UTC 2020</spirit:value>
+            <spirit:value>Tue May 05 15:05:15 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c15d19fe</spirit:value>
+            <spirit:value>9:78ddfc8e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1757,11 +1757,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 28 10:00:12 UTC 2020</spirit:value>
+            <spirit:value>Tue May 05 15:05:15 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c15d19fe</spirit:value>
+            <spirit:value>9:78ddfc8e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1777,11 +1777,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 28 10:00:12 UTC 2020</spirit:value>
+            <spirit:value>Tue May 05 15:05:15 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c15d19fe</spirit:value>
+            <spirit:value>9:78ddfc8e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1806,11 +1806,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 28 10:00:12 UTC 2020</spirit:value>
+            <spirit:value>Tue May 05 15:05:15 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f25d8cff</spirit:value>
+            <spirit:value>9:127ebabb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1826,11 +1826,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 28 10:00:12 UTC 2020</spirit:value>
+            <spirit:value>Tue May 05 15:05:15 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:f25d8cff</spirit:value>
+            <spirit:value>9:127ebabb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1844,11 +1844,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 28 10:00:12 UTC 2020</spirit:value>
+            <spirit:value>Tue May 05 15:05:15 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c15d19fe</spirit:value>
+            <spirit:value>9:78ddfc8e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1862,11 +1862,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Apr 28 10:02:14 UTC 2020</spirit:value>
+            <spirit:value>Tue May 05 15:07:33 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:c15d19fe</spirit:value>
+            <spirit:value>9:78ddfc8e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2362,7 +2362,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_P_MSB&apos;)) - spirit:decode(id(&apos;MODELPARAM_VALUE.C_P_LSB&apos;)))">35</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_P_MSB&apos;)) - spirit:decode(id(&apos;MODELPARAM_VALUE.C_P_LSB&apos;)))">36</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -3457,7 +3457,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_P_LSB</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_P_LSB">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_P_LSB">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_SEL_WIDTH</spirit:name>
@@ -7163,7 +7163,7 @@
     <spirit:parameter>
       <spirit:name>output_properties</spirit:name>
       <spirit:displayName>Output Properties</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.output_properties" spirit:choiceRef="choice_pairs_7ff92674" spirit:order="62">User_Defined</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.output_properties" spirit:choiceRef="choice_pairs_7ff92674" spirit:order="62">Full_Precision</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>p_full_width</spirit:name>
@@ -7172,11 +7172,11 @@
     <spirit:parameter>
       <spirit:name>p_width</spirit:name>
       <spirit:displayName>Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.p_width" spirit:order="64" spirit:minimum="2" spirit:maximum="48" spirit:rangeType="long">36</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.p_width" spirit:order="64" spirit:minimum="2" spirit:maximum="48" spirit:rangeType="long">37</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>p_binarywidth</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.p_binarywidth" spirit:order="65" spirit:minimum="0" spirit:maximum="0" spirit:rangeType="long">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.p_binarywidth" spirit:order="65" spirit:minimum="0" spirit:maximum="48" spirit:rangeType="long">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>has_carryout</spirit:name>

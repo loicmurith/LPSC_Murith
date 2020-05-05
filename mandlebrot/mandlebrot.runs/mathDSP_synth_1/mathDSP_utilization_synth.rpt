@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Apr 28 12:02:14 2020
+| Date         : Tue May  5 17:07:33 2020
 | Host         : xilinx-vm running 64-bit unknown
 | Command      : report_utilization -file mathDSP_utilization_synth.rpt -pb mathDSP_utilization_synth.pb
 | Design       : mathDSP
