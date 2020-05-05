@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../mandlebrot.srcs/sources_1/ip/mathDSP/sim/mathDSP.vhd" \
-"../../../../mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd" \
-
-# Do not sort compile order
-nosort
