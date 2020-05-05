@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="mathDSP_synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1588068013">
-  <File Type="RDS-UTIL-PB" Name="mathDSP_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="mathDSP_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mathDSP_utilization_synth.pb"/>
   <File Type="RDS-RDS" Name="mathDSP.vds"/>
   <File Type="RDS-DCP" Name="mathDSP.dcp"/>
   <File Type="PA-TCL" Name="mathDSP.tcl"/>

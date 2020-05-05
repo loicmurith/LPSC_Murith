@@ -53,7 +53,7 @@ end mandelbrot_calculator;
 architecture Behavioral of mandelbrot_calculator is
 
     -- Creation of FSM states
-    type state_t is (idle, compute1, compute2, compute3, compare, ending);
+    type state_t is (idle, compute1, compute2, compute3, compare);
     -- FSM functioning's signals
     signal state : state_t;
     signal cnt_iter_s : unsigned(SIZE-1 downto 0) := (others => '0');
@@ -61,8 +61,9 @@ architecture Behavioral of mandelbrot_calculator is
     signal cImag_s : std_logic_vector(SIZE-1 downto 0);
     signal next_zReal_s : std_logic_vector(SIZE-1 downto 0);
     signal next_zImag_s : std_logic_vector(SIZE-1 downto 0);
+    signal finalIntResult_s : std_logic_vector(2*(SIZE-COMMA)-1 downto 0);
     -- constant for FSM output compare
-    constant sqRadius_c : std_logic_vector(SIZE-COMMA-1 downto 0) := std_logic_vector(to_unsigned(4,SIZE-COMMA));
+    constant sqRadius_c : unsigned(2*(SIZE-COMMA)-1 downto 0) := to_unsigned(4,2*(SIZE-COMMA));
 
     -- Constants to set DSP with correct math operation
     constant multNadd_c : std_logic_vector(0 downto 0) := "0";
@@ -103,6 +104,10 @@ architecture Behavioral of mandelbrot_calculator is
 
 begin
 
+    -- wiring FSM and DSPs
+    zReal_s <= next_zReal_s;
+    zImag_s <= next_zImag_s;
+
     -- DSP to compute Z_Re_N+1 (first step)
     ZRe_step1 : mathDSP
       PORT MAP (
@@ -127,8 +132,6 @@ begin
         C => zReal_subResOne_s,
         P => zReal_subResTwo_s
       );
-    -- Trunc sub result to get Z_Re_N+1 TODO : Put in a process to sample at right time
-    --next_zReal_s <= zReal_subResTwo_s(((2*SIZE)-1)-(SIZE-COMMA) downto COMMA);
     
     -- DSP to compute Z_Im_N+1
     ZIm : mathDSP
@@ -145,8 +148,6 @@ begin
     -- Extension of c_imaginary_i with correct sign
     cImag_extend_s <= (zerosExtend_c & c_imaginary_i & zerosCommaBits_c) when (c_imaginary_i(SIZE-1) = '0')
                         else (onesExtend_c & c_imaginary_i & zerosCommaBits_c);
-    -- Trunc sub result to get Z_Im_N+1 TODO : Put in a process to sample at right time
-    --next_zImag_s <= zImag_subResOne_s(((2*SIZE)-1)-(SIZE-COMMA) downto COMMA);
     
     -- DSP to compute Z_Im_N+1 * Z_Im_N+1
     ZIm_times_ZIm : mathDSP
@@ -169,6 +170,8 @@ begin
         C => zImag_subResTwo_s,
         P => finalResult_s
       );
+    -- Isolate int part of final result
+    finalIntResult_s <= finalResult_s(2*SIZE-1 downto 2*COMMA);
 
 -- décomposer le calcul en sous-calculs
 computeFSM_Process : process(clk_i,rst_i)
@@ -207,28 +210,57 @@ begin
                     state <= idle;
                 end if;
                 -- outputs
-                cnt_iter_s <= (others => '0');
-                next_zReal_s <= (others => '0');
-                next_zImag_s <= (others => '0');
-                ready_o <= '1';
-                cReal_s <= c_real_i;
-                cImag_s <= c_imaginary_i;
+                cnt_iter_s <= (others => '0');      -- reset interations' counter between each calculation
+                next_zReal_s <= (others => '0');    -- set inner variables to zero between each calculation
+                next_zImag_s <= (others => '0');    -- set inner variables to zero between each calculation
+                ready_o <= '1';                     -- ready for next calculation
+                cReal_s <= c_real_i;                -- sampling input
+                cImag_s <= c_imaginary_i;           -- sampling input
             
             when compute1 =>
                 -- next state
                 state <= compute2;
                 -- outputs
+                ready_o <= '0';                     -- computation has begun, not ready anymore
+                -- Acquiring new inner result Zim_N+1
                 next_zImag_s <= zImag_subResOne_s(((2*SIZE)-1)-(SIZE-COMMA) downto COMMA);
+                cnt_iter_s <= cnt_iter_s + 1;       -- new iterration in progress
+                
             
             when compute2 =>
+                -- next state
+                state <= compare;
+                -- outputs
+                -- Acquiring new inner result Zre_N+1
+                next_zReal_s <= zReal_subResTwo_s(((2*SIZE)-1)-(SIZE-COMMA) downto COMMA);
             
             when compute3 =>
+                -- next state
+                state <= compare;
             
             when compare =>
-            
-            when ending =>
-            
+                -- next state
+                if ((unsigned(finalIntResult_s) > sqRadius_c) OR (to_integer(cnt_iter_s) >= MAX_ITER)) then
+                    state <= idle;      -- If one of the ending conditions has been reach, back to idle mode
+                else
+                    state <= compute1;  -- else, new iterration
+                end if;
+                -- outputs
+                if ((unsigned(finalIntResult_s) > sqRadius_c) OR (to_integer(cnt_iter_s) >= MAX_ITER)) then
+                    if (to_integer(cnt_iter_s) >= MAX_ITER) then
+                        iterations_o <= (others => '0');                -- when max iterrations has been reached, set output to zero
+                    else
+                        iterations_o <= std_logic_vector(cnt_iter_s);   -- else, sample number of iterrations
+                    end if;
+                    -- then update other outputs
+                    z_real_o <= next_zReal_s;
+                    z_imaginary_o <= next_zImag_s;
+                    finished_o <= '1';                                      -- output result ready
+                end if;
+
             when others =>
+                -- In case of error, return at reset state
+                state <= idle;
             
         end case;
     
