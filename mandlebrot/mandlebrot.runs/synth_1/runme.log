@@ -15,25 +15,23 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Device 21-403] Loading part xc7a200tsbg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7912 
+INFO: Helper process launched with PID 10673 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1956.492 ; gain = 201.715 ; free physical = 3426 ; free virtual = 13714
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1955.523 ; gain = 200.715 ; free physical = 1526 ; free virtual = 12015
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'mandelbrot_calculator' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:53]
 	Parameter COMMA bound to: 15 - type: integer 
 	Parameter MAX_ITER bound to: 100 - type: integer 
 	Parameter SIZE bound to: 18 - type: integer 
-INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-7862-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZRe_step1' of component 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:112]
-INFO: [Synth 8-638] synthesizing module 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-7862-xilinx-vm/realtime/mathDSP_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-7862-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZRe_step2' of component 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:126]
-INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-7862-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm' of component 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:137]
-INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-7862-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm_times_ZIm' of component 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:153]
-INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-7862-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm2_plus_ZRe2' of component 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:164]
-WARNING: [Synth 8-6014] Unused sequential element cReal_s_reg was removed.  [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:185]
-WARNING: [Synth 8-6014] Unused sequential element cImag_s_reg was removed.  [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:186]
+INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-10635-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZRe_step1' of component 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-10635-xilinx-vm/realtime/mathDSP_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-10635-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZRe_step2' of component 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:126]
+INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-10635-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm' of component 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:137]
+INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-10635-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm_times_ZIm' of component 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:153]
+INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/.Xil/Vivado-10635-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm2_plus_ZRe2' of component 'mathDSP' [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:164]
 INFO: [Synth 8-256] done synthesizing module 'mandelbrot_calculator' (1#1) [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/sources_1/new/compute_mandleBrot.vhd:53]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2018.246 ; gain = 263.469 ; free physical = 3457 ; free virtual = 13746
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2018.277 ; gain = 263.469 ; free physical = 1557 ; free virtual = 12046
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -46,12 +44,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2018.246 ; gain = 263.469 ; free physical = 3454 ; free virtual = 13743
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2018.277 ; gain = 263.469 ; free physical = 1543 ; free virtual = 12033
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2018.246 ; gain = 263.469 ; free physical = 3454 ; free virtual = 13743
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 2018.277 ; gain = 263.469 ; free physical = 1543 ; free virtual = 12033
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2018.246 ; gain = 0.000 ; free physical = 3447 ; free virtual = 13735
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2018.277 ; gain = 0.000 ; free physical = 1538 ; free virtual = 12028
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -70,20 +68,20 @@ Parsing XDC File [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/constrs_1
 Finished Parsing XDC File [/home/xilinx/LPSC_project/mandlebrot/mandlebrot.srcs/constrs_1/new/NEXYS_constraints.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2140.012 ; gain = 0.000 ; free physical = 3361 ; free virtual = 13649
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2139.043 ; gain = 0.000 ; free physical = 1418 ; free virtual = 11907
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2140.012 ; gain = 0.000 ; free physical = 3361 ; free virtual = 13649
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2139.043 ; gain = 0.000 ; free physical = 1418 ; free virtual = 11907
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3429 ; free virtual = 13718
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1532 ; free virtual = 12022
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3429 ; free virtual = 13718
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1532 ; free virtual = 12022
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -94,7 +92,7 @@ Applied set_property DONT_TOUCH = true for ZIm_times_ZIm. (constraint file  auto
 Applied set_property DONT_TOUCH = true for ZRe_step1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for ZRe_step2. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3432 ; free virtual = 13720
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1532 ; free virtual = 12022
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mandelbrot_calculator'
 ---------------------------------------------------------------------------------------------------
@@ -107,7 +105,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mande
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'mandelbrot_calculator'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:38 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3423 ; free virtual = 13712
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1524 ; free virtual = 12015
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -122,7 +120,7 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     18 Bit       Adders := 1     
 +---Registers : 
-	               18 Bit    Registers := 6     
+	               18 Bit    Registers := 8     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   4 Input     18 Bit        Muxes := 3     
@@ -142,7 +140,7 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     18 Bit       Adders := 1     
 +---Registers : 
-	               18 Bit    Registers := 6     
+	               18 Bit    Registers := 8     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   4 Input     18 Bit        Muxes := 3     
@@ -167,7 +165,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3410 ; free virtual = 13702
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1511 ; free virtual = 12004
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -179,13 +177,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:01:01 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3289 ; free virtual = 13581
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:01:00 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1389 ; free virtual = 11882
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:01 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3289 ; free virtual = 13581
+Finished Timing Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:00 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1389 ; free virtual = 11882
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -197,7 +195,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:43 ; elapsed = 00:01:02 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3287 ; free virtual = 13579
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:01:00 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1388 ; free virtual = 11882
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -221,13 +219,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3287 ; free virtual = 13579
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:01:09 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1388 ; free virtual = 11882
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3287 ; free virtual = 13579
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:01:09 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1388 ; free virtual = 11882
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -246,25 +244,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3287 ; free virtual = 13579
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:51 ; elapsed = 00:01:09 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1388 ; free virtual = 11882
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3287 ; free virtual = 13579
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:51 ; elapsed = 00:01:09 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1388 ; free virtual = 11882
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3287 ; free virtual = 13579
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:51 ; elapsed = 00:01:09 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1388 ; free virtual = 11882
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3287 ; free virtual = 13579
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:51 ; elapsed = 00:01:09 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1388 ; free virtual = 11882
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -292,7 +290,7 @@ Report Cell Usage:
 |9     |LUT3           |     1|
 |10    |LUT5           |     2|
 |11    |LUT6           |     1|
-|12    |FDCE           |   113|
+|12    |FDCE           |   149|
 |13    |FDPE           |     1|
 |14    |IBUF           |    39|
 |15    |OBUF           |    56|
@@ -302,31 +300,31 @@ Report Instance Areas:
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |   492|
+|1     |top      |       |   528|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3287 ; free virtual = 13579
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:51 ; elapsed = 00:01:09 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1388 ; free virtual = 11882
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:01:06 . Memory (MB): peak = 2140.012 ; gain = 263.469 ; free physical = 3340 ; free virtual = 13632
-Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:12 . Memory (MB): peak = 2140.012 ; gain = 385.234 ; free physical = 3340 ; free virtual = 13632
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:04 . Memory (MB): peak = 2139.043 ; gain = 263.469 ; free physical = 1442 ; free virtual = 11935
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:09 . Memory (MB): peak = 2139.043 ; gain = 384.234 ; free physical = 1442 ; free virtual = 11935
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2140.012 ; gain = 0.000 ; free physical = 3414 ; free virtual = 13706
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2139.043 ; gain = 0.000 ; free physical = 1516 ; free virtual = 12009
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2140.012 ; gain = 0.000 ; free physical = 3357 ; free virtual = 13649
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2139.043 ; gain = 0.000 ; free physical = 1461 ; free virtual = 11954
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-21 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:29 . Memory (MB): peak = 2140.012 ; gain = 602.309 ; free physical = 3491 ; free virtual = 13783
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2140.012 ; gain = 0.000 ; free physical = 3491 ; free virtual = 13783
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:25 . Memory (MB): peak = 2139.043 ; gain = 600.309 ; free physical = 1593 ; free virtual = 12086
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2139.043 ; gain = 0.000 ; free physical = 1593 ; free virtual = 12086
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/xilinx/LPSC_project/mandlebrot/mandlebrot.runs/synth_1/mandelbrot_calculator.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mandelbrot_calculator_utilization_synth.rpt -pb mandelbrot_calculator_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May  5 11:00:44 2020...
+INFO: [Common 17-206] Exiting Vivado at Tue May  5 11:26:29 2020...

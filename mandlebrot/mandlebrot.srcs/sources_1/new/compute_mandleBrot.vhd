@@ -118,9 +118,9 @@ begin
         C => cReal_extend_s,
         P => zReal_subResOne_s
       );
-    -- Extension of c_real_i with correct sign
-    cReal_extend_s <= (zerosExtend_c & c_real_i & zerosCommaBits_c) when (c_real_i(SIZE-1) = '0')
-                        else (onesExtend_c & c_real_i & zerosCommaBits_c);
+    -- Extension of cReal_s with correct sign
+    cReal_extend_s <= (zerosExtend_c & cReal_s & zerosCommaBits_c) when (cReal_s(SIZE-1) = '0')
+                        else (onesExtend_c & cReal_s & zerosCommaBits_c);
     
     -- DSP to compute Z_Re_N+1 (second step)  
     ZRe_step2 : mathDSP
@@ -145,9 +145,9 @@ begin
       );
     -- Double Z_Re with a left shift
     zReal_double_s <= (zReal_s(SIZE-2 downto 0) & "0");
-    -- Extension of c_imaginary_i with correct sign
-    cImag_extend_s <= (zerosExtend_c & c_imaginary_i & zerosCommaBits_c) when (c_imaginary_i(SIZE-1) = '0')
-                        else (onesExtend_c & c_imaginary_i & zerosCommaBits_c);
+    -- Extension of cImag_s with correct sign
+    cImag_extend_s <= (zerosExtend_c & cImag_s & zerosCommaBits_c) when (cImag_s(SIZE-1) = '0')
+                        else (onesExtend_c & cImag_s & zerosCommaBits_c);
     
     -- DSP to compute Z_Im_N+1 * Z_Im_N+1
     ZIm_times_ZIm : mathDSP
@@ -173,98 +173,98 @@ begin
     -- Isolate int part of final result
     finalIntResult_s <= finalResult_s(2*SIZE-1 downto 2*COMMA);
 
--- décomposer le calcul en sous-calculs
-computeFSM_Process : process(clk_i,rst_i)
-begin
-    if (rst_i = '1') then
-        -- signals
-        state <= idle;
-        cnt_iter_s <= (others => '0');
-        next_zReal_s <= (others => '0');
-        next_zImag_s <= (others => '0');
-        cReal_s <= (others => '0');
-        cImag_s <= (others => '0');
-        -- outputs
-        ready_o <= '0';
-        finished_o <= '0';
-        z_real_o <= (others => '0');
-        z_imaginary_o <= (others => '0');
-        iterations_o  <= (others => '0');
-        
-    elsif (rising_edge(clk_i)) then
-        -- default signals' values
-        cnt_iter_s <= cnt_iter_s;
-        next_zReal_s <= next_zReal_s;
-        next_zImag_s <= next_zImag_s;
-        cReal_s <= cReal_s;
-        cImag_s <= cImag_s;
-        -- default outputs' values
-        finished_o <= '0';
-        
-        case state is
-            when idle =>
-                -- next state
-                if (start_i = '1') then
-                    state <= compute1;
-                else
-                    state <= idle;
-                end if;
-                -- outputs
-                cnt_iter_s <= (others => '0');      -- reset interations' counter between each calculation
-                next_zReal_s <= (others => '0');    -- set inner variables to zero between each calculation
-                next_zImag_s <= (others => '0');    -- set inner variables to zero between each calculation
-                ready_o <= '1';                     -- ready for next calculation
-                cReal_s <= c_real_i;                -- sampling input
-                cImag_s <= c_imaginary_i;           -- sampling input
+    -- décomposer le calcul en sous-calculs
+    computeFSM_Process : process(clk_i,rst_i)
+    begin
+        if (rst_i = '1') then
+            -- signals
+            state <= idle;
+            cnt_iter_s <= (others => '0');
+            next_zReal_s <= (others => '0');
+            next_zImag_s <= (others => '0');
+            cReal_s <= (others => '0');
+            cImag_s <= (others => '0');
+            -- outputs
+            ready_o <= '0';
+            finished_o <= '0';
+            z_real_o <= (others => '0');
+            z_imaginary_o <= (others => '0');
+            iterations_o  <= (others => '0');
             
-            when compute1 =>
-                -- next state
-                state <= compute2;
-                -- outputs
-                ready_o <= '0';                     -- computation has begun, not ready anymore
-                -- Acquiring new inner result Zim_N+1
-                next_zImag_s <= zImag_subResOne_s(((2*SIZE)-1)-(SIZE-COMMA) downto COMMA);
-                cnt_iter_s <= cnt_iter_s + 1;       -- new iterration in progress
-                
+        elsif (rising_edge(clk_i)) then
+            -- default signals' values
+            cnt_iter_s <= cnt_iter_s;
+            next_zReal_s <= next_zReal_s;
+            next_zImag_s <= next_zImag_s;
+            cReal_s <= cReal_s;
+            cImag_s <= cImag_s;
+            -- default outputs' values
+            finished_o <= '0';
             
-            when compute2 =>
-                -- next state
-                state <= compare;
-                -- outputs
-                -- Acquiring new inner result Zre_N+1
-                next_zReal_s <= zReal_subResTwo_s(((2*SIZE)-1)-(SIZE-COMMA) downto COMMA);
-            
-            when compute3 =>
-                -- next state
-                state <= compare;
-            
-            when compare =>
-                -- next state
-                if ((unsigned(finalIntResult_s) > sqRadius_c) OR (to_integer(cnt_iter_s) >= MAX_ITER)) then
-                    state <= idle;      -- If one of the ending conditions has been reach, back to idle mode
-                else
-                    state <= compute1;  -- else, new iterration
-                end if;
-                -- outputs
-                if ((unsigned(finalIntResult_s) > sqRadius_c) OR (to_integer(cnt_iter_s) >= MAX_ITER)) then
-                    if (to_integer(cnt_iter_s) >= MAX_ITER) then
-                        iterations_o <= (others => '0');                -- when max iterrations has been reached, set output to zero
+            case state is
+                when idle =>
+                    -- next state
+                    if (start_i = '1') then
+                        state <= compute1;
                     else
-                        iterations_o <= std_logic_vector(cnt_iter_s);   -- else, sample number of iterrations
+                        state <= idle;
                     end if;
-                    -- then update other outputs
-                    z_real_o <= next_zReal_s;
-                    z_imaginary_o <= next_zImag_s;
-                    finished_o <= '1';                                      -- output result ready
-                end if;
-
-            when others =>
-                -- In case of error, return at reset state
-                state <= idle;
-            
-        end case;
+                    -- outputs
+                    cnt_iter_s <= (others => '0');      -- reset interations' counter between each calculation
+                    next_zReal_s <= (others => '0');    -- set inner variables to zero between each calculation
+                    next_zImag_s <= (others => '0');    -- set inner variables to zero between each calculation
+                    ready_o <= '1';                     -- ready for next calculation
+                    cReal_s <= c_real_i;                -- sampling input
+                    cImag_s <= c_imaginary_i;           -- sampling input
+                
+                when compute1 =>
+                    -- next state
+                    state <= compute2;
+                    -- outputs
+                    ready_o <= '0';                     -- computation has begun, not ready anymore
+                    -- Acquiring new inner result Zim_N+1
+                    next_zImag_s <= zImag_subResOne_s(((2*SIZE)-1)-(SIZE-COMMA) downto COMMA);
+                    cnt_iter_s <= cnt_iter_s + 1;       -- new iterration in progress
+                    
+                
+                when compute2 =>
+                    -- next state
+                    state <= compare;
+                    -- outputs
+                    -- Acquiring new inner result Zre_N+1
+                    next_zReal_s <= zReal_subResTwo_s(((2*SIZE)-1)-(SIZE-COMMA) downto COMMA);
+                
+                when compute3 =>
+                    -- next state
+                    state <= compare;
+                
+                when compare =>
+                    -- next state
+                    if ((unsigned(finalIntResult_s) > sqRadius_c) OR (to_integer(cnt_iter_s) >= MAX_ITER)) then
+                        state <= idle;      -- If one of the ending conditions has been reach, back to idle mode
+                    else
+                        state <= compute1;  -- else, new iterration
+                    end if;
+                    -- outputs
+                    if ((unsigned(finalIntResult_s) > sqRadius_c) OR (to_integer(cnt_iter_s) >= MAX_ITER)) then
+                        if (to_integer(cnt_iter_s) >= MAX_ITER) then
+                            iterations_o <= std_logic_vector(to_unsigned(2*MAX_ITER,SIZE));--(others => '0');                -- when max iterrations has been reached, set output to zero
+                        else
+                            iterations_o <= std_logic_vector(cnt_iter_s);   -- else, sample number of iterrations
+                        end if;
+                        -- then update other outputs
+                        z_real_o <= next_zReal_s;
+                        z_imaginary_o <= next_zImag_s;
+                        finished_o <= '1';                                      -- output result ready
+                    end if;
     
-    end if;
-end process computeFSM_Process;
-
+                when others =>
+                    -- In case of error, return at reset state
+                    state <= idle;
+                
+            end case;
+        
+        end if;
+    end process computeFSM_Process;
+    
 end Behavioral;
