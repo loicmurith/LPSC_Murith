@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="ublaze_pinout.mmi" key="ublaze_pinout_hw_platform_1-bmmFile"/>
+	<item value="bootloop" key="ublaze_pinout_hw_platform_1-ublaze_core-initElf"/>
+	<item value="ublaze_pinout.bit" key="ublaze_pinout_hw_platform_0-bitFile"/>
+	<item value="Local" key="ublaze_pinout_hw_platform_1-target"/>
+	<item value="Auto Detect" key="ublaze_pinout_hw_platform_1-device"/>
+	<item value="Local" key="ublaze_pinout_hw_platform_0-target"/>
+	<item value="Auto Detect" key="ublaze_pinout_hw_platform_0-device"/>
+	<item value="bootloop" key="ublaze_pinout_hw_platform_0-ublaze_core-initElf"/>
+	<item value="false" key="ublaze_pinout_hw_platform_0-partial_bit"/>
+	<item value="false" key="ublaze_pinout_hw_platform_1-partial_bit"/>
+	<item value="ublaze_pinout_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="ublaze_pinout.bit" key="ublaze_pinout_hw_platform_1-bitFile"/>
+	<item value="ublaze_pinout.mmi" key="ublaze_pinout_hw_platform_0-bmmFile"/>
+</section>

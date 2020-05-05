@@ -1,0 +1,16 @@
+// Mem file initialization records.
+//
+// SW Build 2348494 on Mon Oct  1 18:25:39 MDT 2018
+// Vivado v2018.2.2 (64-bit)
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// Created on Friday February 22, 2019 - 10:49:56 am, from:
+//
+//     Map file     - /home/jo/Documents/Hepia/Cours/LPSC/Mandelbrot/ips/vivado/ublaze/2018.2/ublaze.srcs/sources_1/bd/ublaze_sopc/ublaze_sopc.bmm
+//     Data file(s) - /home/jo/Documents/Hepia/Cours/LPSC/Mandelbrot/ips/vivado/ublaze/2018.2/ublaze.srcs/sources_1/bd/ublaze_sopc/ip/ublaze_sopc_microblaze_0_0/data/mb_bootloop_le.elf
+//
+// Address space 'UblazeSoCxB.UBlazeSoCxI_UblazeSoPCxB.UblazeCorexI_ublaze_core.UblazeSoCxB.UBlazeSoCxI_UblazeSoPCxB.UblazeCorexI_ublaze_bram_32K_7_ADDR_SPACE', bit lane [31:0].
+//
+// Bus width = 32 bits, number of bus blocks = 1.
+
+@00000000
+    B8000000

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/jo/Documents/Hepia/Cours/LPSC/Mandelbrot/ips/vivado/ublaze/2018.2/ublaze.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="13718fs"></ZoomEndTime>
+      <Cursor1Time time="258000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="296"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject type="group" fp_name="group30">
+      <obj_property name="label">Registers</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="FlagColor1RegPortxDP">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">FlagColor1RegPortxDP[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FlagColor1RegPortxDP[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="FlagColor2RegPortxDP">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">FlagColor2RegPortxDP[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FlagColor2RegPortxDP[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="FlagColor3RegPortxDP">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">FlagColor3RegPortxDP[31:0]</obj_property>
+         <obj_property name="ObjectShortName">FlagColor3RegPortxDP[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="InterruptRegPortxDP">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">InterruptRegPortxDP[31:0]</obj_property>
+         <obj_property name="ObjectShortName">InterruptRegPortxDP[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group40">
+      <obj_property name="label">Read</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdValidxS">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdValidxS</obj_property>
+         <obj_property name="ObjectShortName">DebugRdValidxS</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[11:0]</obj_property>
+         <obj_property name="ObjectShortName">DebugRdAddrxD[11:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DebugRdDataxD[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group41">
+      <obj_property name="label">ReadAxi</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARReadyxS">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARReadyxS</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiARReadyxS</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiARAddrxD[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARValidxS">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARValidxS</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiARValidxS</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRReadyxS">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRReadyxS</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiRReadyxS</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiRDataxD[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRValidxS">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRValidxS</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiRValidxS</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group70">
+      <obj_property name="label">Write</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[11:0]</obj_property>
+         <obj_property name="ObjectShortName">DebugWrAddrxD[11:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DebugWrDataxD[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrValidxS">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrValidxS</obj_property>
+         <obj_property name="ObjectShortName">DebugWrValidxS</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group71">
+      <obj_property name="label">WriteAxi</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiAWAddrxD[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWReadyxS">
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWReadyxS</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiAWReadyxS</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWValidxS">
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWValidxS</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiAWValidxS</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD">
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[31:0]</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiWDataxD[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWReadyxS">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWReadyxS</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiWReadyxS</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWStrbxD">
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWStrbxD[3:0]</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiWStrbxD[3:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWValidxS">
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWValidxS</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiWValidxS</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiBReadyxS">
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiBReadyxS</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiBReadyxS</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiBValidxS">
+         <obj_property name="ElementShortName">UblazeSoCxB.UBlazeSoCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiBValidxS</obj_property>
+         <obj_property name="ObjectShortName">DebugSAxiBValidxS</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

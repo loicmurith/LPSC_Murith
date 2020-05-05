@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2.2 (64-bit)
+# SW Build 2348494 on Mon Oct  1 18:25:39 MDT 2018
+# 
+# Start of session at: Fri Feb 15 11:58:29 2019
+# Process ID: 24693
+# Current directory: /home/jo/Documents/Hepia/Cours/LPSC/Mandelbrot/ips/vivado/ublaze_bkup/2018.2/ublaze.sdk/webtalk
+# Command line: wbtcv -mode batch -source sdk_webtalk.tcl
+# Log file: /home/jo/Documents/Hepia/Cours/LPSC/Mandelbrot/ips/vivado/ublaze_bkup/2018.2/ublaze.sdk/webtalk/webtalk.log
+# Journal file: /home/jo/Documents/Hepia/Cours/LPSC/Mandelbrot/ips/vivado/ublaze_bkup/2018.2/ublaze.sdk/webtalk/webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

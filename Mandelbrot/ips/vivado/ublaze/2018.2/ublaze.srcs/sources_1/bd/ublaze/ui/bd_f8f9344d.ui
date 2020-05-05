@@ -1,0 +1,69 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port RdValidxSO -pg 1 -y 810 -defaultsOSRD
+preplace port InterruptxSI -pg 1 -y 820 -defaultsOSRD
+preplace port WrValidxSO -pg 1 -y 770 -defaultsOSRD
+preplace port ResetxRNI -pg 1 -y 530 -defaultsOSRD
+preplace port PllLockedxSO -pg 1 -y 920 -defaultsOSRD
+preplace port GpioxDO -pg 1 -y 390 -defaultsOSRD
+preplace port SysClkxCI -pg 1 -y 990 -defaultsOSRD
+preplace port UserClkxCO -pg 1 -y 900 -defaultsOSRD
+preplace portBus WrAddrxDO -pg 1 -y 750 -defaultsOSRD
+preplace portBus RdDataxDI -pg 1 -y 800 -defaultsOSRD
+preplace portBus RdAddrxDO -pg 1 -y 790 -defaultsOSRD
+preplace portBus WrDataxDO -pg 1 -y 730 -defaultsOSRD
+preplace inst dlmb -pg 1 -lvl 4 -y 90 -defaultsOSRD
+preplace inst ublaze_bram -pg 1 -lvl 6 -y 240 -defaultsOSRD
+preplace inst axi_intc_0 -pg 1 -lvl 2 -y 460 -defaultsOSRD
+preplace inst ilmb -pg 1 -lvl 4 -y 230 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 550 -defaultsOSRD
+preplace inst axi_timer_0 -pg 1 -lvl 5 -y 560 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 5 -y 390 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -y 720 -defaultsOSRD
+preplace inst dlmb_bram_ctrl -pg 1 -lvl 5 -y 110 -defaultsOSRD
+preplace inst mdm_0 -pg 1 -lvl 2 -y 650 -defaultsOSRD
+preplace inst mandelbrot_reg_bank -pg 1 -lvl 5 -y 780 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 3 -y 350 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 4 -y 510 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 5 -y 980 -defaultsOSRD
+preplace inst ilmb_bram_ctrl -pg 1 -lvl 5 -y 250 -defaultsOSRD
+preplace netloc Conn1 1 4 1 N
+preplace netloc axi_intc_0_interrupt 1 2 1 790
+preplace netloc dlmb_bram_ctrl_BRAM_PORT 1 5 1 2070
+preplace netloc clk_wiz_0_locked 1 0 7 30 910 NJ 910 NJ 910 NJ 910 NJ 910 2060 920 NJ
+preplace netloc clk_wiz_0_SysClkxCO 1 0 7 20 450 440 320 780 470 1350 720 1700 670 2070 900 NJ
+preplace netloc mdm_0_Debug_SYS_Rst 1 0 3 50 650 430J 570 790
+preplace netloc microblaze_0_ILMB 1 3 1 1340
+preplace netloc axi4lite_sl_if_0_WrValidxSO 1 5 2 NJ 770 NJ
+preplace netloc axi_interconnect_0_M02_AXI 1 4 1 N
+preplace netloc ARESETN_1 1 1 3 420 330 820J 450 1370J
+preplace netloc proc_sys_reset_0_bus_struct_reset 1 1 4 410 260 NJ 260 1320 10 1710
+preplace netloc proc_sys_reset_0_mb_reset 1 1 2 430 310 840J
+preplace netloc resetn_0_1 1 0 5 20 970 NJ 970 NJ 970 NJ 970 NJ
+preplace netloc ilmb_bram_ctrl_BRAM_PORT 1 5 1 N
+preplace netloc microblaze_0_M_AXI_DP 1 3 1 N
+preplace netloc InterruptxSI_1 1 0 5 NJ 820 NJ 820 NJ 820 NJ 820 NJ
+preplace netloc axi4lite_sl_if_0_RdValidxSO 1 5 2 NJ 810 NJ
+preplace netloc axi_interconnect_0_M04_AXI 1 4 1 1690
+preplace netloc RdDataxDI_1 1 0 5 NJ 800 NJ 800 NJ 800 NJ 800 NJ
+preplace netloc axi4lite_sl_if_0_WrAddrxDO 1 5 2 NJ 750 NJ
+preplace netloc xlconcat_0_dout 1 1 1 450
+preplace netloc axi4lite_sl_if_0_RdAddrxDO 1 5 2 NJ 790 NJ
+preplace netloc clk_in1_0_1 1 0 5 NJ 990 NJ 990 NJ 990 NJ 990 NJ
+preplace netloc axi_gpio_0_GPIO 1 5 2 NJ 390 NJ
+preplace netloc axi_interconnect_0_M00_AXI 1 1 4 470 350 810J 440 1360J 310 1680
+preplace netloc mdm_0_MBDEBUG_0 1 2 1 830
+preplace netloc Conn 1 4 1 N
+preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1690
+preplace netloc axi4lite_sl_if_0_WrDataxDO 1 5 2 NJ 730 NJ
+preplace netloc axi_interconnect_0_M03_AXI 1 1 4 480 730 NJ 730 NJ 730 1680
+preplace netloc microblaze_0_DLMB 1 3 1 1330
+preplace netloc axi4lite_sl_if_0_InterruptxSO 1 0 6 50 890 NJ 890 NJ 890 NJ 890 NJ 890 2050
+preplace netloc axi_timer_0_interrupt 1 0 6 40 900 NJ 900 NJ 900 NJ 900 NJ 900 2060
+preplace netloc S00_ARESETN_1 1 1 4 460 340 800J 460 1380 710 1710
+levelinfo -pg 1 0 230 630 1080 1530 1880 2180 2310 -top 0 -bot 1050
+"
+}
+0

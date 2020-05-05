@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../../hw/axi4lite/src/hdl/axi4lite_rd_chan_sl_if.vhd" \
+"../../../../../../../hw/axi4lite/src/hdl/axi4lite_wr_chan_sl_if.vhd" \
+"../../../../../../../hw/axi4lite/src/hdl/axi4lite_sl_if.vhd" \
+"../../../../../../../hw/axi4lite/src/sim/tb_axi4lite_if.vhd" \
+
+# Do not sort compile order
+nosort

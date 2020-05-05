@@ -1,0 +1,2114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2019.2 (64-bit)                     -->
+<!--                                                              -->
+<!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="2">
+  <device name="xc7a200t_0" gui_info="dashboard1=hw_ila_1[xc7a200t_0/hw_ila_1/Status=ILA_STATUS_1;xc7a200t_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7a200t_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7a200t_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7a200t_0/hw_ila_1/Waveform=ILA_WAVE_1;],dashboard2=hw_ila_2[xc7a200t_0/hw_ila_2/Status=ILA_STATUS_1;xc7a200t_0/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7a200t_0/hw_ila_2/Settings=ILA_SETTINGS_1;xc7a200t_0/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;xc7a200t_0/hw_ila_2/Waveform=ILA_WAVE_1;]"/>
+  <ObjectList object_type="hw_cfgmem" gui_info="">
+    <Object name="" gui_info="">
+      <Properties Property="PROGRAM.BLANK_CHECK" value="0"/>
+      <Properties Property="PROGRAM.CFG_PROGRAM" value="1"/>
+      <Properties Property="PROGRAM.CHECKSUM" value="0"/>
+      <Properties Property="PROGRAM.ERASE" value="1"/>
+      <Properties Property="PROGRAM.VERIFY" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xc7a200t_0" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value=""/>
+      <Properties Property="PROBES.FILE" value=""/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/$_project_name_.bit"/>
+      <Properties Property="PROGRAM.HW_CFGMEM_PART" value="28f00am29ew-bpi-x16"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="256"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_1" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="DebugRdEnFlagColor1xS" gui_info="Trigger Setup=0"/>
+    <Object name="DebugWrValidxS" gui_info="Trigger Setup=0"/>
+    <Object name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARValidxS" gui_info=""/>
+    <Object name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWValidxS" gui_info="Trigger Setup=0"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DebugFlagColor1RegPortxDN[31]"/>
+        <net name="DebugFlagColor1RegPortxDN[30]"/>
+        <net name="DebugFlagColor1RegPortxDN[29]"/>
+        <net name="DebugFlagColor1RegPortxDN[28]"/>
+        <net name="DebugFlagColor1RegPortxDN[27]"/>
+        <net name="DebugFlagColor1RegPortxDN[26]"/>
+        <net name="DebugFlagColor1RegPortxDN[25]"/>
+        <net name="DebugFlagColor1RegPortxDN[24]"/>
+        <net name="DebugFlagColor1RegPortxDN[23]"/>
+        <net name="DebugFlagColor1RegPortxDN[22]"/>
+        <net name="DebugFlagColor1RegPortxDN[21]"/>
+        <net name="DebugFlagColor1RegPortxDN[20]"/>
+        <net name="DebugFlagColor1RegPortxDN[19]"/>
+        <net name="DebugFlagColor1RegPortxDN[18]"/>
+        <net name="DebugFlagColor1RegPortxDN[17]"/>
+        <net name="DebugFlagColor1RegPortxDN[16]"/>
+        <net name="DebugFlagColor1RegPortxDN[15]"/>
+        <net name="DebugFlagColor1RegPortxDN[14]"/>
+        <net name="DebugFlagColor1RegPortxDN[13]"/>
+        <net name="DebugFlagColor1RegPortxDN[12]"/>
+        <net name="DebugFlagColor1RegPortxDN[11]"/>
+        <net name="DebugFlagColor1RegPortxDN[10]"/>
+        <net name="DebugFlagColor1RegPortxDN[9]"/>
+        <net name="DebugFlagColor1RegPortxDN[8]"/>
+        <net name="DebugFlagColor1RegPortxDN[7]"/>
+        <net name="DebugFlagColor1RegPortxDN[6]"/>
+        <net name="DebugFlagColor1RegPortxDN[5]"/>
+        <net name="DebugFlagColor1RegPortxDN[4]"/>
+        <net name="DebugFlagColor1RegPortxDN[3]"/>
+        <net name="DebugFlagColor1RegPortxDN[2]"/>
+        <net name="DebugFlagColor1RegPortxDN[1]"/>
+        <net name="DebugFlagColor1RegPortxDN[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DebugFlagColor1RegPortxDP[31]"/>
+        <net name="DebugFlagColor1RegPortxDP[30]"/>
+        <net name="DebugFlagColor1RegPortxDP[29]"/>
+        <net name="DebugFlagColor1RegPortxDP[28]"/>
+        <net name="DebugFlagColor1RegPortxDP[27]"/>
+        <net name="DebugFlagColor1RegPortxDP[26]"/>
+        <net name="DebugFlagColor1RegPortxDP[25]"/>
+        <net name="DebugFlagColor1RegPortxDP[24]"/>
+        <net name="DebugFlagColor1RegPortxDP[23]"/>
+        <net name="DebugFlagColor1RegPortxDP[22]"/>
+        <net name="DebugFlagColor1RegPortxDP[21]"/>
+        <net name="DebugFlagColor1RegPortxDP[20]"/>
+        <net name="DebugFlagColor1RegPortxDP[19]"/>
+        <net name="DebugFlagColor1RegPortxDP[18]"/>
+        <net name="DebugFlagColor1RegPortxDP[17]"/>
+        <net name="DebugFlagColor1RegPortxDP[16]"/>
+        <net name="DebugFlagColor1RegPortxDP[15]"/>
+        <net name="DebugFlagColor1RegPortxDP[14]"/>
+        <net name="DebugFlagColor1RegPortxDP[13]"/>
+        <net name="DebugFlagColor1RegPortxDP[12]"/>
+        <net name="DebugFlagColor1RegPortxDP[11]"/>
+        <net name="DebugFlagColor1RegPortxDP[10]"/>
+        <net name="DebugFlagColor1RegPortxDP[9]"/>
+        <net name="DebugFlagColor1RegPortxDP[8]"/>
+        <net name="DebugFlagColor1RegPortxDP[7]"/>
+        <net name="DebugFlagColor1RegPortxDP[6]"/>
+        <net name="DebugFlagColor1RegPortxDP[5]"/>
+        <net name="DebugFlagColor1RegPortxDP[4]"/>
+        <net name="DebugFlagColor1RegPortxDP[3]"/>
+        <net name="DebugFlagColor1RegPortxDP[2]"/>
+        <net name="DebugFlagColor1RegPortxDP[1]"/>
+        <net name="DebugFlagColor1RegPortxDP[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe9[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DebugFlagColor1RegPortxD[31]"/>
+        <net name="DebugFlagColor1RegPortxD[30]"/>
+        <net name="DebugFlagColor1RegPortxD[29]"/>
+        <net name="DebugFlagColor1RegPortxD[28]"/>
+        <net name="DebugFlagColor1RegPortxD[27]"/>
+        <net name="DebugFlagColor1RegPortxD[26]"/>
+        <net name="DebugFlagColor1RegPortxD[25]"/>
+        <net name="DebugFlagColor1RegPortxD[24]"/>
+        <net name="DebugFlagColor1RegPortxD[23]"/>
+        <net name="DebugFlagColor1RegPortxD[22]"/>
+        <net name="DebugFlagColor1RegPortxD[21]"/>
+        <net name="DebugFlagColor1RegPortxD[20]"/>
+        <net name="DebugFlagColor1RegPortxD[19]"/>
+        <net name="DebugFlagColor1RegPortxD[18]"/>
+        <net name="DebugFlagColor1RegPortxD[17]"/>
+        <net name="DebugFlagColor1RegPortxD[16]"/>
+        <net name="DebugFlagColor1RegPortxD[15]"/>
+        <net name="DebugFlagColor1RegPortxD[14]"/>
+        <net name="DebugFlagColor1RegPortxD[13]"/>
+        <net name="DebugFlagColor1RegPortxD[12]"/>
+        <net name="DebugFlagColor1RegPortxD[11]"/>
+        <net name="DebugFlagColor1RegPortxD[10]"/>
+        <net name="DebugFlagColor1RegPortxD[9]"/>
+        <net name="DebugFlagColor1RegPortxD[8]"/>
+        <net name="DebugFlagColor1RegPortxD[7]"/>
+        <net name="DebugFlagColor1RegPortxD[6]"/>
+        <net name="DebugFlagColor1RegPortxD[5]"/>
+        <net name="DebugFlagColor1RegPortxD[4]"/>
+        <net name="DebugFlagColor1RegPortxD[3]"/>
+        <net name="DebugFlagColor1RegPortxD[2]"/>
+        <net name="DebugFlagColor1RegPortxD[1]"/>
+        <net name="DebugFlagColor1RegPortxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DebugRdDataFlagColor1xDN[31]"/>
+        <net name="DebugRdDataFlagColor1xDN[30]"/>
+        <net name="DebugRdDataFlagColor1xDN[29]"/>
+        <net name="DebugRdDataFlagColor1xDN[28]"/>
+        <net name="DebugRdDataFlagColor1xDN[27]"/>
+        <net name="DebugRdDataFlagColor1xDN[26]"/>
+        <net name="DebugRdDataFlagColor1xDN[25]"/>
+        <net name="DebugRdDataFlagColor1xDN[24]"/>
+        <net name="DebugRdDataFlagColor1xDN[23]"/>
+        <net name="DebugRdDataFlagColor1xDN[22]"/>
+        <net name="DebugRdDataFlagColor1xDN[21]"/>
+        <net name="DebugRdDataFlagColor1xDN[20]"/>
+        <net name="DebugRdDataFlagColor1xDN[19]"/>
+        <net name="DebugRdDataFlagColor1xDN[18]"/>
+        <net name="DebugRdDataFlagColor1xDN[17]"/>
+        <net name="DebugRdDataFlagColor1xDN[16]"/>
+        <net name="DebugRdDataFlagColor1xDN[15]"/>
+        <net name="DebugRdDataFlagColor1xDN[14]"/>
+        <net name="DebugRdDataFlagColor1xDN[13]"/>
+        <net name="DebugRdDataFlagColor1xDN[12]"/>
+        <net name="DebugRdDataFlagColor1xDN[11]"/>
+        <net name="DebugRdDataFlagColor1xDN[10]"/>
+        <net name="DebugRdDataFlagColor1xDN[9]"/>
+        <net name="DebugRdDataFlagColor1xDN[8]"/>
+        <net name="DebugRdDataFlagColor1xDN[7]"/>
+        <net name="DebugRdDataFlagColor1xDN[6]"/>
+        <net name="DebugRdDataFlagColor1xDN[5]"/>
+        <net name="DebugRdDataFlagColor1xDN[4]"/>
+        <net name="DebugRdDataFlagColor1xDN[3]"/>
+        <net name="DebugRdDataFlagColor1xDN[2]"/>
+        <net name="DebugRdDataFlagColor1xDN[1]"/>
+        <net name="DebugRdDataFlagColor1xDN[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DebugRdDataFlagColor1xDP[31]"/>
+        <net name="DebugRdDataFlagColor1xDP[30]"/>
+        <net name="DebugRdDataFlagColor1xDP[29]"/>
+        <net name="DebugRdDataFlagColor1xDP[28]"/>
+        <net name="DebugRdDataFlagColor1xDP[27]"/>
+        <net name="DebugRdDataFlagColor1xDP[26]"/>
+        <net name="DebugRdDataFlagColor1xDP[25]"/>
+        <net name="DebugRdDataFlagColor1xDP[24]"/>
+        <net name="DebugRdDataFlagColor1xDP[23]"/>
+        <net name="DebugRdDataFlagColor1xDP[22]"/>
+        <net name="DebugRdDataFlagColor1xDP[21]"/>
+        <net name="DebugRdDataFlagColor1xDP[20]"/>
+        <net name="DebugRdDataFlagColor1xDP[19]"/>
+        <net name="DebugRdDataFlagColor1xDP[18]"/>
+        <net name="DebugRdDataFlagColor1xDP[17]"/>
+        <net name="DebugRdDataFlagColor1xDP[16]"/>
+        <net name="DebugRdDataFlagColor1xDP[15]"/>
+        <net name="DebugRdDataFlagColor1xDP[14]"/>
+        <net name="DebugRdDataFlagColor1xDP[13]"/>
+        <net name="DebugRdDataFlagColor1xDP[12]"/>
+        <net name="DebugRdDataFlagColor1xDP[11]"/>
+        <net name="DebugRdDataFlagColor1xDP[10]"/>
+        <net name="DebugRdDataFlagColor1xDP[9]"/>
+        <net name="DebugRdDataFlagColor1xDP[8]"/>
+        <net name="DebugRdDataFlagColor1xDP[7]"/>
+        <net name="DebugRdDataFlagColor1xDP[6]"/>
+        <net name="DebugRdDataFlagColor1xDP[5]"/>
+        <net name="DebugRdDataFlagColor1xDP[4]"/>
+        <net name="DebugRdDataFlagColor1xDP[3]"/>
+        <net name="DebugRdDataFlagColor1xDP[2]"/>
+        <net name="DebugRdDataFlagColor1xDP[1]"/>
+        <net name="DebugRdDataFlagColor1xDP[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DebugRdDataFlagColor1xD[31]"/>
+        <net name="DebugRdDataFlagColor1xD[30]"/>
+        <net name="DebugRdDataFlagColor1xD[29]"/>
+        <net name="DebugRdDataFlagColor1xD[28]"/>
+        <net name="DebugRdDataFlagColor1xD[27]"/>
+        <net name="DebugRdDataFlagColor1xD[26]"/>
+        <net name="DebugRdDataFlagColor1xD[25]"/>
+        <net name="DebugRdDataFlagColor1xD[24]"/>
+        <net name="DebugRdDataFlagColor1xD[23]"/>
+        <net name="DebugRdDataFlagColor1xD[22]"/>
+        <net name="DebugRdDataFlagColor1xD[21]"/>
+        <net name="DebugRdDataFlagColor1xD[20]"/>
+        <net name="DebugRdDataFlagColor1xD[19]"/>
+        <net name="DebugRdDataFlagColor1xD[18]"/>
+        <net name="DebugRdDataFlagColor1xD[17]"/>
+        <net name="DebugRdDataFlagColor1xD[16]"/>
+        <net name="DebugRdDataFlagColor1xD[15]"/>
+        <net name="DebugRdDataFlagColor1xD[14]"/>
+        <net name="DebugRdDataFlagColor1xD[13]"/>
+        <net name="DebugRdDataFlagColor1xD[12]"/>
+        <net name="DebugRdDataFlagColor1xD[11]"/>
+        <net name="DebugRdDataFlagColor1xD[10]"/>
+        <net name="DebugRdDataFlagColor1xD[9]"/>
+        <net name="DebugRdDataFlagColor1xD[8]"/>
+        <net name="DebugRdDataFlagColor1xD[7]"/>
+        <net name="DebugRdDataFlagColor1xD[6]"/>
+        <net name="DebugRdDataFlagColor1xD[5]"/>
+        <net name="DebugRdDataFlagColor1xD[4]"/>
+        <net name="DebugRdDataFlagColor1xD[3]"/>
+        <net name="DebugRdDataFlagColor1xD[2]"/>
+        <net name="DebugRdDataFlagColor1xD[1]"/>
+        <net name="DebugRdDataFlagColor1xD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DebugRdEmptyFlagColor1xS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DebugRdEnFlagColor1xS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DebugWrValidDelayedxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="DebugWrValidxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="RdAddrxD[11]"/>
+        <net name="RdAddrxD[10]"/>
+        <net name="RdAddrxD[9]"/>
+        <net name="RdAddrxD[8]"/>
+        <net name="RdAddrxD[7]"/>
+        <net name="RdAddrxD[6]"/>
+        <net name="RdAddrxD[5]"/>
+        <net name="RdAddrxD[4]"/>
+        <net name="RdAddrxD[3]"/>
+        <net name="RdAddrxD[2]"/>
+        <net name="RdAddrxD[1]"/>
+        <net name="RdAddrxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="RdAddrxD_1[11]"/>
+        <net name="RdAddrxD_1[10]"/>
+        <net name="RdAddrxD_1[9]"/>
+        <net name="RdAddrxD_1[8]"/>
+        <net name="RdAddrxD_1[7]"/>
+        <net name="RdAddrxD_1[6]"/>
+        <net name="RdAddrxD_1[5]"/>
+        <net name="RdAddrxD_1[4]"/>
+        <net name="RdAddrxD_1[3]"/>
+        <net name="RdAddrxD_1[2]"/>
+        <net name="RdAddrxD_1[1]"/>
+        <net name="RdAddrxD_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:30]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="RdDataxD[31]"/>
+        <net name="RdDataxD[30]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[12:9]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="RdDataxD_1[12]"/>
+        <net name="RdDataxD_1[11]"/>
+        <net name="RdDataxD_1[10]"/>
+        <net name="RdDataxD_1[9]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[15:14]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="RdDataxD_2[15]"/>
+        <net name="RdDataxD_2[14]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[23:22]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="RdDataxD_3[23]"/>
+        <net name="RdDataxD_3[22]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[28:25]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="RdDataxD_4[28]"/>
+        <net name="RdDataxD_4[27]"/>
+        <net name="RdDataxD_4[26]"/>
+        <net name="RdDataxD_4[25]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe9[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[11]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[10]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[9]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdAddrxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[29]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[29]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[31]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[30]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[29]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[28]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[27]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[26]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[25]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[24]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[23]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[22]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[21]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[20]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[19]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[18]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[17]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[16]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[15]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[14]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[13]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[12]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[11]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[10]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[9]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[8:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[13]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_1[13]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[8:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq9&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_1[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_1[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_1[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_1[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_1[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_1[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_1[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_1[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[13]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_2[13]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq6&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq6&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[21:16]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq6&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_2[21]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_2[20]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_2[19]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_2[18]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_2[17]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_2[16]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq6&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq6&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[21:16]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq6&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_3[21]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_3[20]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_3[19]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_3[18]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_3[17]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_3[16]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[24]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_3[24]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[24]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_4[24]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[29]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdDataxD_4[29]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe11[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugRdValidxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe10[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[11]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[10]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[9]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[31]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[30]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[29]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[28]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[27]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[26]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[25]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[24]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[23]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[22]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[21]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[20]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[19]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[18]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[17]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[16]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[15]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[14]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[13]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[12]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[11]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[10]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[9]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARAddrxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARReadyxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiARValidxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[31]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[30]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[29]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[28]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[27]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[26]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[25]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[24]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[23]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[22]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[21]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[20]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[19]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[18]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[17]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[16]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[15]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[14]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[13]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[12]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[11]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[10]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[9]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRDataxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe18[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRReadyxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[1:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRRespxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRRespxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe19[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteRdChanSlIfxI/DebugSAxiRValidxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[11]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[10]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[9]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[31]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[30]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[29]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[28]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[27]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[26]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[25]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[24]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[23]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[22]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[21]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[20]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[19]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[18]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[17]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[16]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[15]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[14]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[13]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[12]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[11]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[10]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[9]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWAddrxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWReadyxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe14[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiAWValidxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe15[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiBReadyxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[1:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiBRespxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiBRespxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe16[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiBValidxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[31]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[30]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[29]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[28]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[27]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[26]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[25]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[24]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[23]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[22]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[21]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[20]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[19]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[18]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[17]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[16]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[15]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[14]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[13]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[12]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[11]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[10]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[9]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWDataxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe19[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWReadyxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[3:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWStrbxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWStrbxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWStrbxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWStrbxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe21[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugSAxiWValidxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[11]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[10]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[9]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrAddrxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[31]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[30]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[29]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[28]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[27]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[26]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[25]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[24]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[23]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[22]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[21]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[20]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[19]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[18]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[17]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[16]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[15]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[14]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[13]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[12]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[11]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[10]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[9]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[8]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[7]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[6]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[5]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[4]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[3]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[2]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[1]"/>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrDataxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe20[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="UBlazeCDxB.UblazeSoPCxI/UblazeSoPCxB.UblazeCorexI/mandelbrot_regbank/U0/Axi4LiteSlIfxB.Axi4LiteWrChanSlIfxI/DebugWrValidxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="WrDataxD[31]"/>
+        <net name="WrDataxD[30]"/>
+        <net name="WrDataxD[29]"/>
+        <net name="WrDataxD[28]"/>
+        <net name="WrDataxD[27]"/>
+        <net name="WrDataxD[26]"/>
+        <net name="WrDataxD[25]"/>
+        <net name="WrDataxD[24]"/>
+        <net name="WrDataxD[23]"/>
+        <net name="WrDataxD[22]"/>
+        <net name="WrDataxD[21]"/>
+        <net name="WrDataxD[20]"/>
+        <net name="WrDataxD[19]"/>
+        <net name="WrDataxD[18]"/>
+        <net name="WrDataxD[17]"/>
+        <net name="WrDataxD[16]"/>
+        <net name="WrDataxD[15]"/>
+        <net name="WrDataxD[14]"/>
+        <net name="WrDataxD[13]"/>
+        <net name="WrDataxD[12]"/>
+        <net name="WrDataxD[11]"/>
+        <net name="WrDataxD[10]"/>
+        <net name="WrDataxD[9]"/>
+        <net name="WrDataxD[8]"/>
+        <net name="WrDataxD[7]"/>
+        <net name="WrDataxD[6]"/>
+        <net name="WrDataxD[5]"/>
+        <net name="WrDataxD[4]"/>
+        <net name="WrDataxD[3]"/>
+        <net name="WrDataxD[2]"/>
+        <net name="WrDataxD[1]"/>
+        <net name="WrDataxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugRdAddrxD[11]"/>
+        <net name="u_ila_0_DebugRdAddrxD[10]"/>
+        <net name="u_ila_0_DebugRdAddrxD[9]"/>
+        <net name="u_ila_0_DebugRdAddrxD[8]"/>
+        <net name="u_ila_0_DebugRdAddrxD[7]"/>
+        <net name="u_ila_0_DebugRdAddrxD[6]"/>
+        <net name="u_ila_0_DebugRdAddrxD[5]"/>
+        <net name="u_ila_0_DebugRdAddrxD[4]"/>
+        <net name="u_ila_0_DebugRdAddrxD[3]"/>
+        <net name="u_ila_0_DebugRdAddrxD[2]"/>
+        <net name="u_ila_0_DebugRdAddrxD[1]"/>
+        <net name="u_ila_0_DebugRdAddrxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugRdAddrxD_1[11]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[10]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[9]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[8]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[7]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[6]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[5]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[4]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[3]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[2]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[1]"/>
+        <net name="u_ila_0_DebugRdAddrxD_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[31:30]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugRdDataxD[31]"/>
+        <net name="u_ila_0_DebugRdDataxD[30]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[12:9]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugRdDataxD_1[12]"/>
+        <net name="u_ila_0_DebugRdDataxD_1[11]"/>
+        <net name="u_ila_0_DebugRdDataxD_1[10]"/>
+        <net name="u_ila_0_DebugRdDataxD_1[9]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[15:14]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugRdDataxD_2[15]"/>
+        <net name="u_ila_0_DebugRdDataxD_2[14]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[23:22]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugRdDataxD_3[23]"/>
+        <net name="u_ila_0_DebugRdDataxD_3[22]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[28:25]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugRdDataxD_4[28]"/>
+        <net name="u_ila_0_DebugRdDataxD_4[27]"/>
+        <net name="u_ila_0_DebugRdDataxD_4[26]"/>
+        <net name="u_ila_0_DebugRdDataxD_4[25]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq20&apos;hX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:12]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugSAxiARAddrxD[31]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[30]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[29]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[28]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[27]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[26]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[25]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[24]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[23]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[22]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[21]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[20]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[19]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[18]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[17]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[16]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[15]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[14]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[13]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD[12]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq20&apos;hX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[31:12]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[31]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[30]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[29]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[28]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[27]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[26]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[25]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[24]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[23]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[22]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[21]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[20]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[19]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[18]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[17]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[16]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[15]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[14]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[13]"/>
+        <net name="u_ila_0_DebugSAxiARAddrxD_1[12]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq20&apos;hX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe10[31:12]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[31]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[30]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[29]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[28]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[27]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[26]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[25]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[24]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[23]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[22]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[21]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[20]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[19]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[18]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[17]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[16]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[15]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[14]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[13]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD[12]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq20&apos;hX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[31:12]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq20&apos;hX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[31]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[30]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[29]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[28]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[27]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[26]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[25]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[24]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[23]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[22]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[21]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[20]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[19]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[18]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[17]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[16]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[15]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[14]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[13]"/>
+        <net name="u_ila_0_DebugSAxiAWAddrxD_1[12]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe14[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugSAxiBReadyxS"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[3:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugSAxiWStrbxD[3]"/>
+        <net name="u_ila_0_DebugSAxiWStrbxD[2]"/>
+        <net name="u_ila_0_DebugSAxiWStrbxD[1]"/>
+        <net name="u_ila_0_DebugSAxiWStrbxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugWrAddrxD[11]"/>
+        <net name="u_ila_0_DebugWrAddrxD[10]"/>
+        <net name="u_ila_0_DebugWrAddrxD[9]"/>
+        <net name="u_ila_0_DebugWrAddrxD[8]"/>
+        <net name="u_ila_0_DebugWrAddrxD[7]"/>
+        <net name="u_ila_0_DebugWrAddrxD[6]"/>
+        <net name="u_ila_0_DebugWrAddrxD[5]"/>
+        <net name="u_ila_0_DebugWrAddrxD[4]"/>
+        <net name="u_ila_0_DebugWrAddrxD[3]"/>
+        <net name="u_ila_0_DebugWrAddrxD[2]"/>
+        <net name="u_ila_0_DebugWrAddrxD[1]"/>
+        <net name="u_ila_0_DebugWrAddrxD[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq12&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[11:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq12&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="u_ila_0_DebugWrAddrxD_1[11]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[10]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[9]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[8]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[7]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[6]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[5]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[4]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[3]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[2]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[1]"/>
+        <net name="u_ila_0_DebugWrAddrxD_1[0]"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>
