@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="bram_video_memory_wauto_dauto_rdclk1_wrclk1_synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1589285659">
+  <File Type="RDS-UTIL-PB" Name="bram_video_memory_wauto_dauto_rdclk1_wrclk1_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="bram_video_memory_wauto_dauto_rdclk1_wrclk1_utilization_synth.rpt"/>
+  <File Type="RDS-RDS" Name="bram_video_memory_wauto_dauto_rdclk1_wrclk1.vds"/>
+  <File Type="RDS-DCP" Name="bram_video_memory_wauto_dauto_rdclk1_wrclk1.dcp"/>
+  <File Type="PA-TCL" Name="bram_video_memory_wauto_dauto_rdclk1_wrclk1.tcl"/>
+  <File Type="REPORTS-TCL" Name="bram_video_memory_wauto_dauto_rdclk1_wrclk1_reports.tcl"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bram_video_memory_wauto_dauto_rdclk1_wrclk1">
+    <File Path="$PSRCDIR/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../hw/mandelbrot_pinout/src/ip_core/bram_video_memory_wauto_dauto_rdclk1_wrclk1.xci"/>
+        <Attr Name="ImportTime" Val="1550147898"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="bram_video_memory_wauto_dauto_rdclk1_wrclk1"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/bram_video_memory_wauto_dauto_rdclk1_wrclk1">
+    <File Path="$PSRCDIR/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../hw/mandelbrot_pinout/src/ip_core/bram_video_memory_wauto_dauto_rdclk1_wrclk1.xci"/>
+        <Attr Name="ImportTime" Val="1550147898"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="bram_video_memory_wauto_dauto_rdclk1_wrclk1"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

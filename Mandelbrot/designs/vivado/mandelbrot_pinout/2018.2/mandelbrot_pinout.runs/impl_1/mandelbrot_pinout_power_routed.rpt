@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Tue May  5 18:09:00 2020
+| Date             : Tue May 12 14:31:32 2020
 | Host             : xilinx-vm running 64-bit unknown
 | Command          : report_power -file mandelbrot_pinout_power_routed.rpt -pb mandelbrot_pinout_power_summary_routed.pb -rpx mandelbrot_pinout_power_routed.rpx
 | Design           : mandelbrot_pinout
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.409        |
+| Total On-Chip Power (W)  | 0.410        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.269        |
+| Dynamic (W)              | 0.270        |
 | Device Static (W)        | 0.140        |
 | Effective TJA (C/W)      | 3.3          |
 | Max Ambient (C)          | 83.6         |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.004 |        7 |       --- |             --- |
-| Slice Logic    |    <0.001 |      417 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      189 |    133800 |            0.14 |
+| Clocks         |     0.005 |        7 |       --- |             --- |
+| Slice Logic    |    <0.001 |      422 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      192 |    133800 |            0.14 |
 |   CARRY4       |    <0.001 |       36 |     33450 |            0.11 |
 |   Register     |    <0.001 |       65 |    267600 |            0.02 |
 |   Others       |     0.000 |       26 |       --- |             --- |
-| Signals        |    <0.001 |      190 |       --- |             --- |
-| MMCM           |     0.125 |        1 |        10 |           10.00 |
-| I/O            |     0.139 |       19 |       285 |            6.67 |
+| Signals        |    <0.001 |      196 |       --- |             --- |
+| MMCM           |     0.122 |        1 |        10 |           10.00 |
+| I/O            |     0.142 |       19 |       285 |            6.67 |
 | Static Power   |     0.140 |          |           |                 |
-| Total          |     0.409 |          |           |                 |
+| Total          |     0.410 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.039 |       0.007 |      0.031 |
-| Vccaux    |       1.800 |     0.100 |       0.069 |      0.031 |
-| Vcco33    |       3.300 |     0.046 |       0.041 |      0.005 |
+| Vccint    |       1.000 |     0.040 |       0.009 |      0.031 |
+| Vccaux    |       1.800 |     0.098 |       0.068 |      0.031 |
+| Vcco33    |       3.300 |     0.047 |       0.042 |      0.005 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -128,9 +128,9 @@ Table of Contents
 +----------------------------------+----------------------------------------------------------------------------------------------------+-----------------+
 | Clock                            | Domain                                                                                             | Constraint (ns) |
 +----------------------------------+----------------------------------------------------------------------------------------------------+-----------------+
-| ClkHdmixCO_clk_vga_hdmi_1024x600 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/inst/ClkHdmixCO_clk_vga_hdmi_1024x600 |             3.9 |
-| ClkVgaxCO_clk_vga_hdmi_1024x600  | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/inst/ClkVgaxCO_clk_vga_hdmi_1024x600  |            19.5 |
-| clkfbout_clk_vga_hdmi_1024x600   | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI/inst/clkfbout_clk_vga_hdmi_1024x600   |            10.0 |
+| ClkHdmixCO_clk_vga_hdmi_1024x768 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO_clk_vga_hdmi_1024x768 |             3.1 |
+| ClkVgaxCO_clk_vga_hdmi_1024x768  | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO_clk_vga_hdmi_1024x768  |            15.4 |
+| clkfbout_clk_vga_hdmi_1024x768   | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkfbout_clk_vga_hdmi_1024x768   |            10.0 |
 | sys_clk_pin                      | ClkSys100MhzxCI                                                                                    |            10.0 |
 | sys_clk_pin                      | VgaHdmiCDxB.HdmixI/ClkSys100MhzBufgxC                                                              |            10.0 |
 +----------------------------------+----------------------------------------------------------------------------------------------------+-----------------+
@@ -145,11 +145,13 @@ Table of Contents
 +-----------------------------------------------+-----------+
 | Name                                          | Power (W) |
 +-----------------------------------------------+-----------+
-| mandelbrot_pinout                             |     0.269 |
-|   VgaHdmiCDxB.HdmixI                          |     0.269 |
-|     ClkVgaHdmi1024x600xG.ClkVgaHdmi1024x600xI |     0.127 |
-|       inst                                    |     0.127 |
-|     VgaToHdmixI                               |     0.141 |
+| mandelbrot_pinout                             |     0.270 |
+|   VgaHdmiCDxB.HdmixI                          |     0.270 |
+|     ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI |     0.124 |
+|       inst                                    |     0.124 |
+|     VgaToHdmixI                               |     0.145 |
+|     VgaxI                                     |     0.001 |
+|       VgaControlerxI                          |     0.001 |
 +-----------------------------------------------+-----------+
 
 

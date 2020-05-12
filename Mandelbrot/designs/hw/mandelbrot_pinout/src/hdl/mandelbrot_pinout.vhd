@@ -73,13 +73,13 @@ architecture rtl of mandelbrot_pinout is
     -- 800x600
     -- 640x480
 
-    -- constant C_VGA_CONFIG : t_VgaConfig := C_1024x768_VGACONFIG;
-    constant C_VGA_CONFIG : t_VgaConfig := C_1024x600_VGACONFIG;
+    constant C_VGA_CONFIG : t_VgaConfig := C_1024x768_VGACONFIG;
+    -- constant C_VGA_CONFIG : t_VgaConfig := C_1024x600_VGACONFIG;
     -- constant C_VGA_CONFIG : t_VgaConfig := C_800x600_VGACONFIG;
     -- constant C_VGA_CONFIG : t_VgaConfig := C_640x480_VGACONFIG;
 
-    -- constant C_RESOLUTION : string := "1024x768";
-    constant C_RESOLUTION : string := "1024x600";
+    constant C_RESOLUTION : string := "1024x768";
+    -- constant C_RESOLUTION : string := "1024x600";
     -- constant C_RESOLUTION : string := "800x600";
     -- constant C_RESOLUTION : string := "640x480";
 
@@ -88,7 +88,7 @@ architecture rtl of mandelbrot_pinout is
     constant C_BRAM_VIDEO_MEMORY_ADDR_SIZE      : integer               := 20;
     constant C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE : integer               := 10;
     constant C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE  : integer               := 10;
-    constant C_BRAM_VIDEO_MEMORY_DATA_SIZE      : integer               := 9;
+    constant C_BRAM_VIDEO_MEMORY_DATA_SIZE      : integer               := 7; -- 9
     constant C_CDC_TYPE                         : integer range 0 to 2  := 1;
     constant C_RESET_STATE                      : integer range 0 to 1  := 0;
     constant C_SINGLE_BIT                       : integer range 0 to 1  := 1;
@@ -174,19 +174,33 @@ architecture rtl of mandelbrot_pinout is
             Color1xDI    : in  std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0));
     end component image_generator;
 
-    -- component bram_video_memory_wauto_dauto_rdclk1_wrclk1
-    --     port (
-    --         clka  : in  std_logic;
-    --         wea   : in  std_logic_vector(0 downto 0);
-    --         addra : in  std_logic_vector(19 downto 0);
-    --         dina  : in  std_logic_vector(8 downto 0);
-    --         douta : out std_logic_vector(8 downto 0);
-    --         clkb  : in  std_logic;
-    --         web   : in  std_logic_vector(0 downto 0);
-    --         addrb : in  std_logic_vector(19 downto 0);
-    --         dinb  : in  std_logic_vector(8 downto 0);
-    --         doutb : out std_logic_vector(8 downto 0));
-    -- end component;
+--     component bram_video_memory_wauto_dauto_rdclk1_wrclk1
+--         port (
+--             clka  : in  std_logic;
+--             wea   : in  std_logic_vector(0 downto 0);
+--             addra : in  std_logic_vector(19 downto 0);
+--             dina  : in  std_logic_vector(8 downto 0);
+--             douta : out std_logic_vector(8 downto 0);
+--             clkb  : in  std_logic;
+--             web   : in  std_logic_vector(0 downto 0);
+--             addrb : in  std_logic_vector(19 downto 0);
+--             dinb  : in  std_logic_vector(8 downto 0);
+--             doutb : out std_logic_vector(8 downto 0));
+--     end component;
+    COMPONENT bram_video_memory_wauto_dauto_rdclk1_wrclk1
+      PORT (
+        clka : IN STD_LOGIC;
+        wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        addra : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+        dina : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+        douta : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+        clkb : IN STD_LOGIC;
+        web : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        addrb : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+        dinb : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+        doutb : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+    );
+    END COMPONENT;
 
     component fifo_regport
         port (
@@ -247,10 +261,10 @@ architecture rtl of mandelbrot_pinout is
     -- signal DataImGen2BramMVxD         : std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0);
     -- signal DataBramMV2HdmixD          : std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0);
     signal HdmiSourcexD         : t_HdmiSource                                      := C_NO_HDMI_SOURCE;
-    -- signal BramVideoMemoryWriteAddrxD : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0) := (others => '0');
-    -- signal BramVideoMemoryReadAddrxD  : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0);
-    -- signal BramVideoMemoryWriteDataxD : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
-    -- signal BramVideoMemoryReadDataxD  : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+     signal BramVideoMemoryWriteAddrxD : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0) := (others => '0');
+     signal BramVideoMemoryReadAddrxD  : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0);
+     signal BramVideoMemoryWriteDataxD : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+     signal BramVideoMemoryReadDataxD  : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
     -- signal BtnCInterruptxS      : std_logic                                         := '0';
     -- signal BtnCxD               : std_logic_vector(3 downto 0)                      := (others => '0');
     -- signal BtnCRisexS           : std_logic                                         := '0';
@@ -408,20 +422,20 @@ begin  -- architecture rtl
     VgaHdmiToFpgaUserCDCxB : block is
     begin  -- block VgaHdmiToFpgaUserCDCxB
 
-        -- BramVideoMemoryxI : bram_video_memory_wauto_dauto_rdclk1_wrclk1
-        --     port map (
-        --         -- Port A (Write)
-        --         clka  => ClkMandelxC,
-        --         wea   => PllLockedxD,
-        --         addra => BramVideoMemoryWriteAddrxD,
-        --         dina  => BramVideoMemoryWriteDataxD,
-        --         douta => open,
-        --         -- Port B (Read)
-        --         clkb  => ClkVgaxC,
-        --         web   => (others => '0'),
-        --         addrb => BramVideoMemoryReadAddrxD,
-        --         dinb  => (others => '0'),
-        --         doutb => BramVideoMemoryReadDataxD);
+         BramVideoMemoryxI : bram_video_memory_wauto_dauto_rdclk1_wrclk1
+             port map (
+                 -- Port A (Write)
+                 clka  => ClkVgaxC,                 --ClkMandelxC,
+                 wea   => "1",          --PllLockedxD,
+                 addra => BramVideoMemoryWriteAddrxD,
+                 dina  => BramVideoMemoryWriteDataxD,
+                 douta => open,
+                 -- Port B (Read)
+                 clkb  => ClkVgaxC,
+                 web   => (others => '0'),
+                 addrb => BramVideoMemoryReadAddrxD,
+                 dinb  => (others => '0'),
+                 doutb => BramVideoMemoryReadDataxD);
 
     end block VgaHdmiToFpgaUserCDCxB;
 

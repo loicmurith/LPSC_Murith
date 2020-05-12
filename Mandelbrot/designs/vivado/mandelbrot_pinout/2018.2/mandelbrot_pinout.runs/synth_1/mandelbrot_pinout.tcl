@@ -17,6 +17,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a200tsbg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -25,7 +29,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.cache/wt [current_project]
 set_property parent.project_path /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_repo_paths /home/xilinx/LPSC_project/Mandelbrot [current_project]
@@ -63,6 +67,9 @@ read_ip -quiet /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pi
 set_property used_in_implementation false [get_files -all /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_800x600/clk_vga_hdmi_800x600_board.xdc]
 set_property used_in_implementation false [get_files -all /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_800x600/clk_vga_hdmi_800x600.xdc]
 set_property used_in_implementation false [get_files -all /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_800x600/clk_vga_hdmi_800x600_ooc.xdc]
+
+read_ip -quiet /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1.xci
+set_property used_in_implementation false [get_files -all /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

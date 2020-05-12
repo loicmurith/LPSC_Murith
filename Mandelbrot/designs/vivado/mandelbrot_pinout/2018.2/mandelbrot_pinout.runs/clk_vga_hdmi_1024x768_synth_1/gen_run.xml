@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="clk_vga_hdmi_1024x768_synth_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1588694276">
-  <File Type="VDS-TIMING-PB" Name="clk_vga_hdmi_1024x768_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="clk_vga_hdmi_1024x768_timing_summary_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="clk_vga_hdmi_1024x768_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="clk_vga_hdmi_1024x768_utilization_synth.pb"/>
+  <File Type="RDS-RDS" Name="clk_vga_hdmi_1024x768.vds"/>
   <File Type="RDS-DCP" Name="clk_vga_hdmi_1024x768.dcp"/>
   <File Type="PA-TCL" Name="clk_vga_hdmi_1024x768.tcl"/>
   <File Type="REPORTS-TCL" Name="clk_vga_hdmi_1024x768_reports.tcl"/>
-  <File Type="RDS-RDS" Name="clk_vga_hdmi_1024x768.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="clk_vga_hdmi_1024x768_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="clk_vga_hdmi_1024x768_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="clk_vga_hdmi_1024x768_utilization_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_vga_hdmi_1024x768">
     <File Path="$PSRCDIR/sources_1/ip/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768.xci">
       <FileInfo>
