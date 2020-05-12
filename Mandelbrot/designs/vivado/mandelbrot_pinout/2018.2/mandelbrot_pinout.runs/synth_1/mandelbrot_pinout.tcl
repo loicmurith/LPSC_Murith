@@ -71,6 +71,11 @@ set_property used_in_implementation false [get_files -all /home/xilinx/LPSC_proj
 read_ip -quiet /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1.xci
 set_property used_in_implementation false [get_files -all /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_ooc.xdc]
 
+read_ip -quiet /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot.xci
+set_property used_in_implementation false [get_files -all /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot_board.xdc]
+set_property used_in_implementation false [get_files -all /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot.xdc]
+set_property used_in_implementation false [get_files -all /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot_ooc.xdc]
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be

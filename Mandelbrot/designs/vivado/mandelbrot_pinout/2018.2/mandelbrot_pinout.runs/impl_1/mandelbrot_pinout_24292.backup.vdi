@@ -1,0 +1,582 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue May 12 17:13:26 2020
+# Process ID: 24292
+# Current directory: /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1
+# Command line: vivado -log mandelbrot_pinout.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mandelbrot_pinout.tcl -notrace
+# Log file: /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1/mandelbrot_pinout.vdi
+# Journal file: /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source mandelbrot_pinout.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/xilinx/LPSC_project/Mandelbrot'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/xilinx/LPSC_project/Mandelbrot' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+Command: link_design -top mandelbrot_pinout -part xc7a200tsbg484-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a200tsbg484-1
+INFO: [Project 1-454] Reading design checkpoint '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1/.Xil/Vivado-24292-xilinx-vm/clk_mandelbrot/clk_mandelbrot.dcp' for cell 'FpgaUserCDxB.ClkMandelbrotxI'
+INFO: [Project 1-454] Reading design checkpoint '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1.dcp' for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI'
+INFO: [Project 1-454] Reading design checkpoint '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768.dcp' for cell 'VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI'
+Netlist sorting complete. Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.38 . Memory (MB): peak = 1777.996 ; gain = 0.000 ; free physical = 849 ; free virtual = 10830
+INFO: [Netlist 29-17] Analyzing 890 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. FpgaUserCDxB.ClkMandelbrotxI/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'FpgaUserCDxB.ClkMandelbrotxI/ClkSys100MhzxCI' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/ClkSys100MhzxCI' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_vga_hdmi_1024x600'. The XDC file /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x600/clk_vga_hdmi_1024x600_board.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_vga_hdmi_1024x600'. The XDC file /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x600/clk_vga_hdmi_1024x600.xdc will not be read for any cell of this module.
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768_board.xdc] for cell 'VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768_board.xdc] for cell 'VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768.xdc] for cell 'VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768.xdc:57]
+get_clocks: Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 2458.473 ; gain = 552.969 ; free physical = 320 ; free virtual = 10301
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768.xdc] for cell 'VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst'
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_vga_hdmi_640x480'. The XDC file /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_640x480/clk_vga_hdmi_640x480_board.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_vga_hdmi_640x480'. The XDC file /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_640x480/clk_vga_hdmi_640x480.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_vga_hdmi_800x600'. The XDC file /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_800x600/clk_vga_hdmi_800x600_board.xdc will not be read for any cell of this module.
+CRITICAL WARNING: [Designutils 20-1280] Could not find module 'clk_vga_hdmi_800x600'. The XDC file /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_800x600/clk_vga_hdmi_800x600.xdc will not be read for any cell of this module.
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot_board.xdc] for cell 'FpgaUserCDxB.ClkMandelbrotxI/inst'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot_board.xdc] for cell 'FpgaUserCDxB.ClkMandelbrotxI/inst'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot.xdc] for cell 'FpgaUserCDxB.ClkMandelbrotxI/inst'
+INFO: [Timing 38-2] Deriving generated clocks [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot.xdc:57]
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_mandelbrot/clk_mandelbrot.xdc] for cell 'FpgaUserCDxB.ClkMandelbrotxI/inst'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/constrs/mandelbrot_pinout.xdc]
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/constrs/mandelbrot_pinout.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.477 ; gain = 0.000 ; free physical = 327 ; free virtual = 10308
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+16 Infos, 5 Warnings, 6 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:14 . Memory (MB): peak = 2458.477 ; gain = 919.805 ; free physical = 327 ; free virtual = 10308
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2490.492 ; gain = 32.016 ; free physical = 322 ; free virtual = 10303
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1ace6f502
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2501.395 ; gain = 10.902 ; free physical = 318 ; free virtual = 10299
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 14a76d55f
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2646.363 ; gain = 0.004 ; free physical = 167 ; free virtual = 10148
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
+INFO: [Opt 31-1021] In phase Retarget, 4 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1c1360666
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2646.363 ; gain = 0.004 ; free physical = 167 ; free virtual = 10148
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 18e66fdae
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2646.363 ; gain = 0.004 ; free physical = 168 ; free virtual = 10149
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 2541 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
+INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
+Phase 4 BUFG optimization | Checksum: 18e66fdae
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2646.363 ; gain = 0.004 ; free physical = 168 ; free virtual = 10149
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 18e66fdae
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2646.363 ; gain = 0.004 ; free physical = 168 ; free virtual = 10149
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 18e66fdae
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2646.363 ; gain = 0.004 ; free physical = 168 ; free virtual = 10149
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               1  |                                              4  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |            2541  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 2646.363 ; gain = 0.000 ; free physical = 168 ; free virtual = 10149
+Ending Logic Optimization Task | Checksum: 1c9041867
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2646.363 ; gain = 0.004 ; free physical = 168 ; free virtual = 10149
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1c9041867
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2646.363 ; gain = 0.000 ; free physical = 168 ; free virtual = 10149
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1c9041867
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2646.363 ; gain = 0.000 ; free physical = 168 ; free virtual = 10149
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2646.363 ; gain = 0.000 ; free physical = 168 ; free virtual = 10149
+Ending Netlist Obfuscation Task | Checksum: 1c9041867
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2646.363 ; gain = 0.000 ; free physical = 168 ; free virtual = 10149
+INFO: [Common 17-83] Releasing license: Implementation
+37 Infos, 5 Warnings, 6 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 2646.363 ; gain = 187.887 ; free physical = 168 ; free virtual = 10149
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2646.363 ; gain = 0.000 ; free physical = 168 ; free virtual = 10149
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2646.363 ; gain = 0.000 ; free physical = 166 ; free virtual = 10148
+INFO: [Common 17-1381] The checkpoint '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1/mandelbrot_pinout_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file mandelbrot_pinout_drc_opted.rpt -pb mandelbrot_pinout_drc_opted.pb -rpx mandelbrot_pinout_drc_opted.rpx
+Command: report_drc -file mandelbrot_pinout_drc_opted.rpt -pb mandelbrot_pinout_drc_opted.pb -rpx mandelbrot_pinout_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1/mandelbrot_pinout_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2702.395 ; gain = 56.027 ; free physical = 166 ; free virtual = 10147
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 163 ; free virtual = 10145
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1241bcf8c
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 163 ; free virtual = 10145
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 163 ; free virtual = 10145
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 11d1ebd35
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 143 ; free virtual = 10125
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1f7828cc9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 156 ; free virtual = 10138
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1f7828cc9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 156 ; free virtual = 10138
+Phase 1 Placer Initialization | Checksum: 1f7828cc9
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 155 ; free virtual = 10136
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1c21c00d0
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 153 ; free virtual = 10135
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 136 ; free virtual = 10118
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |              0  |                     0  |           0  |           3  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 178539686
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 136 ; free virtual = 10118
+Phase 2.2 Global Placement Core | Checksum: 1e1a7d687
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 133 ; free virtual = 10115
+Phase 2 Global Placement | Checksum: 1e1a7d687
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 135 ; free virtual = 10117
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 19bc954a3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 135 ; free virtual = 10117
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2250c89e9
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 133 ; free virtual = 10115
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 26e5db457
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 133 ; free virtual = 10114
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 26e5db457
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 133 ; free virtual = 10114
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 1e79b27fd
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 128 ; free virtual = 10110
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 2446cf79b
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 129 ; free virtual = 10110
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 2446cf79b
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 129 ; free virtual = 10110
+Phase 3 Detail Placement | Checksum: 2446cf79b
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 129 ; free virtual = 10110
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 2029db144
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2029db144
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 128 ; free virtual = 10110
+INFO: [Place 30-746] Post Placement Timing Summary WNS=11.200. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 13f7703b3
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 128 ; free virtual = 10110
+Phase 4.1 Post Commit Optimization | Checksum: 13f7703b3
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 128 ; free virtual = 10110
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 13f7703b3
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 133 ; free virtual = 10114
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 13f7703b3
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 133 ; free virtual = 10114
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 133 ; free virtual = 10114
+Phase 4.4 Final Placement Cleanup | Checksum: f318c7d3
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 133 ; free virtual = 10114
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: f318c7d3
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 133 ; free virtual = 10114
+Ending Placer Task | Checksum: ea1acb83
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 133 ; free virtual = 10114
+INFO: [Common 17-83] Releasing license: Implementation
+66 Infos, 5 Warnings, 6 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 157 ; free virtual = 10139
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 157 ; free virtual = 10139
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 156 ; free virtual = 10138
+INFO: [Common 17-1381] The checkpoint '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1/mandelbrot_pinout_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file mandelbrot_pinout_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.38 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 146 ; free virtual = 10128
+INFO: [runtcl-4] Executing : report_utilization -file mandelbrot_pinout_utilization_placed.rpt -pb mandelbrot_pinout_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file mandelbrot_pinout_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2702.395 ; gain = 0.000 ; free physical = 156 ; free virtual = 10138
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: c5d30e7e ConstDB: 0 ShapeSum: 2447bd05 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 12b32080d
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:53 . Memory (MB): peak = 2833.156 ; gain = 130.762 ; free physical = 148 ; free virtual = 9923
+Post Restoration Checksum: NetGraph: 304aa084 NumContArr: fae76789 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 12b32080d
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:53 . Memory (MB): peak = 2852.156 ; gain = 149.762 ; free physical = 121 ; free virtual = 9896
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 12b32080d
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:53 . Memory (MB): peak = 2872.156 ; gain = 169.762 ; free physical = 127 ; free virtual = 9873
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 12b32080d
+
+Time (s): cpu = 00:02:12 ; elapsed = 00:01:53 . Memory (MB): peak = 2872.156 ; gain = 169.762 ; free physical = 134 ; free virtual = 9873
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1a9411122
+
+Time (s): cpu = 00:02:14 ; elapsed = 00:01:55 . Memory (MB): peak = 2913.680 ; gain = 211.285 ; free physical = 175 ; free virtual = 9865
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=11.214 | TNS=0.000  | WHS=-0.073 | THS=-1.125 |
+
+Phase 2 Router Initialization | Checksum: 1b1bbe98a
+
+Time (s): cpu = 00:02:14 ; elapsed = 00:01:56 . Memory (MB): peak = 2913.680 ; gain = 211.285 ; free physical = 174 ; free virtual = 9863
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 142
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 142
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: df8da38a
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:57 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 172 ; free virtual = 9861
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=11.083 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 6a78c2a1
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 171 ; free virtual = 9860
+Phase 4 Rip-up And Reroute | Checksum: 6a78c2a1
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 171 ; free virtual = 9860
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1dc44a0c
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 170 ; free virtual = 9860
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=11.176 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Delay CleanUp | Checksum: 1dc44a0c
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 170 ; free virtual = 9860
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1dc44a0c
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 170 ; free virtual = 9860
+Phase 5 Delay and Skew Optimization | Checksum: 1dc44a0c
+
+Time (s): cpu = 00:02:17 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 170 ; free virtual = 9860
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 31657221
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 170 ; free virtual = 9860
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=11.176 | TNS=0.000  | WHS=0.230  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 4249680f
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 170 ; free virtual = 9860
+Phase 6 Post Hold Fix | Checksum: 4249680f
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 170 ; free virtual = 9860
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0154672 %
+  Global Horizontal Routing Utilization  = 0.00532056 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 3a94cd91
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 169 ; free virtual = 9859
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 3a94cd91
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 167 ; free virtual = 9857
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 102d971f1
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 167 ; free virtual = 9857
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=11.176 | TNS=0.000  | WHS=0.230  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 102d971f1
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 168 ; free virtual = 9858
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:58 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 199 ; free virtual = 9888
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+84 Infos, 5 Warnings, 6 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:02:25 ; elapsed = 00:02:07 . Memory (MB): peak = 2914.684 ; gain = 212.289 ; free physical = 199 ; free virtual = 9888
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2914.684 ; gain = 0.000 ; free physical = 199 ; free virtual = 9888
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2914.684 ; gain = 0.000 ; free physical = 196 ; free virtual = 9887
+INFO: [Common 17-1381] The checkpoint '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1/mandelbrot_pinout_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file mandelbrot_pinout_drc_routed.rpt -pb mandelbrot_pinout_drc_routed.pb -rpx mandelbrot_pinout_drc_routed.rpx
+Command: report_drc -file mandelbrot_pinout_drc_routed.rpt -pb mandelbrot_pinout_drc_routed.pb -rpx mandelbrot_pinout_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1/mandelbrot_pinout_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2953.574 ; gain = 38.887 ; free physical = 194 ; free virtual = 9884
+INFO: [runtcl-4] Executing : report_methodology -file mandelbrot_pinout_methodology_drc_routed.rpt -pb mandelbrot_pinout_methodology_drc_routed.pb -rpx mandelbrot_pinout_methodology_drc_routed.rpx
+Command: report_methodology -file mandelbrot_pinout_methodology_drc_routed.rpt -pb mandelbrot_pinout_methodology_drc_routed.pb -rpx mandelbrot_pinout_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/impl_1/mandelbrot_pinout_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2953.574 ; gain = 0.000 ; free physical = 195 ; free virtual = 9885
+INFO: [runtcl-4] Executing : report_power -file mandelbrot_pinout_power_routed.rpt -pb mandelbrot_pinout_power_summary_routed.pb -rpx mandelbrot_pinout_power_routed.rpx
+Command: report_power -file mandelbrot_pinout_power_routed.rpt -pb mandelbrot_pinout_power_summary_routed.pb -rpx mandelbrot_pinout_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+97 Infos, 5 Warnings, 6 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file mandelbrot_pinout_route_status.rpt -pb mandelbrot_pinout_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file mandelbrot_pinout_timing_summary_routed.rpt -pb mandelbrot_pinout_timing_summary_routed.pb -rpx mandelbrot_pinout_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file mandelbrot_pinout_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file mandelbrot_pinout_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file mandelbrot_pinout_bus_skew_routed.rpt -pb mandelbrot_pinout_bus_skew_routed.pb -rpx mandelbrot_pinout_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Common 17-206] Exiting Vivado at Tue May 12 17:18:23 2020...

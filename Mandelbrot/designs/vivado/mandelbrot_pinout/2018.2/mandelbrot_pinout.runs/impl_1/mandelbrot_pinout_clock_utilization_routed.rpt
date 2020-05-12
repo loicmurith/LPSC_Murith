@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue May 12 14:31:32 2020
+| Date         : Tue May 12 17:42:11 2020
 | Host         : xilinx-vm running 64-bit unknown
 | Command      : report_clock_utilization -file mandelbrot_pinout_clock_utilization_routed.rpt
 | Design       : mandelbrot_pinout
@@ -23,8 +23,17 @@ Table of Contents
 7. Device Cell Placement Summary for Global Clock g1
 8. Device Cell Placement Summary for Global Clock g2
 9. Device Cell Placement Summary for Global Clock g3
-10. Clock Region Cell Placement per Global Clock: Region X1Y0
-11. Clock Region Cell Placement per Global Clock: Region X1Y2
+10. Device Cell Placement Summary for Global Clock g4
+11. Device Cell Placement Summary for Global Clock g5
+12. Device Cell Placement Summary for Global Clock g6
+13. Clock Region Cell Placement per Global Clock: Region X0Y0
+14. Clock Region Cell Placement per Global Clock: Region X1Y0
+15. Clock Region Cell Placement per Global Clock: Region X0Y1
+16. Clock Region Cell Placement per Global Clock: Region X1Y1
+17. Clock Region Cell Placement per Global Clock: Region X0Y2
+18. Clock Region Cell Placement per Global Clock: Region X1Y2
+19. Clock Region Cell Placement per Global Clock: Region X0Y3
+20. Clock Region Cell Placement per Global Clock: Region X1Y3
 
 1. Clock Primitive Utilization
 ------------------------------
@@ -32,12 +41,12 @@ Table of Contents
 +----------+------+-----------+-----+--------------+--------+
 | Type     | Used | Available | LOC | Clock Region | Pblock |
 +----------+------+-----------+-----+--------------+--------+
-| BUFGCTRL |    4 |        32 |   0 |            0 |      0 |
+| BUFGCTRL |    7 |        32 |   0 |            0 |      0 |
 | BUFH     |    0 |       120 |   0 |            0 |      0 |
 | BUFIO    |    0 |        40 |   0 |            0 |      0 |
 | BUFMR    |    0 |        20 |   0 |            0 |      0 |
 | BUFR     |    0 |        40 |   0 |            0 |      0 |
-| MMCM     |    1 |        10 |   0 |            0 |      0 |
+| MMCM     |    2 |        10 |   0 |            0 |      0 |
 | PLL      |    0 |        10 |   0 |            0 |      0 |
 +----------+------+-----------+-----+--------------+--------+
 
@@ -48,10 +57,13 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+----------------------------------+---------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                            | Driver Pin                                                                      | Net                                                                                                  |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+----------------------------------+---------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 1 |          73 |               0 |       15.385 | ClkVgaxCO_clk_vga_hdmi_1024x768  | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkout1_buf/O | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO                          |
-| g1        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y1 | n/a          |                 1 |           8 |               0 |        3.077 | ClkHdmixCO_clk_vga_hdmi_1024x768 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkout2_buf/O | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO                         |
-| g2        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y2 | n/a          |                 1 |           1 |               0 |       10.000 | sys_clk_pin                      | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.BUFGClkSysToClkVgaHdmixI/O              | VgaHdmiCDxB.HdmixI/ClkSys100MhzBufgxC                                                                |
-| g3        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_clk_vga_hdmi_1024x768   | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkf_buf/O    | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkfbout_buf_clk_vga_hdmi_1024x768 |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 7 |         279 |               0 |       15.385 | ClkVgaxCO_clk_vga_hdmi_1024x768  | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkout1_buf/O | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO                          |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y2 | n/a          |                 7 |         226 |               0 |       10.000 | ClkMandelxCO_clk_mandelbrot      | FpgaUserCDxB.ClkMandelbrotxI/inst/clkout1_buf/O                                 | FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                                                       |
+| g2        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y1 | n/a          |                 1 |           8 |               0 |        3.077 | ClkHdmixCO_clk_vga_hdmi_1024x768 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkout2_buf/O | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO                         |
+| g3        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y3 | n/a          |                 1 |           1 |               0 |       10.000 | sys_clk_pin                      | FpgaUserCDxB.BUFGClkSysToClkMandelxI/O                                          | ClkSys100MhzBufgxC                                                                                   |
+| g4        | src2      | BUFG/O          | None       | BUFGCTRL_X0Y5 | n/a          |                 1 |           1 |               0 |       10.000 | sys_clk_pin                      | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.BUFGClkSysToClkVgaHdmixI/O              | VgaHdmiCDxB.HdmixI/ClkSys100MhzBufgxC                                                                |
+| g5        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y4 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_clk_mandelbrot          | FpgaUserCDxB.ClkMandelbrotxI/inst/clkf_buf/O                                    | FpgaUserCDxB.ClkMandelbrotxI/inst/clkfbout_buf_clk_mandelbrot                                        |
+| g6        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y6 | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_clk_vga_hdmi_1024x768   | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkf_buf/O    | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkfbout_buf_clk_vga_hdmi_1024x768 |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+----------------------------------+---------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -63,10 +75,12 @@ Table of Contents
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+----------------------------------+------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
 | Source Id | Global Id | Driver Type/Pin     | Constraint | Site            | Clock Region | Clock Loads | Non-Clock Loads | Source Clock Period | Source Clock                     | Driver Pin                                                                               | Net                                                                                                |
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+----------------------------------+------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
-| src0      | g1        | MMCME2_ADV/CLKOUT1  | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |               3.077 | ClkHdmixCO_clk_vga_hdmi_1024x768 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/mmcm_adv_inst/CLKOUT1  | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO_clk_vga_hdmi_1024x768 |
+| src0      | g2        | MMCME2_ADV/CLKOUT1  | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |               3.077 | ClkHdmixCO_clk_vga_hdmi_1024x768 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/mmcm_adv_inst/CLKOUT1  | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO_clk_vga_hdmi_1024x768 |
 | src0      | g0        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |              15.385 | ClkVgaxCO_clk_vga_hdmi_1024x768  | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/mmcm_adv_inst/CLKOUT0  | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO_clk_vga_hdmi_1024x768  |
-| src0      | g3        | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |              10.000 | clkfbout_clk_vga_hdmi_1024x768   | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/mmcm_adv_inst/CLKFBOUT | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkfbout_clk_vga_hdmi_1024x768   |
-| src1      | g2        | IBUF/O              | IOB_X1Y124 | IOB_X1Y124      | X1Y2         |           1 |               0 |              10.000 | sys_clk_pin                      | ClkSys100MhzxCI_IBUF_inst/O                                                              | ClkSys100MhzxCI_IBUF                                                                               |
+| src0      | g6        | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X1Y0 | X1Y0         |           1 |               0 |              10.000 | clkfbout_clk_vga_hdmi_1024x768   | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/mmcm_adv_inst/CLKFBOUT | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkfbout_clk_vga_hdmi_1024x768   |
+| src1      | g1        | MMCME2_ADV/CLKOUT0  | None       | MMCME2_ADV_X0Y2 | X0Y2         |           1 |               0 |              10.000 | ClkMandelxCO_clk_mandelbrot      | FpgaUserCDxB.ClkMandelbrotxI/inst/mmcm_adv_inst/CLKOUT0                                  | FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO_clk_mandelbrot                                      |
+| src1      | g5        | MMCME2_ADV/CLKFBOUT | None       | MMCME2_ADV_X0Y2 | X0Y2         |           1 |               0 |              10.000 | clkfbout_clk_mandelbrot          | FpgaUserCDxB.ClkMandelbrotxI/inst/mmcm_adv_inst/CLKFBOUT                                 | FpgaUserCDxB.ClkMandelbrotxI/inst/clkfbout_clk_mandelbrot                                          |
+| src2      | g3, g4    | IBUF/O              | IOB_X1Y124 | IOB_X1Y124      | X1Y2         |           2 |               0 |              10.000 | sys_clk_pin                      | ClkSys100MhzxCI_IBUF_inst/O                                                              | ClkSys100MhzxCI_IBUF                                                                               |
 +-----------+-----------+---------------------+------------+-----------------+--------------+-------------+-----------------+---------------------+----------------------------------+------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -80,14 +94,14 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     4 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2700 |    0 |   800 |    0 |    60 |    0 |    30 |    0 |    60 |
+| X0Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     4 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2700 |    0 |   800 |    0 |    60 |   19 |    30 |    0 |    60 |
 | X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     4 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2500 |    0 |   800 |    0 |    40 |    0 |    20 |    0 |    40 |
-| X0Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4200 |    0 |  1400 |    0 |   100 |    0 |    50 |    0 |   100 |
-| X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4000 |    0 |  1400 |    0 |    80 |    0 |    40 |    0 |    80 |
-| X0Y2              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  3600 |    0 |  1400 |    0 |   100 |    0 |    50 |    0 |   100 |
-| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |   65 |  4000 |   21 |  1400 |    0 |    80 |    0 |    40 |    0 |    80 |
-| X0Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  3600 |    0 |  1400 |    0 |   100 |    0 |    50 |    0 |   100 |
-| X1Y3              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4000 |    0 |  1400 |    0 |    80 |    0 |    40 |    0 |    80 |
+| X0Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   20 |  4200 |   10 |  1400 |    0 |   100 |   49 |    50 |    0 |   100 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    1 |  4000 |    1 |  1400 |    0 |    80 |   21 |    40 |    0 |    80 |
+| X0Y2              |    4 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    8 |  3600 |    6 |  1400 |    0 |   100 |   42 |    50 |    0 |   100 |
+| X1Y2              |    3 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    8 |    50 |   84 |  4000 |   29 |  1400 |    0 |    80 |   27 |    40 |    0 |    80 |
+| X0Y3              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  3600 |    0 |  1400 |    0 |   100 |   24 |    50 |    0 |   100 |
+| X1Y3              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  4000 |    0 |  1400 |    0 |    80 |   10 |    40 |    0 |    80 |
 | X0Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     4 |    0 |     1 |    0 |    50 |    0 |    50 |    0 |  2550 |    0 |   750 |    0 |    50 |    0 |    25 |    0 |    60 |
 | X1Y4              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     4 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2500 |    0 |   800 |    0 |    40 |    0 |    20 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
@@ -102,10 +116,10 @@ All Modules
 |    | X0 | X1 |
 +----+----+----+
 | Y4 |  0 |  0 |
-| Y3 |  0 |  0 |
-| Y2 |  0 |  2 |
-| Y1 |  0 |  0 |
-| Y0 |  0 |  2 |
+| Y3 |  2 |  2 |
+| Y2 |  4 |  3 |
+| Y1 |  2 |  2 |
+| Y0 |  2 |  2 |
 +----+----+----+
 
 
@@ -115,7 +129,7 @@ All Modules
 +-----------+-----------------+-------------------+---------------------------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                           | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                         |
 +-----------+-----------------+-------------------+---------------------------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------+
-| g0        | BUFG/O          | n/a               | ClkVgaxCO_clk_vga_hdmi_1024x768 |      15.385 | {0.000 7.692} |          65 |        8 |              0 |        0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |
+| g0        | BUFG/O          | n/a               | ClkVgaxCO_clk_vga_hdmi_1024x768 |      15.385 | {0.000 7.692} |         271 |        8 |              0 |        0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |
 +-----------+-----------------+-------------------+---------------------------------+-------------+---------------+-------------+----------+----------------+----------+-----------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -123,24 +137,49 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+----+-----+
-|    | X0 | X1  |
-+----+----+-----+
-| Y4 |  0 |   0 |
-| Y3 |  0 |   0 |
-| Y2 |  0 |  73 |
-| Y1 |  0 |   0 |
-| Y0 |  0 |   0 |
-+----+----+-----+
++----+-----+-----+
+|    | X0  | X1  |
++----+-----+-----+
+| Y4 |   0 |   0 |
+| Y3 |  24 |  10 |
+| Y2 |  50 |  85 |
+| Y1 |  69 |  22 |
+| Y0 |  19 |   0 |
++----+-----+-----+
 
 
 7. Device Cell Placement Summary for Global Clock g1
 ----------------------------------------------------
 
++-----------+-----------------+-------------------+-----------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                       | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                            |
++-----------+-----------------+-------------------+-----------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------+
+| g1        | BUFG/O          | n/a               | ClkMandelxCO_clk_mandelbrot |      10.000 | {0.000 5.000} |         226 |        0 |              0 |        0 | FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO |
++-----------+-----------------+-------------------+-----------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+-----+-----+
+|    | X0  | X1  |
++----+-----+-----+
+| Y4 |   0 |   0 |
+| Y3 |  24 |  10 |
+| Y2 |  42 |  61 |
+| Y1 |  49 |  21 |
+| Y0 |  19 |   0 |
++----+-----+-----+
+
+
+8. Device Cell Placement Summary for Global Clock g2
+----------------------------------------------------
+
 +-----------+-----------------+-------------------+----------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                            | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                          |
 +-----------+-----------------+-------------------+----------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------+
-| g1        | BUFG/O          | n/a               | ClkHdmixCO_clk_vga_hdmi_1024x768 |       3.077 | {0.000 1.538} |           0 |        8 |              0 |        0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO |
+| g2        | BUFG/O          | n/a               | ClkHdmixCO_clk_vga_hdmi_1024x768 |       3.077 | {0.000 1.538} |           0 |        8 |              0 |        0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO |
 +-----------+-----------------+-------------------+----------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -159,13 +198,38 @@ All Modules
 +----+----+----+
 
 
-8. Device Cell Placement Summary for Global Clock g2
+9. Device Cell Placement Summary for Global Clock g3
 ----------------------------------------------------
+
++-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+--------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock       | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                |
++-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+--------------------+
+| g3        | BUFG/O          | n/a               | sys_clk_pin |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | ClkSys100MhzBufgxC |
++-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+--------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y4 |  0 |  0 |
+| Y3 |  0 |  0 |
+| Y2 |  1 |  0 |
+| Y1 |  0 |  0 |
+| Y0 |  0 |  0 |
++----+----+----+
+
+
+10. Device Cell Placement Summary for Global Clock g4
+-----------------------------------------------------
 
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock       | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                   |
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------+
-| g2        | BUFG/O          | n/a               | sys_clk_pin |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | VgaHdmiCDxB.HdmixI/ClkSys100MhzBufgxC |
+| g4        | BUFG/O          | n/a               | sys_clk_pin |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | VgaHdmiCDxB.HdmixI/ClkSys100MhzBufgxC |
 +-----------+-----------------+-------------------+-------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -184,13 +248,38 @@ All Modules
 +----+----+----+
 
 
-9. Device Cell Placement Summary for Global Clock g3
-----------------------------------------------------
+11. Device Cell Placement Summary for Global Clock g5
+-----------------------------------------------------
+
++-----------+-----------------+-------------------+-------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------+
+| Global Id | Driver Type/Pin | Driver Region (D) | Clock                   | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                           |
++-----------+-----------------+-------------------+-------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------+
+| g5        | BUFG/O          | n/a               | clkfbout_clk_mandelbrot |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | FpgaUserCDxB.ClkMandelbrotxI/inst/clkfbout_buf_clk_mandelbrot |
++-----------+-----------------+-------------------+-------------------------+-------------+---------------+-------------+----------+----------------+----------+---------------------------------------------------------------+
+* Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
+** IO Loads column represents load cell count of IO types
+*** Clocking Loads column represents load cell count that are clock resources (global clock buffer, MMCM, PLL, etc)
+**** GT Loads column represents load cell count of GT types
+
+
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y4 |  0 |  0 |
+| Y3 |  0 |  0 |
+| Y2 |  1 |  0 |
+| Y1 |  0 |  0 |
+| Y0 |  0 |  0 |
++----+----+----+
+
+
+12. Device Cell Placement Summary for Global Clock g6
+-----------------------------------------------------
 
 +-----------+-----------------+-------------------+--------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                          | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                                                                                  |
 +-----------+-----------------+-------------------+--------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------+
-| g3        | BUFG/O          | n/a               | clkfbout_clk_vga_hdmi_1024x768 |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkfbout_buf_clk_vga_hdmi_1024x768 |
+| g6        | BUFG/O          | n/a               | clkfbout_clk_vga_hdmi_1024x768 |      10.000 | {0.000 5.000} |           0 |        0 |              1 |        0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkfbout_buf_clk_vga_hdmi_1024x768 |
 +-----------+-----------------+-------------------+--------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------------------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -209,29 +298,116 @@ All Modules
 +----+----+----+
 
 
-10. Clock Region Cell Placement per Global Clock: Region X1Y0
+13. Clock Region Cell Placement per Global Clock: Region X0Y0
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          19 |               0 |  0 |      0 |   19 |   0 |  0 |    0 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |
+| g1        | n/a   | BUFG/O          | None       |          19 |               0 |  0 |      0 |   19 |   0 |  0 |    0 |   0 |       0 | FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+14. Clock Region Cell Placement per Global Clock: Region X1Y0
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                                                  |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------+
-| g2        | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkSys100MhzBufgxC                                                                |
-| g3        | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkfbout_buf_clk_vga_hdmi_1024x768 |
+| g4        | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkSys100MhzBufgxC                                                                |
+| g6        | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkfbout_buf_clk_vga_hdmi_1024x768 |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-11. Clock Region Cell Placement per Global Clock: Region X1Y2
+15. Clock Region Cell Placement per Global Clock: Region X0Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          69 |               0 | 20 |      0 |   49 |   0 |  0 |    0 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |
+| g1        | n/a   | BUFG/O          | None       |          49 |               0 |  0 |      0 |   49 |   0 |  0 |    0 |   0 |       0 | FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+16. Clock Region Cell Placement per Global Clock: Region X1Y1
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          22 |               0 |  1 |      0 |   21 |   0 |  0 |    0 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |
+| g1        | n/a   | BUFG/O          | None       |          21 |               0 |  0 |      0 |   21 |   0 |  0 |    0 |   0 |       0 | FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+17. Clock Region Cell Placement per Global Clock: Region X0Y2
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          50 |               0 |  8 |      0 |   42 |   0 |  0 |    0 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |
+| g1        | n/a   | BUFG/O          | None       |          42 |               0 |  0 |      0 |   42 |   0 |  0 |    0 |   0 |       0 | FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |
+| g3        | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | ClkSys100MhzBufgxC                                                          |
+| g5        | n/a   | BUFG/O          | None       |           1 |               0 |  0 |      0 |    0 |   0 |  0 |    1 |   0 |       0 | FpgaUserCDxB.ClkMandelbrotxI/inst/clkfbout_buf_clk_mandelbrot               |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+18. Clock Region Cell Placement per Global Clock: Region X1Y2
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                          |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          73 |               0 | 65 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO  |
-| g1        | n/a   | BUFG/O          | None       |           8 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO |
+| g0        | n/a   | BUFG/O          | None       |          85 |               0 | 50 |      0 |   27 |   0 |  0 |    0 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO  |
+| g1        | n/a   | BUFG/O          | None       |          61 |               0 | 34 |      0 |   27 |   0 |  0 |    0 |   0 |       0 | FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                               |
+| g2        | n/a   | BUFG/O          | None       |           8 |               0 |  0 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+19. Clock Region Cell Placement per Global Clock: Region X0Y3
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          24 |               0 |  0 |      0 |   24 |   0 |  0 |    0 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |
+| g1        | n/a   | BUFG/O          | None       |          24 |               0 |  0 |      0 |   24 |   0 |  0 |    0 |   0 |       0 | FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+* Clock Loads column represents the clock pin loads (pin count)
+** Non-Clock Loads column represents the non-clock pin loads (pin count)
+*** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
+
+
+20. Clock Region Cell Placement per Global Clock: Region X1Y3
+-------------------------------------------------------------
+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                                         |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          10 |               0 |  0 |      0 |   10 |   0 |  0 |    0 |   0 |       0 | VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |
+| g1        | n/a   | BUFG/O          | None       |          10 |               0 |  0 |      0 |   10 |   0 |  0 |    0 |   0 |       0 | FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-----------------------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -239,10 +415,13 @@ All Modules
 
 
 # Location of BUFG Primitives 
-set_property LOC BUFGCTRL_X0Y3 [get_cells VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkf_buf]
+set_property LOC BUFGCTRL_X0Y6 [get_cells VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkf_buf]
 set_property LOC BUFGCTRL_X0Y0 [get_cells VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkout1_buf]
 set_property LOC BUFGCTRL_X0Y1 [get_cells VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkout2_buf]
-set_property LOC BUFGCTRL_X0Y2 [get_cells VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.BUFGClkSysToClkVgaHdmixI]
+set_property LOC BUFGCTRL_X0Y5 [get_cells VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.BUFGClkSysToClkVgaHdmixI]
+set_property LOC BUFGCTRL_X0Y4 [get_cells FpgaUserCDxB.ClkMandelbrotxI/inst/clkf_buf]
+set_property LOC BUFGCTRL_X0Y2 [get_cells FpgaUserCDxB.ClkMandelbrotxI/inst/clkout1_buf]
+set_property LOC BUFGCTRL_X0Y3 [get_cells FpgaUserCDxB.BUFGClkSysToClkMandelxI]
 
 # Location of IO Primitives which is load of clock spine
 
@@ -253,7 +432,7 @@ set_property LOC IOB_X1Y124 [get_ports ClkSys100MhzxCI]
 #startgroup
 create_pblock {CLKAG_VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO}
 add_cells_to_pblock [get_pblocks  {CLKAG_VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO"}]]]
-resize_pblock [get_pblocks {CLKAG_VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO}] -add {CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+resize_pblock [get_pblocks {CLKAG_VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
 
 # Clock net "VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO" driven by instance "VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/clkout2_buf" located at site "BUFGCTRL_X0Y1"
@@ -261,4 +440,11 @@ resize_pblock [get_pblocks {CLKAG_VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVga
 create_pblock {CLKAG_VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO}
 add_cells_to_pblock [get_pblocks  {CLKAG_VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO"}]]]
 resize_pblock [get_pblocks {CLKAG_VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkHdmixCO}] -add {CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
+#endgroup
+
+# Clock net "FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO" driven by instance "FpgaUserCDxB.ClkMandelbrotxI/inst/clkout1_buf" located at site "BUFGCTRL_X0Y2"
+#startgroup
+create_pblock {CLKAG_FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO}
+add_cells_to_pblock [get_pblocks  {CLKAG_FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO"}]]]
+resize_pblock [get_pblocks {CLKAG_FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO}] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3}
 #endgroup
