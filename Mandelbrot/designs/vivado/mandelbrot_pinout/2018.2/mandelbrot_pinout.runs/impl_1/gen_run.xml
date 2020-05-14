@@ -1,80 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a200tsbg484-1" LaunchTime="1589297182">
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BITSTR-SYSDEF" Name="mandelbrot_pinout.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="mandelbrot_pinout.ltx"/>
-  <File Type="BG-BGN" Name="mandelbrot_pinout.bgn"/>
-  <File Type="RBD_FILE" Name="mandelbrot_pinout.rbd"/>
-  <File Type="BG-DRC" Name="mandelbrot_pinout.drc"/>
-  <File Type="NPI_FILE" Name="mandelbrot_pinout.npi"/>
-  <File Type="RNPI_FILE" Name="mandelbrot_pinout.rnpi"/>
-  <File Type="CFI_FILE" Name="mandelbrot_pinout.cfi"/>
-  <File Type="PDI-FILE" Name="mandelbrot_pinout.pdi"/>
-  <File Type="BITSTR-MMI" Name="mandelbrot_pinout.mmi"/>
-  <File Type="BITSTR-BMM" Name="mandelbrot_pinout_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="mandelbrot_pinout.nky"/>
-  <File Type="BITSTR-RBT" Name="mandelbrot_pinout.rbt"/>
-  <File Type="BITSTR-MSK" Name="mandelbrot_pinout.msk"/>
+  <File Type="PA-TCL" Name="mandelbrot_pinout.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="mandelbrot_pinout_bus_skew_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="mandelbrot_pinout_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="mandelbrot_pinout_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="mandelbrot_pinout_opt.dcp"/>
+  <File Type="OPT-DRC" Name="mandelbrot_pinout_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="mandelbrot_pinout.hwdef"/>
+  <File Type="PWROPT-DCP" Name="mandelbrot_pinout_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="mandelbrot_pinout_placed.dcp"/>
+  <File Type="PLACE-IO" Name="mandelbrot_pinout_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="mandelbrot_pinout_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="mandelbrot_pinout_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="mandelbrot_pinout_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="mandelbrot_pinout_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="mandelbrot_pinout_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="mandelbrot_pinout_physopt.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="mandelbrot_pinout_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="mandelbrot_pinout_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="mandelbrot_pinout_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="mandelbrot_pinout_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="mandelbrot_pinout_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="mandelbrot_pinout_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="mandelbrot_pinout_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="mandelbrot_pinout_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="mandelbrot_pinout_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="mandelbrot_pinout_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="mandelbrot_pinout_power_summary_routed.pb"/>
   <File Type="BG-BIN" Name="mandelbrot_pinout.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="mandelbrot_pinout_timing_summary_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="mandelbrot_pinout.msk"/>
+  <File Type="CFI_FILE" Name="mandelbrot_pinout.cfi"/>
+  <File Type="ROUTE-TIMING-PB" Name="mandelbrot_pinout_timing_summary_routed.pb"/>
+  <File Type="BITSTR-RBT" Name="mandelbrot_pinout.rbt"/>
+  <File Type="RNPI_FILE" Name="mandelbrot_pinout.rnpi"/>
+  <File Type="ROUTE-TIMING-RPX" Name="mandelbrot_pinout_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="mandelbrot_pinout.nky"/>
+  <File Type="BITSTR-BMM" Name="mandelbrot_pinout_bd.bmm"/>
+  <File Type="ROUTE-CLK" Name="mandelbrot_pinout_clock_utilization_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="mandelbrot_pinout.mmi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="mandelbrot_pinout_bus_skew_routed.rpt"/>
+  <File Type="PDI-FILE" Name="mandelbrot_pinout.pdi"/>
+  <File Type="RBD_FILE" Name="mandelbrot_pinout.rbd"/>
+  <File Type="BG-BGN" Name="mandelbrot_pinout.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="mandelbrot_pinout.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-LTX" Name="mandelbrot_pinout.ltx"/>
+  <File Type="NPI_FILE" Name="mandelbrot_pinout.npi"/>
+  <File Type="BG-DRC" Name="mandelbrot_pinout.drc"/>
   <File Type="RCFI_FILE" Name="mandelbrot_pinout.rcfi"/>
   <File Type="BG-BIT" Name="mandelbrot_pinout.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="mandelbrot_pinout_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="mandelbrot_pinout_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="mandelbrot_pinout_bus_skew_postroute_physopted.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="mandelbrot_pinout_route_status.pb"/>
   <File Type="RDI-RDI" Name="mandelbrot_pinout.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="mandelbrot_pinout_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="mandelbrot_pinout_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="mandelbrot_pinout_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="mandelbrot_pinout_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="mandelbrot_pinout_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="mandelbrot_pinout_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="mandelbrot_pinout_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="mandelbrot_pinout_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="mandelbrot_pinout_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="mandelbrot_pinout_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="mandelbrot_pinout_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="mandelbrot_pinout_route_status.pb"/>
   <File Type="ROUTE-STATUS" Name="mandelbrot_pinout_route_status.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="mandelbrot_pinout_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="mandelbrot_pinout_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="mandelbrot_pinout_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="mandelbrot_pinout_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="mandelbrot_pinout_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="mandelbrot_pinout_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="mandelbrot_pinout_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="mandelbrot_pinout_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="mandelbrot_pinout_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="mandelbrot_pinout_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="mandelbrot_pinout_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="mandelbrot_pinout_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="mandelbrot_pinout_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="mandelbrot_pinout_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="mandelbrot_pinout_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="mandelbrot_pinout_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="mandelbrot_pinout_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="mandelbrot_pinout_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="mandelbrot_pinout_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="mandelbrot_pinout_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="mandelbrot_pinout_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="mandelbrot_pinout_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="mandelbrot_pinout_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="mandelbrot_pinout_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="mandelbrot_pinout_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="mandelbrot_pinout_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="mandelbrot_pinout_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="mandelbrot_pinout_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="mandelbrot_pinout_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="mandelbrot_pinout_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="mandelbrot_pinout.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="mandelbrot_pinout_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="mandelbrot_pinout_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="mandelbrot_pinout_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="mandelbrot_pinout_timing_summary_init.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="mandelbrot_pinout_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="mandelbrot_pinout_reports.tcl"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="mandelbrot_pinout_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="mandelbrot_pinout.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../../../ips/hw/hdmi/src/hdl_pkg/hdmi_interface_pkg.vhd">
@@ -208,11 +189,12 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_vga_hdmi_1024x600"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_vga_hdmi_640x480"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_vga_hdmi_1024x768"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_vga_hdmi_800x600"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_mandelbrot"/>
   <BlockFileSet Type="BlockSrcs" Name="bram_video_memory_wauto_dauto_rdclk1_wrclk1"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_vga_hdmi_800x600"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_vga_hdmi_1024x768"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_vga_hdmi_640x480"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_vga_hdmi_1024x600"/>
 </GenRun>

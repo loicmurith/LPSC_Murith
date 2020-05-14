@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../ip/mathDSP/sim/mathDSP.vhd" \
+
+nosort

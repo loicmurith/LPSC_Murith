@@ -203,6 +203,46 @@ architecture rtl of mandelbrot_pinout is
 --    );
 --    END COMPONENT;
 
+    -- Mandelbrot's algorithm calculator
+    COMPONENT mandelbrot_calculator
+        generic ( COMMA    : integer;  -- nombre de bits après la virgule
+            MAX_ITER : integer;
+            SIZE     : integer);
+        port(
+            clk_i       : in    std_logic;
+            rst_i       : in    std_logic;
+            ready_o     : out   std_logic;
+            start_i     : in    std_logic;
+            finished_o  : out   std_logic;
+            c_real_i    : in    std_logic_vector(SIZE-1 downto 0);
+            c_imaginary_i : in    std_logic_vector(SIZE-1 downto 0);
+            z_real_o    : out   std_logic_vector(SIZE-1 downto 0);
+            z_imaginary_o : out   std_logic_vector(SIZE-1 downto 0);
+            iterations_o : out   std_logic_vector(SIZE-1 downto 0)
+        );
+    END COMPONENT;
+    
+    -- Complex numbers generator
+    component ComplexValueGenerator is
+        generic (
+            SIZE       : integer;
+            X_SIZE     : integer;
+            Y_SIZE     : integer;
+            SCREEN_RES : integer);
+        port (          -- TODO : put generic size
+            clk           : in  std_logic;
+            reset         : in  std_logic;
+            next_value    : in  std_logic;
+            c_top_left_RE : in  std_logic_vector((18 - 1) downto 0);
+            c_top_left_IM : in  std_logic_vector((18 - 1) downto 0);
+            c_inc_RE      : in  std_logic_vector((18 - 1) downto 0);
+            c_inc_IM      : in  std_logic_vector((18 - 1) downto 0);
+            c_real        : out std_logic_vector((18 - 1) downto 0);
+            c_imaginary   : out std_logic_vector((18 - 1) downto 0);
+            X_screen      : out std_logic_vector((18 - 1) downto 0);
+            Y_screen      : out std_logic_vector((18 - 1) downto 0));
+    end component ComplexValueGenerator;
+
     component fifo_regport
         port (
             wr_clk : in  std_logic;
@@ -216,6 +256,7 @@ architecture rtl of mandelbrot_pinout is
             full   : out std_logic;
             empty  : out std_logic);
     end component;
+    
 
     -- component cdc_sync is
     --     generic (
@@ -438,7 +479,48 @@ begin  -- architecture rtl
                  addrb => BramVideoMemoryReadAddrxD,
                  dinb  => (others => '0'),
                  doutb => BramVideoMemoryReadDataxD);
-
+                 
+          -- MandelBrot computer component
+          mandelBrot_computer : mandelbrot_calculator
+            GENERIC MAP(
+                COMMA => 15,
+                MAX_ITER => 100,
+                SIZE => 18 
+            )
+            PORT MAP(       -- TODO : map
+                clk_i => ClkMandelxC,
+                rst_i => ResetxR,
+                ready_o => open,
+                start_i => '0',
+                finished_o => open,
+                c_real_i => (others => '0'),
+                c_imaginary_i => (others => '0'),
+                z_real_o => open,
+                z_imaginary_o => open,
+                iterations_o => open
+                );
+                
+        -- COmplex value generator
+        ComplexValueGeneratorxI : entity work.ComplexValueGenerator
+            generic map (       --TODO : map
+                SIZE       => 18,
+                X_SIZE     => 1024,
+                Y_SIZE     => 768,
+                SCREEN_RES => 10)
+            port map (
+                clk           => ClkMandelxC,
+                reset         => ResetxR,
+                next_value    => '1',
+                c_inc_RE      => (others => '0'),
+                c_inc_IM      => (others => '0'),
+                c_top_left_RE => (others => '0'),
+                c_top_left_IM => (others => '0'),
+                c_real        => open,
+                c_imaginary   => open,
+                X_screen      => open,
+                Y_screen      => open
+                );
+    
     end block VgaHdmiToFpgaUserCDCxB;
 
     -- FPGA User Clock Domain
