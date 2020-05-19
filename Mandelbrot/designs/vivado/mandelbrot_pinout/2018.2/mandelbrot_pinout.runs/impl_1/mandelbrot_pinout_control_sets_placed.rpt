@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue May 12 17:36:32 2020
+| Date         : Tue May 19 14:44:59 2020
 | Host         : xilinx-vm running 64-bit unknown
 | Command      : report_control_sets -verbose -file mandelbrot_pinout_control_sets_placed.rpt
 | Design       : mandelbrot_pinout
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     6 |
-|    Minimum number of control sets                        |     6 |
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    15 |
+| Unused register locations in slices containing registers |    32 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     6 |
+| Total control sets |    11 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     0 |
-| >= 6 to < 8        |     0 |
+| >= 6 to < 8        |     2 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     1 |
+| >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     5 |
+| >= 16              |     9 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              32 |           20 |
-| No           | No                    | Yes                    |              37 |           13 |
-| No           | Yes                   | No                     |              12 |            4 |
+| No           | No                    | No                     |              37 |           22 |
+| No           | No                    | Yes                    |              27 |           11 |
+| No           | Yes                   | No                     |              20 |           10 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              32 |           13 |
+| Yes          | No                    | Yes                    |             180 |           53 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,15 +70,20 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|                                 Clock Signal                                 |                   Enable Signal                  |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
-+------------------------------------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                  | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/SR[0]               |                4 |             12 |
-|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/VCountxD | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/bbstub_PllLockedxSO |                6 |             16 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | VCountIntxD                                      | FpgaUserCDxB.ImageGeneratorxI/AR[0]                         |                7 |             16 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |                                                  | FpgaUserCDxB.ImageGeneratorxI/AR[0]                         |                7 |             18 |
-|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                  | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/bbstub_PllLockedxSO |                6 |             19 |
-|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                  |                                                             |               20 |             32 |
-+------------------------------------------------------------------------------+--------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
++------------------------------------------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|                                 Clock Signal                                 |                       Enable Signal                       |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
++------------------------------------------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |                                                           | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |                3 |              6 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/iterations_o[6]_i_1_n_0  | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |                1 |              7 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/next_zReal_s[17]_i_1_n_0 | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |                3 |             18 |
+|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/VCountxD          | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/bbstub_PllLockedxSO |                8 |             18 |
+|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                           | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/VidOnxS_reg_4       |               10 |             20 |
+|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                           | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/bbstub_PllLockedxSO |                8 |             21 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/cReal_s                  | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |               12 |             32 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/E[0]                     | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |               13 |             32 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/ready_o_reg_0[0]         | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |                9 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/ready_o_i_1_n_0          | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |                7 |             37 |
+|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                           |                                                             |               22 |             37 |
++------------------------------------------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 
 

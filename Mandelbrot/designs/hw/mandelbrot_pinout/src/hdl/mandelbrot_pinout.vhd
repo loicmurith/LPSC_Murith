@@ -572,8 +572,8 @@ begin  -- architecture rtl
                 c_top_left_IM => "001000" & x"000",
                 c_real        => c_real_s,
                 c_imaginary   => c_imag_s,
-                X_screen      => VCountIntxD,
-                Y_screen      => HCountIntxD
+                X_screen      => HCountIntxD,
+                Y_screen      => VCountIntxD
                 );
                 
                 
@@ -623,30 +623,30 @@ begin  -- architecture rtl
         end process syncProcess;
 
         -- The process below was commented
-         HVCountIntxP : process (all) is
-         begin  -- process HVCountxP
+--         HVCountIntxP : process (all) is
+--         begin  -- process HVCountxP
 
-             if PllNotLockedxS = '1' then
-                 HCountIntxD <= (others => '0');
-                 VCountIntxD <= (others => '0');
-             elsif rising_edge(ClkMandelxC) then
-                 HCountIntxD <= HCountIntxD;
-                 VCountIntxD <= VCountIntxD;
+--             if PllNotLockedxS = '1' then
+--                 HCountIntxD <= (others => '0');
+--                 VCountIntxD <= (others => '0');
+--             elsif rising_edge(ClkMandelxC) then
+--                 HCountIntxD <= HCountIntxD;
+--                 VCountIntxD <= VCountIntxD;
 
-                 if unsigned(HCountIntxD) = (C_VGA_CONFIG.HActivexD - 1) then
-                     HCountIntxD <= (others => '0');
+--                 if unsigned(HCountIntxD) = (C_VGA_CONFIG.HActivexD - 1) then
+--                     HCountIntxD <= (others => '0');
 
-                     if unsigned(VCountIntxD) = (C_VGA_CONFIG.VActivexD - 1) then
-                         VCountIntxD <= (others => '0');
-                     else
-                         VCountIntxD <= std_logic_vector(unsigned(VCountIntxD) + 1);
-                     end if;
-                 else
-                     HCountIntxD <= std_logic_vector(unsigned(HCountIntxD) + 1);
-                 end if;
-             end if;
+--                     if unsigned(VCountIntxD) = (C_VGA_CONFIG.VActivexD - 1) then
+--                         VCountIntxD <= (others => '0');
+--                     else
+--                         VCountIntxD <= std_logic_vector(unsigned(VCountIntxD) + 1);
+--                     end if;
+--                 else
+--                     HCountIntxD <= std_logic_vector(unsigned(HCountIntxD) + 1);
+--                 end if;
+--             end if;
 
-         end process HVCountIntxP;
+--         end process HVCountIntxP;
 
     end block FpgaUserCDxB;
 
