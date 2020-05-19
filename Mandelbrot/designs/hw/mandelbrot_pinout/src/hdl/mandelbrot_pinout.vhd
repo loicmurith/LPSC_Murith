@@ -83,12 +83,12 @@ architecture rtl of mandelbrot_pinout is
     -- constant C_RESOLUTION : string := "800x600";
     -- constant C_RESOLUTION : string := "640x480";
 
-    constant C_DATA_SIZE                        : integer               := 16;
+    constant C_DATA_SIZE                        : integer               := 18;
     constant C_PIXEL_SIZE                       : integer               := 8;
     constant C_BRAM_VIDEO_MEMORY_ADDR_SIZE      : integer               := 20;
     constant C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE : integer               := 10;
     constant C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE  : integer               := 10;
-    constant C_BRAM_VIDEO_MEMORY_DATA_SIZE      : integer               := 9; -- 9
+    constant C_BRAM_VIDEO_MEMORY_DATA_SIZE      : integer               := 7; -- 9
     constant C_CDC_TYPE                         : integer range 0 to 2  := 1;
     constant C_RESET_STATE                      : integer range 0 to 1  := 0;
     constant C_SINGLE_BIT                       : integer range 0 to 1  := 1;
@@ -175,33 +175,33 @@ architecture rtl of mandelbrot_pinout is
     end component image_generator;
 
 -- Old BRAM IP (before IP upgrade)
-     component bram_video_memory_wauto_dauto_rdclk1_wrclk1
-         port (
-             clka  : in  std_logic;
-             wea   : in  std_logic_vector(0 downto 0);
-             addra : in  std_logic_vector(19 downto 0);
-             dina  : in  std_logic_vector(8 downto 0);
-             douta : out std_logic_vector(8 downto 0);
-             clkb  : in  std_logic;
-             web   : in  std_logic_vector(0 downto 0);
-             addrb : in  std_logic_vector(19 downto 0);
-             dinb  : in  std_logic_vector(8 downto 0);
-             doutb : out std_logic_vector(8 downto 0));
-     end component;
---    COMPONENT bram_video_memory_wauto_dauto_rdclk1_wrclk1
---      PORT (
---        clka : IN STD_LOGIC;
---        wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
---        addra : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
---        dina : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
---        douta : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
---        clkb : IN STD_LOGIC;
---        web : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
---        addrb : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
---        dinb : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
---        doutb : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
---    );
---    END COMPONENT;
+--     component bram_video_memory_wauto_dauto_rdclk1_wrclk1
+--         port (
+--             clka  : in  std_logic;
+--             wea   : in  std_logic_vector(0 downto 0);
+--             addra : in  std_logic_vector(19 downto 0);
+--             dina  : in  std_logic_vector(8 downto 0);
+--             douta : out std_logic_vector(8 downto 0);
+--             clkb  : in  std_logic;
+--             web   : in  std_logic_vector(0 downto 0);
+--             addrb : in  std_logic_vector(19 downto 0);
+--             dinb  : in  std_logic_vector(8 downto 0);
+--             doutb : out std_logic_vector(8 downto 0));
+--     end component;
+    COMPONENT bram_video_memory_wauto_dauto_rdclk1_wrclk1
+      PORT (
+        clka : IN STD_LOGIC;
+        wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        addra : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+        dina : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+        douta : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+        clkb : IN STD_LOGIC;
+        web : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        addrb : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+        dinb : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+        doutb : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+    );
+    END COMPONENT;
 
     -- Mandelbrot's algorithm calculator
     COMPONENT mandelbrot_calculator
@@ -229,18 +229,18 @@ architecture rtl of mandelbrot_pinout is
             X_SIZE     : integer;
             Y_SIZE     : integer;
             SCREEN_RES : integer);
-        port (          -- TODO : put generic size
+        port (     
             clk           : in  std_logic;
             reset         : in  std_logic;
             next_value    : in  std_logic;
-            c_top_left_RE : in  std_logic_vector((18 - 1) downto 0);
-            c_top_left_IM : in  std_logic_vector((18 - 1) downto 0);
-            c_inc_RE      : in  std_logic_vector((18 - 1) downto 0);
-            c_inc_IM      : in  std_logic_vector((18 - 1) downto 0);
-            c_real        : out std_logic_vector((18 - 1) downto 0);
-            c_imaginary   : out std_logic_vector((18 - 1) downto 0);
-            X_screen      : out std_logic_vector((18 - 1) downto 0);
-            Y_screen      : out std_logic_vector((18 - 1) downto 0));
+            c_top_left_RE : in  std_logic_vector((SIZE - 1) downto 0);
+            c_top_left_IM : in  std_logic_vector((SIZE - 1) downto 0);
+            c_inc_RE      : in  std_logic_vector((SIZE - 1) downto 0);
+            c_inc_IM      : in  std_logic_vector((SIZE - 1) downto 0);
+            c_real        : out std_logic_vector((SIZE - 1) downto 0);
+            c_imaginary   : out std_logic_vector((SIZE - 1) downto 0);
+            X_screen      : out std_logic_vector((SIZE - 1) downto 0);
+            Y_screen      : out std_logic_vector((SIZE - 1) downto 0));
     end component ComplexValueGenerator;
 
     component fifo_regport
@@ -299,6 +299,7 @@ architecture rtl of mandelbrot_pinout is
     signal VCountxD             : std_logic_vector((C_DATA_SIZE - 1) downto 0);
     signal VidOnxS              : std_logic;
     -- Others
+    signal Nb_iter_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
     signal DataImGen2HDMIxD     : std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0);
      signal DataImGen2BramMVxD         : std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0); --
      signal DataBramMV2HdmixD          : std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0); --
@@ -422,9 +423,12 @@ begin  -- architecture rtl
     begin  -- block VgaHdmiCDxB
 
         -- next two assignations were commented
-         DataBramMV2HdmixAS : DataBramMV2HdmixD <= BramVideoMemoryReadDataxD(8 downto 6) & "00000" &
-                                                   BramVideoMemoryReadDataxD(5 downto 3) & "00000" &
-                                                   BramVideoMemoryReadDataxD(2 downto 0) & "00000";
+--        DataBramMV2HdmixAS : DataBramMV2HdmixD <= BramVideoMemoryReadDataxD(8 downto 6) & "00000" &
+--                                                   BramVideoMemoryReadDataxD(5 downto 3) & "00000" &
+--                                                   BramVideoMemoryReadDataxD(2 downto 0) & "00000";
+        DataBramMV2HdmixAS : DataBramMV2HdmixD <= BramVideoMemoryReadDataxD & "0" &
+                                                   BramVideoMemoryReadDataxD & "0" &
+                                                   BramVideoMemoryReadDataxD & "0";
 
          BramVMRdAddrxAS : BramVideoMemoryReadAddrxD <= VCountxD((C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE - 1) downto 0) &
                                                         HCountxD((C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE - 1) downto 0);
@@ -480,46 +484,9 @@ begin  -- architecture rtl
                  dinb  => (others => '0'),
                  doutb => BramVideoMemoryReadDataxD);
                  
-          -- MandelBrot computer component
-          mandelBrot_computer : mandelbrot_calculator
-            GENERIC MAP(
-                COMMA => 15,
-                MAX_ITER => 100,
-                SIZE => 18 
-            )
-            PORT MAP(       -- TODO : map
-                clk_i => ClkMandelxC,
-                rst_i => ResetxR,
-                ready_o => open,
-                start_i => '0',
-                finished_o => open,
-                c_real_i => (others => '0'),
-                c_imaginary_i => (others => '0'),
-                z_real_o => open,
-                z_imaginary_o => open,
-                iterations_o => open
-                );
+          
                 
-        -- COmplex value generator
-        ComplexValueGeneratorxI : entity work.ComplexValueGenerator
-            generic map (       --TODO : map
-                SIZE       => 18,
-                X_SIZE     => 1024,
-                Y_SIZE     => 768,
-                SCREEN_RES => 10)
-            port map (
-                clk           => ClkMandelxC,
-                reset         => ResetxR,
-                next_value    => '1',
-                c_inc_RE      => (others => '0'),
-                c_inc_IM      => (others => '0'),
-                c_top_left_RE => (others => '0'),
-                c_top_left_IM => (others => '0'),
-                c_real        => open,
-                c_imaginary   => open,
-                X_screen      => open,
-                Y_screen      => open
-                );
+        
     
     end block VgaHdmiToFpgaUserCDCxB;
 
@@ -530,8 +497,17 @@ begin  -- architecture rtl
 
         -- 3 sub signals were commented
          signal ClkSys100MhzBufgxC : std_logic                                    := '0';
-         signal HCountIntxD        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := std_logic_vector(C_VGA_CONFIG.HActivexD - 1);
+         signal HCountIntxD        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := "00" & std_logic_vector(C_VGA_CONFIG.HActivexD - 1);
          signal VCountIntxD        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := (others => '0');
+         
+         -- signals to interface MandelBrot computer and complex_val generator
+         signal c_real_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+         signal c_imag_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+         signal computerRdy_s       : std_logic;
+         
+         -- sync signals
+        signal computeNow_s            : std_logic;
+        signal delay_s                 : std_logic;
 
     begin  -- block FpgaUserCDxB
 
@@ -540,10 +516,11 @@ begin  -- architecture rtl
         --------------------------------------------------------------------------------------------------------------
          PllNotLockedxAS : PllNotLockedxS <= not PllLockedxS;
          PllLockedxAS    : PllLockedxD(0) <= PllLockedxS;
-
-         BramVideoMemoryWriteDataxAS : BramVideoMemoryWriteDataxD <= DataImGen2BramMVxD(23 downto 21) &
-                                                                     DataImGen2BramMVxD(15 downto 13) &
-                                                                     DataImGen2BramMVxD(7 downto 5);
+         
+--         BramVideoMemoryWriteDataxAS : BramVideoMemoryWriteDataxD <= DataImGen2BramMVxD(23 downto 21) &
+--                                                                     DataImGen2BramMVxD(15 downto 13) &
+--                                                                     DataImGen2BramMVxD(7 downto 5);
+        BramVideoMemoryWriteDataxAS : BramVideoMemoryWriteDataxD <= Nb_iter_s((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
 
          BramVMWrAddrxAS : BramVideoMemoryWriteAddrxD <= VCountIntxD((C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE - 1) downto 0) &
                                                          HCountIntxD((C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE - 1) downto 0);
@@ -563,20 +540,87 @@ begin  -- architecture rtl
         -- This bloc was commented (ABOVE)
         --------------------------------------------------------------------------------------------------------------
 
-        ImageGeneratorxI : entity work.image_generator
-            generic map (
-                C_DATA_SIZE  => C_DATA_SIZE,
-                C_PIXEL_SIZE => C_PIXEL_SIZE,
-                C_VGA_CONFIG => C_VGA_CONFIG)
+--        ImageGeneratorxI : entity work.image_generator
+--            generic map (
+--                C_DATA_SIZE  => C_DATA_SIZE,
+--                C_PIXEL_SIZE => C_PIXEL_SIZE,
+--                C_VGA_CONFIG => C_VGA_CONFIG)
+--            port map (
+--                ClkVgaxCI    => ClkMandelxC,            --,ClkVgaxC
+--                RstxRAI      => PllNotLockedxS,  --,HdmiPllNotLockedxS
+--                PllLockedxSI => PllLockedxD(0),     --,HdmiPllLockedxS
+--                HCountxDI    => HCountIntxD,            --,HCountxD
+--                VCountxDI    => VCountIntxD,            --,VCountxD
+--                VidOnxSI     => '1',             --,VidOnxS
+--                DataxDO      => DataImGen2BramMVxD,    --,DataImGen2HDMIxD
+--                Color1xDI    => RdDataFlagColor1xDP(((C_PIXEL_SIZE * 3) - 1) downto 0));
+                
+        -- COmplex value generator
+        ComplexValueGeneratorxI : entity work.ComplexValueGenerator
+            generic map (       --TODO : map
+                SIZE       => C_DATA_SIZE,
+                X_SIZE     => 1024,
+                Y_SIZE     => 768,
+                SCREEN_RES => C_DATA_SIZE) --10
             port map (
-                ClkVgaxCI    => ClkMandelxC,            --,ClkVgaxC
-                RstxRAI      => PllNotLockedxS,  --,HdmiPllNotLockedxS
-                PllLockedxSI => PllLockedxD(0),     --,HdmiPllLockedxS
-                HCountxDI    => HCountIntxD,            --,HCountxD
-                VCountxDI    => VCountIntxD,            --,VCountxD
-                VidOnxSI     => '1',             --,VidOnxS
-                DataxDO      => DataImGen2BramMVxD,    --,DataImGen2HDMIxD
-                Color1xDI    => RdDataFlagColor1xDP(((C_PIXEL_SIZE * 3) - 1) downto 0));
+                clk           => ClkMandelxC,
+                reset         => ResetxR,
+                next_value    => computerRdy_s,
+                c_inc_RE      => "000" & x"00" & "1100000", -- 3/1024 = 0.0029296875
+                c_inc_IM      => "000" & x"00" & "1010101", -- 2/768 = 0.00260416667
+                c_top_left_RE => "110000" & x"000",
+                c_top_left_IM => "001000" & x"000",
+                c_real        => c_real_s,
+                c_imaginary   => c_imag_s,
+                X_screen      => VCountIntxD,
+                Y_screen      => HCountIntxD
+                );
+                
+                
+        -- MandelBrot computer component
+          mandelBrot_computer : mandelbrot_calculator
+            GENERIC MAP(
+                COMMA => 15,
+                MAX_ITER => 100,
+                SIZE => C_DATA_SIZE 
+            )
+            PORT MAP(       
+                clk_i => ClkMandelxC,
+                rst_i => ResetxR,
+                ready_o => computerRdy_s,
+                start_i => computeNow_s,
+                finished_o => open,
+                c_real_i => c_real_s,
+                c_imaginary_i => c_imag_s,
+                z_real_o => open,
+                z_imaginary_o => open,
+                iterations_o => Nb_iter_s
+                );
+                
+        -- value genearator and mandelbrot computer synch process
+        syncProcess : process(ClkMandelxC, ResetxR) is
+        begin
+            if (ResetxR = '1') then
+                computeNow_s <= '0';
+                delay_s <= '0';
+                
+            elsif rising_edge(ClkMandelxC) then
+            
+                if (computerRdy_s = '1') then
+                    delay_s <= '1';
+                else
+                    delay_s <= delay_s;
+                end if;
+                
+                if (delay_s = '1') then
+                    computeNow_s <= '1';
+                    delay_s <= '0';
+                else
+                    computeNow_s <= '0';
+                end if;
+                
+            end if;
+        end process syncProcess;
 
         -- The process below was commented
          HVCountIntxP : process (all) is
