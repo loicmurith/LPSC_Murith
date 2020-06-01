@@ -85,9 +85,9 @@ architecture rtl of mandelbrot_pinout is
 
     constant C_DATA_SIZE                        : integer               := 18;
     constant C_PIXEL_SIZE                       : integer               := 8;
-    constant C_BRAM_VIDEO_MEMORY_ADDR_SIZE      : integer               := 20;
-    constant C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE : integer               := 10;
-    constant C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE  : integer               := 10;
+    constant C_BRAM_VIDEO_MEMORY_ADDR_SIZE      : integer               := 18;--20
+    constant C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE : integer               := 10;--10
+    constant C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE  : integer               := 10;--10
     constant C_BRAM_VIDEO_MEMORY_DATA_SIZE      : integer               := 7; -- 9
     constant C_CDC_TYPE                         : integer range 0 to 2  := 1;
     constant C_RESET_STATE                      : integer range 0 to 1  := 0;
@@ -174,33 +174,35 @@ architecture rtl of mandelbrot_pinout is
             Color1xDI    : in  std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0));
     end component image_generator;
 
-    -- Old BRAM IP (before IP upgrade) --
---     component bram_video_memory_wauto_dauto_rdclk1_wrclk1
---         port (
---             clka  : in  std_logic;
---             wea   : in  std_logic_vector(0 downto 0);
---             addra : in  std_logic_vector(19 downto 0);
---             dina  : in  std_logic_vector(8 downto 0);
---             douta : out std_logic_vector(8 downto 0);
---             clkb  : in  std_logic;
---             web   : in  std_logic_vector(0 downto 0);
---             addrb : in  std_logic_vector(19 downto 0);
---             dinb  : in  std_logic_vector(8 downto 0);
---             doutb : out std_logic_vector(8 downto 0));
---     end component;
+    -- Old BRAM IP (before IP upgrade) only for one mandelbrot computer --
+
+--    COMPONENT bram_video_memory_wauto_dauto_rdclk1_wrclk1
+--      PORT (
+--        clka : IN STD_LOGIC;
+--        wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+--        addra : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+--        dina : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+--        douta : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+--        clkb : IN STD_LOGIC;
+--        web : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+--        addrb : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+--        dinb : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+--        doutb : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+--    );
+--    END COMPONENT;
     COMPONENT bram_video_memory_wauto_dauto_rdclk1_wrclk1
       PORT (
         clka : IN STD_LOGIC;
         wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        addra : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+        addra : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
         dina : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
         douta : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
         clkb : IN STD_LOGIC;
         web : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-        addrb : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+        addrb : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
         dinb : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
         doutb : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
-    );
+      );
     END COMPONENT;
 
     -- Mandelbrot's algorithm calculator
@@ -299,15 +301,30 @@ architecture rtl of mandelbrot_pinout is
     signal VCountxD             : std_logic_vector((C_DATA_SIZE - 1) downto 0);
     signal VidOnxS              : std_logic;
     -- Others
-    signal Nb_iter_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+    signal Nb_iter_1_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+    signal Nb_iter_2_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+    signal Nb_iter_3_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+    signal Nb_iter_4_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
     signal DataImGen2HDMIxD     : std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0);
      signal DataImGen2BramMVxD         : std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0); --
      signal DataBramMV2HdmixD          : std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0); --
     signal HdmiSourcexD         : t_HdmiSource                                      := C_NO_HDMI_SOURCE;
-     signal BramVideoMemoryWriteAddrxD : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0) := (others => '0');
+     signal BramVideoMemoryWriteAddrxD_1 : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0) := (others => '0');
+     signal BramVideoMemoryWriteAddrxD_2 : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0) := (others => '0');
+     signal BramVideoMemoryWriteAddrxD_3 : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0) := (others => '0');
+     signal BramVideoMemoryWriteAddrxD_4 : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0) := (others => '0');
      signal BramVideoMemoryReadAddrxD  : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0);
-     signal BramVideoMemoryWriteDataxD : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
-     signal BramVideoMemoryReadDataxD  : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+--     signal BramVideoMemoryReadAddrxD_2  : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0);
+--     signal BramVideoMemoryReadAddrxD_3  : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0);
+--     signal BramVideoMemoryReadAddrxD_4  : std_logic_vector((C_BRAM_VIDEO_MEMORY_ADDR_SIZE - 1) downto 0);
+     signal BramVideoMemoryWriteDataxD_1 : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+     signal BramVideoMemoryWriteDataxD_2 : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+     signal BramVideoMemoryWriteDataxD_3 : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+     signal BramVideoMemoryWriteDataxD_4 : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+     signal BramVideoMemoryReadDataxD_1  : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+     signal BramVideoMemoryReadDataxD_2  : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+     signal BramVideoMemoryReadDataxD_3  : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+     signal BramVideoMemoryReadDataxD_4  : std_logic_vector((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
     -- signal BtnCInterruptxS      : std_logic                                         := '0';
     -- signal BtnCxD               : std_logic_vector(3 downto 0)                      := (others => '0');
     -- signal BtnCRisexS           : std_logic                                         := '0';
@@ -422,17 +439,42 @@ begin  -- architecture rtl
     VgaHdmiCDxB : block is
     begin  -- block VgaHdmiCDxB
 
-        -- old assignation
+        -- old assignations
 --        DataBramMV2HdmixAS : DataBramMV2HdmixD <= BramVideoMemoryReadDataxD(8 downto 6) & "00000" &
 --                                                   BramVideoMemoryReadDataxD(5 downto 3) & "00000" &
 --                                                   BramVideoMemoryReadDataxD(2 downto 0) & "00000";
         -- new assignation --> displays fractal in grey levels
-        DataBramMV2HdmixAS : DataBramMV2HdmixD <= BramVideoMemoryReadDataxD & "0" &
-                                                   BramVideoMemoryReadDataxD & "0" &
-                                                   BramVideoMemoryReadDataxD & "0";
+--        DataBramMV2HdmixAS : DataBramMV2HdmixD <= BramVideoMemoryReadDataxD & "0" &
+--                                                   BramVideoMemoryReadDataxD & "0" &
+--                                                   BramVideoMemoryReadDataxD & "0";
 
-         BramVMRdAddrxAS : BramVideoMemoryReadAddrxD <= VCountxD((C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE - 1) downto 0) &
-                                                        HCountxD((C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE - 1) downto 0);
+--        DataBramMV2HdmixD <= (BramVideoMemoryReadDataxD_1 & "0" &
+--                             BramVideoMemoryReadDataxD_1 & "0" &
+--                             BramVideoMemoryReadDataxD_1 & "0") when (HCountxD(1 downto 0) = "00") else
+--                             (BramVideoMemoryReadDataxD_2 & "0" &
+--                             BramVideoMemoryReadDataxD_2 & "0" &
+--                             BramVideoMemoryReadDataxD_2 & "0") when (HCountxD(1 downto 0) = "01") else
+--                             (BramVideoMemoryReadDataxD_3 & "0" &
+--                             BramVideoMemoryReadDataxD_3 & "0" &
+--                             BramVideoMemoryReadDataxD_3 & "0") when (HCountxD(1 downto 0) = "10") else
+--                             (BramVideoMemoryReadDataxD_4 & "0" &
+--                             BramVideoMemoryReadDataxD_4 & "0" &
+--                             BramVideoMemoryReadDataxD_4 & "0");
+
+        -- This assignation displays computations in various color following this caneva:
+        --      1st computer : red
+        --      2nd computer : green
+        --      3rd computer : blue
+        --      4th computer : white
+        DataBramMV2HdmixD <= (BramVideoMemoryReadDataxD_1 & "0" & x"00" & x"00") when (HCountxD(3 downto 2) = "00") else
+                             (x"00" & BramVideoMemoryReadDataxD_2 & "0" & x"00") when (HCountxD(3 downto 2) = "01") else
+                             (x"00" & x"00" & BramVideoMemoryReadDataxD_3 & "0") when (HCountxD(3 downto 2) = "10") else
+                             (BramVideoMemoryReadDataxD_4 & "0" &
+                             BramVideoMemoryReadDataxD_4 & "0" &
+                             BramVideoMemoryReadDataxD_4 & "0");
+
+     BramVMRdAddrxAS : BramVideoMemoryReadAddrxD <= VCountxD((C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE - 1) downto 0) &
+                                                        HCountxD((C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE -1) downto 2);
 
         HdmiPllNotLockedxAS : HdmiPllNotLockedxS <= not HdmiPllLockedxS;
 
@@ -470,20 +512,69 @@ begin  -- architecture rtl
     VgaHdmiToFpgaUserCDCxB : block is
     begin  -- block VgaHdmiToFpgaUserCDCxB
 
-         BramVideoMemoryxI : bram_video_memory_wauto_dauto_rdclk1_wrclk1
+        -- BRAM for 1st MandelBrot computer results
+         BramVideoMemoryxI_1 : bram_video_memory_wauto_dauto_rdclk1_wrclk1
              port map (
                  -- Port A (Write)
                  clka  => ClkMandelxC,               
                  wea   => PllLockedxD,         
-                 addra => BramVideoMemoryWriteAddrxD,
-                 dina  => BramVideoMemoryWriteDataxD,
+                 addra => BramVideoMemoryWriteAddrxD_1,
+                 dina  => BramVideoMemoryWriteDataxD_1,
                  douta => open,
                  -- Port B (Read)
                  clkb  => ClkVgaxC,
                  web   => (others => '0'),
                  addrb => BramVideoMemoryReadAddrxD,
                  dinb  => (others => '0'),
-                 doutb => BramVideoMemoryReadDataxD);
+                 doutb => BramVideoMemoryReadDataxD_1);
+                 
+         -- BRAM for 2nd MandelBrot computer results
+         BramVideoMemoryxI_2 : bram_video_memory_wauto_dauto_rdclk1_wrclk1
+             port map (
+                 -- Port A (Write)
+                 clka  => ClkMandelxC,               
+                 wea   => PllLockedxD,         
+                 addra => BramVideoMemoryWriteAddrxD_2,
+                 dina  => BramVideoMemoryWriteDataxD_2,
+                 douta => open,
+                 -- Port B (Read)
+                 clkb  => ClkVgaxC,
+                 web   => (others => '0'),
+                 addrb => BramVideoMemoryReadAddrxD,
+                 dinb  => (others => '0'),
+                 doutb => BramVideoMemoryReadDataxD_2);
+                 
+         -- BRAM for 3rd MandelBrot computer results
+         BramVideoMemoryxI_3 : bram_video_memory_wauto_dauto_rdclk1_wrclk1
+             port map (
+                 -- Port A (Write)
+                 clka  => ClkMandelxC,               
+                 wea   => PllLockedxD,         
+                 addra => BramVideoMemoryWriteAddrxD_3,
+                 dina  => BramVideoMemoryWriteDataxD_3,
+                 douta => open,
+                 -- Port B (Read)
+                 clkb  => ClkVgaxC,
+                 web   => (others => '0'),
+                 addrb => BramVideoMemoryReadAddrxD,
+                 dinb  => (others => '0'),
+                 doutb => BramVideoMemoryReadDataxD_3);
+                 
+         -- BRAM for 4th MandelBrot computer results
+         BramVideoMemoryxI_4 : bram_video_memory_wauto_dauto_rdclk1_wrclk1
+             port map (
+                 -- Port A (Write)
+                 clka  => ClkMandelxC,               
+                 wea   => PllLockedxD,         
+                 addra => BramVideoMemoryWriteAddrxD_4,
+                 dina  => BramVideoMemoryWriteDataxD_4,
+                 douta => open,
+                 -- Port B (Read)
+                 clkb  => ClkVgaxC,
+                 web   => (others => '0'),
+                 addrb => BramVideoMemoryReadAddrxD,
+                 dinb  => (others => '0'),
+                 doutb => BramVideoMemoryReadDataxD_4);
                  
           
                 
@@ -498,17 +589,38 @@ begin  -- architecture rtl
 
         
          signal ClkSys100MhzBufgxC : std_logic                                    := '0';
-         signal HCountIntxD        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := "00" & std_logic_vector(C_VGA_CONFIG.HActivexD - 1);
-         signal VCountIntxD        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := (others => '0');
+         signal HCountIntxD_1        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := "00" & std_logic_vector(C_VGA_CONFIG.HActivexD - 1);
+         signal VCountIntxD_1        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := (others => '0');
+         signal HCountIntxD_2        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := "00" & std_logic_vector(C_VGA_CONFIG.HActivexD - 1);
+         signal VCountIntxD_2        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := (others => '0');
+         signal HCountIntxD_3        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := "00" & std_logic_vector(C_VGA_CONFIG.HActivexD - 1);
+         signal VCountIntxD_3        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := (others => '0');
+         signal HCountIntxD_4        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := "00" & std_logic_vector(C_VGA_CONFIG.HActivexD - 1);
+         signal VCountIntxD_4        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := (others => '0');
          
          -- signals to interface MandelBrot computer and complex_val generator
-         signal c_real_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
-         signal c_imag_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
-         signal computerRdy_s       : std_logic;
+         signal c_real_1_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+         signal c_imag_1_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+         signal computerRdy_1_s       : std_logic;
+         signal c_real_2_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+         signal c_imag_2_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+         signal computerRdy_2_s       : std_logic;
+         signal c_real_3_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+         signal c_imag_3_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+         signal computerRdy_3_s       : std_logic;
+         signal c_real_4_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+         signal c_imag_4_s            : std_logic_vector((C_DATA_SIZE - 1) downto 0);
+         signal computerRdy_4_s       : std_logic;
          
          -- sync signals
-        signal computeNow_s            : std_logic;
-        signal delay_s                 : std_logic;
+        signal computeNow_1_s            : std_logic;
+        signal delay_1_s                 : std_logic;
+        signal computeNow_2_s            : std_logic;
+        signal delay_2_s                 : std_logic;
+        signal computeNow_3_s            : std_logic;
+        signal delay_3_s                 : std_logic;
+        signal computeNow_4_s            : std_logic;
+        signal delay_4_s                 : std_logic;
 
     begin  -- block FpgaUserCDxB
 
@@ -519,10 +631,24 @@ begin  -- architecture rtl
          PllLockedxAS    : PllLockedxD(0) <= PllLockedxS;
          
         -- link mandelbrot computer's output to BRAM's input
-        BramVideoMemoryWriteDataxAS : BramVideoMemoryWriteDataxD <= Nb_iter_s((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+        BramVideoMemoryWriteDataxAS_1 : BramVideoMemoryWriteDataxD_1 <= Nb_iter_1_s((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+        BramVideoMemoryWriteDataxAS_2 : BramVideoMemoryWriteDataxD_2 <= Nb_iter_2_s((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+        BramVideoMemoryWriteDataxAS_3 : BramVideoMemoryWriteDataxD_3 <= Nb_iter_3_s((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
+        BramVideoMemoryWriteDataxAS_4 : BramVideoMemoryWriteDataxD_4 <= Nb_iter_4_s((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
 
-         BramVMWrAddrxAS : BramVideoMemoryWriteAddrxD <= VCountIntxD((C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE - 1) downto 0) &
-                                                         HCountIntxD((C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE - 1) downto 0);
+        BramVMWrAddrxAS_1 : BramVideoMemoryWriteAddrxD_1 <= VCountIntxD_1((C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE - 1) downto 0) &
+                                                         HCountIntxD_1((C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE - 3) downto 0);
+                                                         
+        BramVMWrAddrxAS_2 : BramVideoMemoryWriteAddrxD_2 <= VCountIntxD_2((C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE - 1) downto 0) &
+                                                         HCountIntxD_2((C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE - 3) downto 0);
+                                                         
+        BramVMWrAddrxAS_3 : BramVideoMemoryWriteAddrxD_3 <= VCountIntxD_3((C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE - 1) downto 0) &
+                                                         HCountIntxD_3((C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE - 3) downto 0);
+                                                         
+        BramVMWrAddrxAS_4 : BramVideoMemoryWriteAddrxD_4 <= VCountIntxD_4((C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE - 1) downto 0) &
+                                                         HCountIntxD_4((C_BRAM_VIDEO_MEMORY_LOW_ADDR_SIZE - 3) downto 0);      
+        
+                                                         
 
          BUFGClkSysToClkMandelxI : BUFG
              port map (
@@ -551,30 +677,94 @@ begin  -- architecture rtl
 --                DataxDO      => DataImGen2BramMVxD,    --,DataImGen2HDMIxD
 --                Color1xDI    => RdDataFlagColor1xDP(((C_PIXEL_SIZE * 3) - 1) downto 0));
                 
-        -- COmplex value generator
-        ComplexValueGeneratorxI : entity work.ComplexValueGenerator
+        -- Complex value generator 1 (raws 1 over 4)
+        ComplexValueGeneratorxI_1 : entity work.ComplexValueGenerator
             generic map (      
                 SIZE       => C_DATA_SIZE,
                 X_SIZE     => 1024,
                 Y_SIZE     => 768,
-                SCREEN_RES => C_DATA_SIZE) --10
+                SCREEN_RES => C_DATA_SIZE)
             port map (
                 clk           => ClkMandelxC,
                 reset         => ResetxR,
-                next_value    => computerRdy_s,
-                c_inc_RE      => "000" & x"00" & "1011111", -- 3/1024 = 0.0029296875
+                next_value    => computerRdy_1_s,
+                c_inc_RE      => "000" & x"02" & "1111111", -- 3/1024 * 4 = 0.0029296875 * 4 = 0.01171875
                 c_inc_IM      => "000" & x"00" & "1010101", -- 2/768 = 0.00260416667
-                c_top_left_RE => "110000" & x"000",
-                c_top_left_IM => "001000" & x"000",
-                c_real        => c_real_s,
-                c_imaginary   => c_imag_s,
-                X_screen      => HCountIntxD,
-                Y_screen      => VCountIntxD
+                c_top_left_RE => "110000" & x"000",         -- -1 + 0*3/1024
+                c_top_left_IM => "001000" & x"000",         -- +1
+                c_real        => c_real_1_s,
+                c_imaginary   => c_imag_1_s,
+                X_screen      => HCountIntxD_1,
+                Y_screen      => VCountIntxD_1
                 );
                 
                 
-        -- MandelBrot computer component
-          mandelBrot_computer : mandelbrot_calculator
+        -- Complex value generator 2 (raws 2 over 4)
+        ComplexValueGeneratorxI_2 : entity work.ComplexValueGenerator
+            generic map (      
+                SIZE       => C_DATA_SIZE,
+                X_SIZE     => 1024,
+                Y_SIZE     => 768,
+                SCREEN_RES => C_DATA_SIZE)
+            port map (
+                clk           => ClkMandelxC,
+                reset         => ResetxR,
+                next_value    => computerRdy_2_s,
+                c_inc_RE      => "000" & x"02" & "1111111", -- 3/1024 * 4 = 0.0029296875 * 4 = 0.01171875
+                c_inc_IM      => "000" & x"00" & "1010101", -- 2/768 = 0.00260416667
+                c_top_left_RE => "110" & x"00" & "1011111", -- -1 + 1*3/1024
+                c_top_left_IM => "001000" & x"000",         -- +1
+                c_real        => c_real_2_s,
+                c_imaginary   => c_imag_2_s,
+                X_screen      => HCountIntxD_2,
+                Y_screen      => VCountIntxD_2
+                );
+                
+        -- Complex value generator 3 (raws 3 over 4)
+        ComplexValueGeneratorxI_3 : entity work.ComplexValueGenerator
+            generic map (      
+                SIZE       => C_DATA_SIZE,
+                X_SIZE     => 1024,
+                Y_SIZE     => 768,
+                SCREEN_RES => C_DATA_SIZE)
+            port map (
+                clk           => ClkMandelxC,
+                reset         => ResetxR,
+                next_value    => computerRdy_3_s,
+                c_inc_RE      => "000" & x"02" & "1111111", -- 3/1024 * 4 = 0.0029296875 * 4 = 0.01171875
+                c_inc_IM      => "000" & x"00" & "1010101", -- 2/768 = 0.00260416667
+                c_top_left_RE => "110" & x"01" & "0111111", -- -1 + 2*3/1024
+                c_top_left_IM => "001000" & x"000",         -- +1
+                c_real        => c_real_3_s,
+                c_imaginary   => c_imag_3_s,
+                X_screen      => HCountIntxD_3,
+                Y_screen      => VCountIntxD_3
+                );
+                
+        -- Complex value generator 4 (raws 4 over 4)
+        ComplexValueGeneratorxI_4 : entity work.ComplexValueGenerator
+            generic map (      
+                SIZE       => C_DATA_SIZE,
+                X_SIZE     => 1024,
+                Y_SIZE     => 768,
+                SCREEN_RES => C_DATA_SIZE)
+            port map (
+                clk           => ClkMandelxC,
+                reset         => ResetxR,
+                next_value    => computerRdy_4_s,
+                c_inc_RE      => "000" & x"02" & "1111111", -- 3/1024 * 4 = 0.0029296875 * 4 = 0.01171875
+                c_inc_IM      => "000" & x"00" & "1010101", -- 2/768 = 0.00260416667
+                c_top_left_RE => "110" & x"02" & "0011111", -- -1 + 3*3/1024
+                c_top_left_IM => "001000" & x"000",         -- +1
+                c_real        => c_real_4_s,
+                c_imaginary   => c_imag_4_s,
+                X_screen      => HCountIntxD_4,
+                Y_screen      => VCountIntxD_4
+                );
+                
+                
+          -- MandelBrot computer component 1 (raws 1 over 4)
+          mandelBrot_computer_1 : mandelbrot_calculator
             GENERIC MAP(
                 COMMA => 15,
                 MAX_ITER => 100,
@@ -583,40 +773,176 @@ begin  -- architecture rtl
             PORT MAP(       
                 clk_i => ClkMandelxC,
                 rst_i => ResetxR,
-                ready_o => computerRdy_s,
-                start_i => computeNow_s,
+                ready_o => computerRdy_1_s,
+                start_i => computeNow_1_s,
                 finished_o => open,
-                c_real_i => c_real_s,
-                c_imaginary_i => c_imag_s,
+                c_real_i => c_real_1_s,
+                c_imaginary_i => c_imag_1_s,
                 z_real_o => open,
                 z_imaginary_o => open,
-                iterations_o => Nb_iter_s
+                iterations_o => Nb_iter_1_s
+            );
+            
+            -- MandelBrot computer component 2 (raws 2 over 4)
+              mandelBrot_computer_2 : mandelbrot_calculator
+                GENERIC MAP(
+                    COMMA => 15,
+                    MAX_ITER => 100,
+                    SIZE => C_DATA_SIZE 
+                )
+                PORT MAP(       
+                    clk_i => ClkMandelxC,
+                    rst_i => ResetxR,
+                    ready_o => computerRdy_2_s,
+                    start_i => computeNow_2_s,
+                    finished_o => open,
+                    c_real_i => c_real_2_s,
+                    c_imaginary_i => c_imag_2_s,
+                    z_real_o => open,
+                    z_imaginary_o => open,
+                    iterations_o => Nb_iter_2_s
                 );
                 
-        -- value genearator and mandelbrot computer synch process
-        syncProcess : process(ClkMandelxC, ResetxR) is
+              -- MandelBrot computer component 3 (raws 3 over 4)
+              mandelBrot_computer_3 : mandelbrot_calculator
+                GENERIC MAP(
+                    COMMA => 15,
+                    MAX_ITER => 100,
+                    SIZE => C_DATA_SIZE 
+                )
+                PORT MAP(       
+                    clk_i => ClkMandelxC,
+                    rst_i => ResetxR,
+                    ready_o => computerRdy_3_s,
+                    start_i => computeNow_3_s,
+                    finished_o => open,
+                    c_real_i => c_real_3_s,
+                    c_imaginary_i => c_imag_3_s,
+                    z_real_o => open,
+                    z_imaginary_o => open,
+                    iterations_o => Nb_iter_3_s
+                );
+                
+                -- MandelBrot computer component 4 (raws 4 over 4)
+              mandelBrot_computer_4 : mandelbrot_calculator
+                GENERIC MAP(
+                    COMMA => 15,
+                    MAX_ITER => 100,
+                    SIZE => C_DATA_SIZE 
+                )
+                PORT MAP(       
+                    clk_i => ClkMandelxC,
+                    rst_i => ResetxR,
+                    ready_o => computerRdy_4_s,
+                    start_i => computeNow_4_s,
+                    finished_o => open,
+                    c_real_i => c_real_4_s,
+                    c_imaginary_i => c_imag_4_s,
+                    z_real_o => open,
+                    z_imaginary_o => open,
+                    iterations_o => Nb_iter_4_s
+                );
+                
+        -- value genearator and mandelbrot computer synch process (sub-module 1)
+        syncProcess_1 : process(ClkMandelxC, ResetxR) is
         begin
             if (ResetxR = '1') then
-                computeNow_s <= '0';
-                delay_s <= '0';
+                computeNow_1_s <= '0';
+                delay_1_s <= '0';
                 
             elsif rising_edge(ClkMandelxC) then
             
-                if (computerRdy_s = '1') then
-                    delay_s <= '1';
+                if (computerRdy_1_s = '1') then
+                    delay_1_s <= '1';
                 else
-                    delay_s <= delay_s;
+                    delay_1_s <= delay_1_s;
                 end if;
                 
-                if (delay_s = '1') then
-                    computeNow_s <= '1';
-                    delay_s <= '0';
+                if (delay_1_s = '1') then
+                    computeNow_1_s <= '1';
+                    delay_1_s <= '0';
                 else
-                    computeNow_s <= '0';
+                    computeNow_1_s <= '0';
                 end if;
                 
             end if;
-        end process syncProcess;
+        end process syncProcess_1;
+        
+        -- value genearator and mandelbrot computer synch process (sub-module 2)
+        syncProcess_2 : process(ClkMandelxC, ResetxR) is
+        begin
+            if (ResetxR = '1') then
+                computeNow_2_s <= '0';
+                delay_2_s <= '0';
+                
+            elsif rising_edge(ClkMandelxC) then
+            
+                if (computerRdy_2_s = '1') then
+                    delay_2_s <= '1';
+                else
+                    delay_2_s <= delay_2_s;
+                end if;
+                
+                if (delay_2_s = '1') then
+                    computeNow_2_s <= '1';
+                    delay_2_s <= '0';
+                else
+                    computeNow_2_s <= '0';
+                end if;
+                
+            end if;
+        end process syncProcess_2;
+        
+        -- value genearator and mandelbrot computer synch process (sub-module 3)
+        syncProcess_3 : process(ClkMandelxC, ResetxR) is
+        begin
+            if (ResetxR = '1') then
+                computeNow_3_s <= '0';
+                delay_3_s <= '0';
+                
+            elsif rising_edge(ClkMandelxC) then
+            
+                if (computerRdy_3_s = '1') then
+                    delay_3_s <= '1';
+                else
+                    delay_3_s <= delay_3_s;
+                end if;
+                
+                if (delay_3_s = '1') then
+                    computeNow_3_s <= '1';
+                    delay_3_s <= '0';
+                else
+                    computeNow_3_s <= '0';
+                end if;
+                
+            end if;
+        end process syncProcess_3;
+        
+        -- value genearator and mandelbrot computer synch process (sub-module 4)
+        syncProcess_4 : process(ClkMandelxC, ResetxR) is
+        begin
+            if (ResetxR = '1') then
+                computeNow_4_s <= '0';
+                delay_4_s <= '0';
+                
+            elsif rising_edge(ClkMandelxC) then
+            
+                if (computerRdy_4_s = '1') then
+                    delay_4_s <= '1';
+                else
+                    delay_4_s <= delay_4_s;
+                end if;
+                
+                if (delay_4_s = '1') then
+                    computeNow_4_s <= '1';
+                    delay_4_s <= '0';
+                else
+                    computeNow_4_s <= '0';
+                end if;
+                
+            end if;
+        end process syncProcess_4;
+        
 
         -- used for image generator
 --         HVCountIntxP : process (all) is

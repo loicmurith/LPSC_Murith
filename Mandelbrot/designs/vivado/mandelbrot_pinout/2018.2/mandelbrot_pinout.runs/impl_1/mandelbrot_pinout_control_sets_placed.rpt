@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue May 19 16:42:57 2020
+| Date         : Mon Jun  1 21:22:35 2020
 | Host         : xilinx-vm running 64-bit unknown
 | Command      : report_control_sets -verbose -file mandelbrot_pinout_control_sets_placed.rpt
 | Design       : mandelbrot_pinout
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    11 |
-|    Minimum number of control sets                        |    11 |
+| Total control sets                                       |    29 |
+|    Minimum number of control sets                        |    29 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    40 |
+| Unused register locations in slices containing registers |   103 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    11 |
+| Total control sets |    29 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     0 |
-| >= 6 to < 8        |     2 |
+| >= 6 to < 8        |     4 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     9 |
+| >= 16              |    25 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              37 |           25 |
-| No           | No                    | Yes                    |              27 |           11 |
-| No           | Yes                   | No                     |              20 |           13 |
+| No           | No                    | No                     |              40 |           29 |
+| No           | No                    | Yes                    |              45 |           19 |
+| No           | Yes                   | No                     |              22 |           12 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             188 |           53 |
+| Yes          | No                    | Yes                    |             694 |          181 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,20 +70,38 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------------------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|                                 Clock Signal                                 |                       Enable Signal                       |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
-+------------------------------------------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |                                                           | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |                2 |              6 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/iterations_o[6]_i_1_n_0  | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |                1 |              7 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/next_zReal_s[17]_i_1_n_0 | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |                4 |             18 |
-|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/VCountxD          | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/bbstub_PllLockedxSO |                7 |             18 |
-|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                           | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/VidOnxS_reg_4       |               13 |             20 |
-|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                           | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/bbstub_PllLockedxSO |                9 |             21 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/E[0]                     | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |                9 |             36 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/ready_o_reg_0[0]         | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |               10 |             36 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/cReal_s                  | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |               12 |             36 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer/ready_o_i_1_n_0          | FpgaUserCDxB.mandelBrot_computer/ResetxR                    |               10 |             37 |
-|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                           |                                                             |               25 |             37 |
-+------------------------------------------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
++------------------------------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|                                 Clock Signal                                 |                          Enable Signal                         |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
++------------------------------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/iterations_o[6]_i_1__0_n_0  | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                3 |              7 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/iterations_o[6]_i_1_n_0     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                1 |              7 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/iterations_o[6]_i_1__2_n_0  | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                2 |              7 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/iterations_o[6]_i_1__1_n_0  | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                2 |              7 |
+|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/VCountxD               | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/bbstub_PllLockedxSO |                7 |             18 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/next_zReal_s[17]_i_1__0_n_0 | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                3 |             18 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/next_zReal_s[17]_i_1__1_n_0 | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                4 |             18 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/next_zReal_s[17]_i_1_n_0    | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                3 |             18 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/next_zReal_s[17]_i_1__2_n_0 | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                4 |             18 |
+|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                                | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/bbstub_PllLockedxSO |                8 |             21 |
+|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                                | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/VidOnxS_reg_8       |               12 |             22 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |                                                                | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               11 |             24 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             35 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             35 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                7 |             35 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                7 |             35 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               11 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               12 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               12 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               14 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               11 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                8 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/cnt_iter_s[17]_i_1__2_n_0   | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                8 |             37 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/cnt_iter_s[17]_i_1_n_0      | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                8 |             37 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/cnt_iter_s[17]_i_1__1_n_0   | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               10 |             37 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/cnt_iter_s[17]_i_1__0_n_0   | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                8 |             37 |
+|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                                |                                                             |               29 |             40 |
++------------------------------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 
 

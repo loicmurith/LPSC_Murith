@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue May 19 16:37:48 2020
-# Process ID: 6068
+# Start of session at: Mon Jun  1 21:17:17 2020
+# Process ID: 11452
 # Current directory: /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1
 # Command line: vivado -log mandelbrot_pinout.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mandelbrot_pinout.tcl
 # Log file: /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/mandelbrot_pinout.vds
@@ -28,9 +28,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Device 21-403] Loading part xc7a200tsbg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6148 
+INFO: Helper process launched with PID 11571 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1960.266 ; gain = 201.715 ; free physical = 494 ; free virtual = 11100
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1960.465 ; gain = 201.684 ; free physical = 1236 ; free virtual = 11635
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'mandelbrot_pinout' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:62]
 	Parameter C_CHANNEL_NUMBER bound to: 4 - type: integer 
@@ -46,8 +46,8 @@ INFO: [Synth 8-638] synthesizing module 'hdmi' [/home/xilinx/LPSC_project/Mandel
 	Parameter C_VGA_CONFIG bound to: 192'b000001000000000000000011000000000000000000011000000000001010000000000000000000110000000000011101000000001000100000000000000001100000010101000000000000110010011000000000000000000000000000000000 
 	Parameter C_RESOLUTION bound to: 1024x768 - type: string 
 INFO: [Synth 8-113] binding component instance 'BUFGClkSysToClkVgaHdmixI' to cell 'BUFG' [/home/xilinx/LPSC_project/Mandelbrot/ips/hw/hdmi/src/hdl/hdmi.vhd:315]
-INFO: [Synth 8-3491] module 'clk_vga_hdmi_1024x768' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/clk_vga_hdmi_1024x768_stub.vhdl:5' bound to instance 'ClkVgaHdmi1024x768xI' of component 'clk_vga_hdmi_1024x768' [/home/xilinx/LPSC_project/Mandelbrot/ips/hw/hdmi/src/hdl/hdmi.vhd:332]
-INFO: [Synth 8-638] synthesizing module 'clk_vga_hdmi_1024x768' [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/clk_vga_hdmi_1024x768_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'clk_vga_hdmi_1024x768' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/clk_vga_hdmi_1024x768_stub.vhdl:5' bound to instance 'ClkVgaHdmi1024x768xI' of component 'clk_vga_hdmi_1024x768' [/home/xilinx/LPSC_project/Mandelbrot/ips/hw/hdmi/src/hdl/hdmi.vhd:332]
+INFO: [Synth 8-638] synthesizing module 'clk_vga_hdmi_1024x768' [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/clk_vga_hdmi_1024x768_stub.vhdl:16]
 INFO: [Synth 8-638] synthesizing module 'vga' [/home/xilinx/LPSC_project/Mandelbrot/ips/hw/hdmi/src/hdl/vga.vhd:49]
 	Parameter C_DATA_SIZE bound to: 18 - type: integer 
 	Parameter C_PIXEL_SIZE bound to: 8 - type: integer 
@@ -144,35 +144,50 @@ INFO: [Synth 8-113] binding component instance 'OBUFDSHdmiTxCh2xI' to cell 'OBUF
 INFO: [Synth 8-113] binding component instance 'OBUFDSHdmiTxClkxI' to cell 'OBUFDS' [/home/xilinx/LPSC_project/Mandelbrot/ips/hw/hdmi/src/hdl/vga_to_hdmi.vhd:241]
 INFO: [Synth 8-256] done synthesizing module 'vga_to_hdmi' (6#1) [/home/xilinx/LPSC_project/Mandelbrot/ips/hw/hdmi/src/hdl/vga_to_hdmi.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'hdmi' (7#1) [/home/xilinx/LPSC_project/Mandelbrot/ips/hw/hdmi/src/hdl/hdmi.vhd:64]
-INFO: [Synth 8-3491] module 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/bram_video_memory_wauto_dauto_rdclk1_wrclk1_stub.vhdl:5' bound to instance 'BramVideoMemoryxI' of component 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:472]
-INFO: [Synth 8-638] synthesizing module 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/bram_video_memory_wauto_dauto_rdclk1_wrclk1_stub.vhdl:21]
-INFO: [Synth 8-113] binding component instance 'BUFGClkSysToClkMandelxI' to cell 'BUFG' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:528]
-INFO: [Synth 8-3491] module 'clk_mandelbrot' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/clk_mandelbrot_stub.vhdl:5' bound to instance 'ClkMandelbrotxI' of component 'clk_mandelbrot' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:533]
-INFO: [Synth 8-638] synthesizing module 'clk_mandelbrot' [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/clk_mandelbrot_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/bram_video_memory_wauto_dauto_rdclk1_wrclk1_stub.vhdl:5' bound to instance 'BramVideoMemoryxI_1' of component 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:516]
+INFO: [Synth 8-638] synthesizing module 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/bram_video_memory_wauto_dauto_rdclk1_wrclk1_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/bram_video_memory_wauto_dauto_rdclk1_wrclk1_stub.vhdl:5' bound to instance 'BramVideoMemoryxI_2' of component 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:532]
+INFO: [Synth 8-3491] module 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/bram_video_memory_wauto_dauto_rdclk1_wrclk1_stub.vhdl:5' bound to instance 'BramVideoMemoryxI_3' of component 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:548]
+INFO: [Synth 8-3491] module 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/bram_video_memory_wauto_dauto_rdclk1_wrclk1_stub.vhdl:5' bound to instance 'BramVideoMemoryxI_4' of component 'bram_video_memory_wauto_dauto_rdclk1_wrclk1' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:564]
+INFO: [Synth 8-113] binding component instance 'BUFGClkSysToClkMandelxI' to cell 'BUFG' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:653]
+INFO: [Synth 8-3491] module 'clk_mandelbrot' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/clk_mandelbrot_stub.vhdl:5' bound to instance 'ClkMandelbrotxI' of component 'clk_mandelbrot' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:658]
+INFO: [Synth 8-638] synthesizing module 'clk_mandelbrot' [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/clk_mandelbrot_stub.vhdl:15]
 INFO: [Synth 8-638] synthesizing module 'ComplexValueGenerator' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/ComplexValueGenerator.vhd:36]
 	Parameter SIZE bound to: 18 - type: integer 
 	Parameter X_SIZE bound to: 1024 - type: integer 
 	Parameter Y_SIZE bound to: 768 - type: integer 
 	Parameter SCREEN_RES bound to: 18 - type: integer 
-WARNING: [Synth 8-614] signal 'c_top_left_RE' is read in the process but is not in the sensitivity list [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/ComplexValueGenerator.vhd:45]
-WARNING: [Synth 8-614] signal 'c_top_left_IM' is read in the process but is not in the sensitivity list [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/ComplexValueGenerator.vhd:45]
+WARNING: [Synth 8-614] signal 'c_top_left_RE' is read in the process but is not in the sensitivity list [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/ComplexValueGenerator.vhd:48]
+WARNING: [Synth 8-614] signal 'c_top_left_IM' is read in the process but is not in the sensitivity list [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/ComplexValueGenerator.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'ComplexValueGenerator' (8#1) [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/ComplexValueGenerator.vhd:36]
 	Parameter COMMA bound to: 15 - type: integer 
 	Parameter MAX_ITER bound to: 100 - type: integer 
 	Parameter SIZE bound to: 18 - type: integer 
-INFO: [Synth 8-3491] module 'mandelbrot_calculator' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:35' bound to instance 'mandelBrot_computer' of component 'mandelbrot_calculator' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:581]
+INFO: [Synth 8-3491] module 'mandelbrot_calculator' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:35' bound to instance 'mandelBrot_computer_1' of component 'mandelbrot_calculator' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:767]
 INFO: [Synth 8-638] synthesizing module 'mandelbrot_calculator' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:53]
 	Parameter COMMA bound to: 15 - type: integer 
 	Parameter MAX_ITER bound to: 100 - type: integer 
 	Parameter SIZE bound to: 18 - type: integer 
-INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZRe_step1' of component 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:112]
-INFO: [Synth 8-638] synthesizing module 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/mathDSP_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZRe_step2' of component 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:126]
-INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm' of component 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:137]
-INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm_times_ZIm' of component 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:153]
-INFO: [Synth 8-638] synthesizing module 'mathDSP__parameterized2' [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/mathDSP_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm2_plus_ZRe2' of component 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:164]
+INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZRe_step1' of component 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/mathDSP_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZRe_step2' of component 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:126]
+INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm' of component 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:137]
+INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm_times_ZIm' of component 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'mathDSP__parameterized2' [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/mathDSP_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'mathDSP' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/realtime/mathDSP_stub.vhdl:5' bound to instance 'ZIm2_plus_ZRe2' of component 'mathDSP' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:164]
 INFO: [Synth 8-256] done synthesizing module 'mandelbrot_calculator' (9#1) [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:53]
+	Parameter COMMA bound to: 15 - type: integer 
+	Parameter MAX_ITER bound to: 100 - type: integer 
+	Parameter SIZE bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'mandelbrot_calculator' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:35' bound to instance 'mandelBrot_computer_2' of component 'mandelbrot_calculator' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:787]
+	Parameter COMMA bound to: 15 - type: integer 
+	Parameter MAX_ITER bound to: 100 - type: integer 
+	Parameter SIZE bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'mandelbrot_calculator' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:35' bound to instance 'mandelBrot_computer_3' of component 'mandelbrot_calculator' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:807]
+	Parameter COMMA bound to: 15 - type: integer 
+	Parameter MAX_ITER bound to: 100 - type: integer 
+	Parameter SIZE bound to: 18 - type: integer 
+INFO: [Synth 8-3491] module 'mandelbrot_calculator' declared at '/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/compute_mandleBrot.vhd:35' bound to instance 'mandelBrot_computer_4' of component 'mandelbrot_calculator' [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:827]
 WARNING: [Synth 8-3848] Net LedxDO in module/entity mandelbrot_pinout does not have driver. [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:47]
 INFO: [Synth 8-256] done synthesizing module 'mandelbrot_pinout' (10#1) [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/hdl/mandelbrot_pinout.vhd:62]
 WARNING: [Synth 8-3331] design vga_to_hdmi has unconnected port HdmiSourcexDIO[HdmiSourceInxS][HdmiTxHpdxS]
@@ -185,7 +200,7 @@ WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port LedxDO[2]
 WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port LedxDO[1]
 WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port LedxDO[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 2026.988 ; gain = 268.438 ; free physical = 527 ; free virtual = 11133
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 2027.188 ; gain = 268.406 ; free physical = 1268 ; free virtual = 11668
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -198,75 +213,160 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2026.988 ; gain = 268.438 ; free physical = 524 ; free virtual = 11131
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 2027.188 ; gain = 268.406 ; free physical = 1265 ; free virtual = 11665
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 2026.988 ; gain = 268.438 ; free physical = 524 ; free virtual = 11131
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 2027.188 ; gain = 268.406 ; free physical = 1265 ; free virtual = 11665
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2032.922 ; gain = 0.000 ; free physical = 516 ; free virtual = 11123
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2034.121 ; gain = 0.000 ; free physical = 1258 ; free virtual = 11658
 INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_in_context.xdc] for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI'
-Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_in_context.xdc] for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI'
 Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768_in_context.xdc] for cell 'VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI'
 Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768/clk_vga_hdmi_1024x768_in_context.xdc] for cell 'VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI'
-Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/clk_mandelbrot/clk_mandelbrot/clk_mandelbrot_in_context.xdc] for cell 'FpgaUserCDxB.ClkMandelbrotxI'
-Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/clk_mandelbrot/clk_mandelbrot/clk_mandelbrot_in_context.xdc] for cell 'FpgaUserCDxB.ClkMandelbrotxI'
-Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer/ZRe_step1'
-Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer/ZRe_step1'
-Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer/ZRe_step2'
-Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer/ZRe_step2'
-Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer/ZIm'
-Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer/ZIm'
-Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer/ZIm_times_ZIm'
-Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer/ZIm_times_ZIm'
-Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer/ZIm2_plus_ZRe2'
-Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-6068-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer/ZIm2_plus_ZRe2'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/clk_mandelbrot/clk_mandelbrot/clk_mandelbrot_in_context.xdc] for cell 'FpgaUserCDxB.ClkMandelbrotxI'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/clk_mandelbrot/clk_mandelbrot/clk_mandelbrot_in_context.xdc] for cell 'FpgaUserCDxB.ClkMandelbrotxI'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_1/ZRe_step1'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_1/ZRe_step1'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_1/ZRe_step2'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_1/ZRe_step2'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_1/ZIm'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_1/ZIm'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_1/ZIm_times_ZIm'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_1/ZIm_times_ZIm'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_1/ZIm2_plus_ZRe2'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_1/ZIm2_plus_ZRe2'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_2/ZRe_step1'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_2/ZRe_step1'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_2/ZRe_step2'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_2/ZRe_step2'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_2/ZIm'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_2/ZIm'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_2/ZIm_times_ZIm'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_2/ZIm_times_ZIm'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_2/ZIm2_plus_ZRe2'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_2/ZIm2_plus_ZRe2'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_3/ZRe_step1'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_3/ZRe_step1'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_3/ZRe_step2'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_3/ZRe_step2'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_3/ZIm'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_3/ZIm'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_3/ZIm_times_ZIm'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_3/ZIm_times_ZIm'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_3/ZIm2_plus_ZRe2'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_3/ZIm2_plus_ZRe2'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_4/ZRe_step1'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_4/ZRe_step1'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_4/ZRe_step2'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_4/ZRe_step2'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_4/ZIm'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_4/ZIm'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_4/ZIm_times_ZIm'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_4/ZIm_times_ZIm'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_4/ZIm2_plus_ZRe2'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/.Xil/Vivado-11452-xilinx-vm/mathDSP/mathDSP/mathDSP_in_context.xdc] for cell 'FpgaUserCDxB.mandelBrot_computer_4/ZIm2_plus_ZRe2'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_in_context.xdc] for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_1'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_in_context.xdc] for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_1'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_in_context.xdc] for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_2'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_in_context.xdc] for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_2'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_in_context.xdc] for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_3'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_in_context.xdc] for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_3'
+Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_in_context.xdc] for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_4'
+Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.srcs/sources_1/ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1_in_context.xdc] for cell 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_4'
 Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/constrs/mandelbrot_pinout.xdc]
 Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/constrs/mandelbrot_pinout.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/constrs/mandelbrot_pinout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mandelbrot_pinout_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/mandelbrot_pinout_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2157.754 ; gain = 0.000 ; free physical = 378 ; free virtual = 10984
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2158.953 ; gain = 0.000 ; free physical = 1169 ; free virtual = 11569
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2157.754 ; gain = 0.000 ; free physical = 378 ; free virtual = 10984
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2158.953 ; gain = 0.000 ; free physical = 1169 ; free virtual = 11569
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_1' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_2' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_3' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_4' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 2160.719 ; gain = 402.168 ; free physical = 500 ; free virtual = 11106
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 2161.918 ; gain = 403.137 ; free physical = 1241 ; free virtual = 11641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tsbg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 2160.719 ; gain = 402.168 ; free physical = 500 ; free virtual = 11106
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 2161.918 ; gain = 403.137 ; free physical = 1241 ; free virtual = 11641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for \VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for \VgaHdmiCDxB.HdmixI /\ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.ClkMandelbrotxI . (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer /ZIm. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer /ZIm2_plus_ZRe2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer /ZIm_times_ZIm. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer /ZRe_step1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer /ZRe_step2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_1 /ZIm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_2 /ZIm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_3 /ZIm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_4 /ZIm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_1 /ZIm2_plus_ZRe2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_2 /ZIm2_plus_ZRe2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_3 /ZIm2_plus_ZRe2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_4 /ZIm2_plus_ZRe2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_1 /ZIm_times_ZIm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_2 /ZIm_times_ZIm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_3 /ZIm_times_ZIm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_4 /ZIm_times_ZIm. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_1 /ZRe_step1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_2 /ZRe_step1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_3 /ZRe_step1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_4 /ZRe_step1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_1 /ZRe_step2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_2 /ZRe_step2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_3 /ZRe_step2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \FpgaUserCDxB.mandelBrot_computer_4 /ZRe_step2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_1 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_2 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_3 . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for \VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_4 . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 2160.719 ; gain = 402.168 ; free physical = 502 ; free virtual = 11109
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:40 . Memory (MB): peak = 2161.918 ; gain = 403.137 ; free physical = 1243 ; free virtual = 11643
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/xilinx/LPSC_project/Mandelbrot/ips/hw/hdmi/src/hdl/tmds_encoder.vhd:212]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/xilinx/LPSC_project/Mandelbrot/ips/hw/hdmi/src/hdl/tmds_encoder.vhd:213]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mandelbrot_calculator__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mandelbrot_calculator__xdcDup__2'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mandelbrot_calculator__xdcDup__3'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mandelbrot_calculator'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                              000
+                compute1 |                             0010 |                              001
+                compute2 |                             0100 |                              010
+                 compare |                             1000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'mandelbrot_calculator__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                              000
+                compute1 |                             0010 |                              001
+                compute2 |                             0100 |                              010
+                 compare |                             1000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'mandelbrot_calculator__xdcDup__2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                              000
+                compute1 |                             0010 |                              001
+                compute2 |                             0100 |                              010
+                 compare |                             1000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'mandelbrot_calculator__xdcDup__3'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -277,7 +377,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'mande
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'mandelbrot_calculator'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:44 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 491 ; free virtual = 11098
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:42 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1234 ; free virtual = 11634
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -290,8 +390,8 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     18 Bit       Adders := 6     
-	   3 Input     18 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 18    
+	   3 Input     18 Bit       Adders := 4     
 	   8 Input      4 Bit       Adders := 3     
 	   9 Input      4 Bit       Adders := 3     
 	   4 Input      4 Bit       Adders := 3     
@@ -299,23 +399,24 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 42    
 +---Registers : 
-	               18 Bit    Registers := 14    
+	               18 Bit    Registers := 50    
 	               10 Bit    Registers := 3     
 	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 19    
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 13    
-	   4 Input     18 Bit        Muxes := 3     
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 40    
+	   4 Input     18 Bit        Muxes := 12    
 	   5 Input     10 Bit        Muxes := 6     
 	   4 Input     10 Bit        Muxes := 3     
 	   2 Input     10 Bit        Muxes := 9     
 	   2 Input      9 Bit        Muxes := 6     
 	   2 Input      8 Bit        Muxes := 3     
-	   2 Input      4 Bit        Muxes := 14    
-	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 20    
+	   4 Input      4 Bit        Muxes := 4     
 	   3 Input      1 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 5     
-	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 16    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -326,9 +427,10 @@ Hierarchical RTL Component report
 Module mandelbrot_pinout 
 Detailed RTL Component Info : 
 +---Registers : 
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
+	   4 Input     24 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 Module vga_stripes 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -372,6 +474,45 @@ Detailed RTL Component Info :
 	               18 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input     18 Bit        Muxes := 8     
+Module mandelbrot_calculator__xdcDup__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 8     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     18 Bit        Muxes := 3     
+	   2 Input     18 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 4     
+Module mandelbrot_calculator__xdcDup__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 8     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     18 Bit        Muxes := 3     
+	   2 Input     18 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 4     
+Module mandelbrot_calculator__xdcDup__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
++---Registers : 
+	               18 Bit    Registers := 8     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   4 Input     18 Bit        Muxes := 3     
+	   2 Input     18 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 4     
 Module mandelbrot_calculator 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -401,7 +542,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3917] design mandelbrot_pinout has port HdmiTxRsclxSO driven by constant 1
+WARNING: [Synth 8-3331] design hdmi has unconnected port HdmiTxHpdxSI
 WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port LedxDO[7]
 WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port LedxDO[6]
 WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port LedxDO[5]
@@ -410,9 +551,8 @@ WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port LedxDO[3]
 WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port LedxDO[2]
 WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port LedxDO[1]
 WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port LedxDO[0]
-WARNING: [Synth 8-3331] design mandelbrot_pinout has unconnected port HdmiTxHpdxSI
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 469 ; free virtual = 11080
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:56 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1210 ; free virtual = 11615
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -424,13 +564,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:14 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 350 ; free virtual = 10961
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:19 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1091 ; free virtual = 11495
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:14 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 350 ; free virtual = 10961
+Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:19 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1090 ; free virtual = 11495
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -441,9 +581,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'VgaHdmiCDxB.HdmixI/VgaToHdmixI/TmdsEncoderC1xI/TmdsEncodedDataxDO_reg[8]' (FDS) to 'VgaHdmiCDxB.HdmixI/VgaToHdmixI/TmdsEncoderC2xI/TmdsEncodedDataxDO_reg[8]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:15 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 348 ; free virtual = 10959
+Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:21 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1087 ; free virtual = 11492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -467,13 +606,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:04 ; elapsed = 00:01:25 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 348 ; free virtual = 10959
+Finished IO Insertion : Time (s): cpu = 00:01:11 ; elapsed = 00:01:31 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1087 ; free virtual = 11492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:04 ; elapsed = 00:01:25 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 348 ; free virtual = 10959
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:11 ; elapsed = 00:01:31 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1087 ; free virtual = 11492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -492,25 +631,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:05 ; elapsed = 00:01:25 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 348 ; free virtual = 10959
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:11 ; elapsed = 00:01:31 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1087 ; free virtual = 11492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:05 ; elapsed = 00:01:25 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 348 ; free virtual = 10959
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:11 ; elapsed = 00:01:31 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1087 ; free virtual = 11492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:05 ; elapsed = 00:01:25 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 348 ; free virtual = 10959
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:31 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1087 ; free virtual = 11492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:05 ; elapsed = 00:01:25 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 348 ; free virtual = 10959
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:31 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1087 ; free virtual = 11492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -520,85 +659,110 @@ Report BlackBoxes:
 +------+--------------------------------------------+----------+
 |      |BlackBox name                               |Instances |
 +------+--------------------------------------------+----------+
-|1     |bram_video_memory_wauto_dauto_rdclk1_wrclk1 |         1|
+|1     |bram_video_memory_wauto_dauto_rdclk1_wrclk1 |         4|
 |2     |clk_mandelbrot                              |         1|
-|3     |mathDSP                                     |         5|
+|3     |mathDSP                                     |        20|
 |4     |clk_vga_hdmi_1024x768                       |         1|
 +------+--------------------------------------------+----------+
 
 Report Cell Usage: 
-+------+---------------------------------------------------+------+
-|      |Cell                                               |Count |
-+------+---------------------------------------------------+------+
-|1     |bram_video_memory_wauto_dauto_rdclk1_wrclk1_bbox_5 |     1|
-|2     |clk_mandelbrot_bbox_6                              |     1|
-|3     |clk_vga_hdmi_1024x768_bbox_4                       |     1|
-|4     |mathDSP_bbox_10                                    |     1|
-|5     |mathDSP_bbox_11                                    |     1|
-|6     |mathDSP_bbox_7                                     |     1|
-|7     |mathDSP_bbox_8                                     |     1|
-|8     |mathDSP_bbox_9                                     |     1|
-|9     |BUFG                                               |     2|
-|10    |CARRY4                                             |    38|
-|11    |LUT1                                               |    27|
-|12    |LUT2                                               |   200|
-|13    |LUT3                                               |     7|
-|14    |LUT4                                               |    31|
-|15    |LUT5                                               |    44|
-|16    |LUT6                                               |    62|
-|17    |OSERDESE2                                          |     4|
-|18    |OSERDESE2_1                                        |     4|
-|19    |FDCE                                               |   211|
-|20    |FDPE                                               |     4|
-|21    |FDRE                                               |    41|
-|22    |IBUF                                               |     2|
-|23    |OBUF                                               |     1|
-|24    |OBUFDS                                             |     4|
-|25    |OBUFT                                              |     8|
-+------+---------------------------------------------------+------+
++------+----------------------------------------------------+------+
+|      |Cell                                                |Count |
++------+----------------------------------------------------+------+
+|1     |bram_video_memory_wauto_dauto_rdclk1_wrclk1_bbox_10 |     1|
+|2     |bram_video_memory_wauto_dauto_rdclk1_wrclk1_bbox_11 |     1|
+|3     |bram_video_memory_wauto_dauto_rdclk1_wrclk1_bbox_8  |     1|
+|4     |bram_video_memory_wauto_dauto_rdclk1_wrclk1_bbox_9  |     1|
+|5     |clk_mandelbrot_bbox_12                              |     1|
+|6     |clk_vga_hdmi_1024x768_bbox_7                        |     1|
+|7     |mathDSP_bbox_13                                     |     1|
+|8     |mathDSP_bbox_13__4                                  |     1|
+|9     |mathDSP_bbox_13__5                                  |     1|
+|10    |mathDSP_bbox_13__6                                  |     1|
+|11    |mathDSP_bbox_14                                     |     1|
+|12    |mathDSP_bbox_14__4                                  |     1|
+|13    |mathDSP_bbox_14__5                                  |     1|
+|14    |mathDSP_bbox_14__6                                  |     1|
+|15    |mathDSP_bbox_15                                     |     1|
+|16    |mathDSP_bbox_15__4                                  |     1|
+|17    |mathDSP_bbox_15__5                                  |     1|
+|18    |mathDSP_bbox_15__6                                  |     1|
+|19    |mathDSP_bbox_16                                     |     1|
+|20    |mathDSP_bbox_16__4                                  |     1|
+|21    |mathDSP_bbox_16__5                                  |     1|
+|22    |mathDSP_bbox_16__6                                  |     1|
+|23    |mathDSP_bbox_17                                     |     1|
+|24    |mathDSP_bbox_17__4                                  |     1|
+|25    |mathDSP_bbox_17__5                                  |     1|
+|26    |mathDSP_bbox_17__6                                  |     1|
+|27    |BUFG                                                |     2|
+|28    |CARRY4                                              |   122|
+|29    |LUT1                                                |    97|
+|30    |LUT2                                                |   652|
+|31    |LUT3                                                |    21|
+|32    |LUT4                                                |    39|
+|33    |LUT5                                                |    74|
+|34    |LUT6                                                |   114|
+|35    |OSERDESE2                                           |     4|
+|36    |OSERDESE2_1                                         |     4|
+|37    |FDCE                                                |   704|
+|38    |FDPE                                                |    35|
+|39    |FDRE                                                |    40|
+|40    |FDSE                                                |     2|
+|41    |IBUF                                                |     2|
+|42    |OBUF                                                |     1|
+|43    |OBUFDS                                              |     4|
+|44    |OBUFT                                               |     8|
++------+----------------------------------------------------+------+
 
 Report Instance Areas: 
-+------+-----------------------------------------+----------------------+------+
-|      |Instance                                 |Module                |Cells |
-+------+-----------------------------------------+----------------------+------+
-|1     |top                                      |                      |   894|
-|2     |  \FpgaUserCDxB.ComplexValueGeneratorxI  |ComplexValueGenerator |   191|
-|3     |  \FpgaUserCDxB.mandelBrot_computer      |mandelbrot_calculator |   381|
-|4     |  \VgaHdmiCDxB.HdmixI                    |hdmi                  |   292|
-|5     |    VgaToHdmixI                          |vga_to_hdmi           |    77|
-|6     |      SerializerChannel0xI               |serializer_10_to_1    |     2|
-|7     |      SerializerChannel1xI               |serializer_10_to_1_0  |     2|
-|8     |      SerializerChannel2xI               |serializer_10_to_1_1  |     2|
-|9     |      SerializerChannel3xI               |serializer_10_to_1_2  |     2|
-|10    |      TmdsEncoderC0xI                    |tmds_encoder          |    23|
-|11    |      TmdsEncoderC1xI                    |tmds_encoder_3        |    21|
-|12    |      TmdsEncoderC2xI                    |tmds_encoder_4        |    21|
-|13    |    VgaxI                                |vga                   |   211|
-|14    |      VgaControlerxI                     |vga_controler         |   211|
-+------+-----------------------------------------+----------------------+------+
++------+-------------------------------------------+---------------------------------+------+
+|      |Instance                                   |Module                           |Cells |
++------+-------------------------------------------+---------------------------------+------+
+|1     |top                                        |                                 |  2726|
+|2     |  \FpgaUserCDxB.ComplexValueGeneratorxI_1  |ComplexValueGenerator            |   192|
+|3     |  \FpgaUserCDxB.ComplexValueGeneratorxI_2  |ComplexValueGenerator_0          |   192|
+|4     |  \FpgaUserCDxB.ComplexValueGeneratorxI_3  |ComplexValueGenerator_1          |   192|
+|5     |  \FpgaUserCDxB.ComplexValueGeneratorxI_4  |ComplexValueGenerator_2          |   192|
+|6     |  \FpgaUserCDxB.mandelBrot_computer_1      |mandelbrot_calculator__xdcDup__1 |   380|
+|7     |  \FpgaUserCDxB.mandelBrot_computer_2      |mandelbrot_calculator__xdcDup__2 |   380|
+|8     |  \FpgaUserCDxB.mandelBrot_computer_3      |mandelbrot_calculator__xdcDup__3 |   380|
+|9     |  \FpgaUserCDxB.mandelBrot_computer_4      |mandelbrot_calculator            |   381|
+|10    |  \VgaHdmiCDxB.HdmixI                      |hdmi                             |   359|
+|11    |    VgaToHdmixI                            |vga_to_hdmi                      |    77|
+|12    |      SerializerChannel0xI                 |serializer_10_to_1               |     2|
+|13    |      SerializerChannel1xI                 |serializer_10_to_1_3             |     2|
+|14    |      SerializerChannel2xI                 |serializer_10_to_1_4             |     2|
+|15    |      SerializerChannel3xI                 |serializer_10_to_1_5             |     2|
+|16    |      TmdsEncoderC0xI                      |tmds_encoder                     |    21|
+|17    |      TmdsEncoderC1xI                      |tmds_encoder_6                   |    23|
+|18    |      TmdsEncoderC2xI                      |tmds_encoder_7                   |    21|
+|19    |    VgaxI                                  |vga                              |   278|
+|20    |      VgaControlerxI                       |vga_controler                    |   278|
++------+-------------------------------------------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:05 ; elapsed = 00:01:25 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 348 ; free virtual = 10959
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:31 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1087 ; free virtual = 11492
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:01:17 . Memory (MB): peak = 2160.723 ; gain = 268.441 ; free physical = 401 ; free virtual = 11012
-Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:25 . Memory (MB): peak = 2160.723 ; gain = 402.172 ; free physical = 401 ; free virtual = 11012
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:04 ; elapsed = 00:01:23 . Memory (MB): peak = 2161.922 ; gain = 268.410 ; free physical = 1140 ; free virtual = 11545
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:32 . Memory (MB): peak = 2161.922 ; gain = 403.141 ; free physical = 1140 ; free virtual = 11545
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2160.723 ; gain = 0.000 ; free physical = 471 ; free virtual = 11081
-INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2161.922 ; gain = 0.000 ; free physical = 1209 ; free virtual = 11614
+INFO: [Netlist 29-17] Analyzing 126 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2160.723 ; gain = 0.000 ; free physical = 415 ; free virtual = 11025
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2161.922 ; gain = 0.000 ; free physical = 1151 ; free virtual = 11556
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-68 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+79 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:42 . Memory (MB): peak = 2160.723 ; gain = 622.051 ; free physical = 547 ; free virtual = 11158
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2160.723 ; gain = 0.000 ; free physical = 547 ; free virtual = 11158
+synth_design: Time (s): cpu = 00:01:24 ; elapsed = 00:01:48 . Memory (MB): peak = 2161.922 ; gain = 622.215 ; free physical = 1281 ; free virtual = 11686
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2161.922 ; gain = 0.000 ; free physical = 1281 ; free virtual = 11686
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/synth_1/mandelbrot_pinout.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mandelbrot_pinout_utilization_synth.rpt -pb mandelbrot_pinout_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May 19 16:39:48 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  1 21:19:24 2020...

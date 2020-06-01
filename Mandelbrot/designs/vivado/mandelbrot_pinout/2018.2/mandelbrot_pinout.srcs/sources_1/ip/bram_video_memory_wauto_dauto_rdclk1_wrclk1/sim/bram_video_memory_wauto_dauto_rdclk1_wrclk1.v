@@ -71,7 +71,7 @@ input wire clka;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA WE" *)
 input wire [0 : 0] wea;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *)
-input wire [19 : 0] addra;
+input wire [17 : 0] addra;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN" *)
 input wire [6 : 0] dina;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
@@ -82,7 +82,7 @@ input wire clkb;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB WE" *)
 input wire [0 : 0] web;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB ADDR" *)
-input wire [19 : 0] addrb;
+input wire [17 : 0] addrb;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB DIN" *)
 input wire [6 : 0] dinb;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
@@ -121,9 +121,9 @@ output wire [6 : 0] doutb;
     .C_WRITE_MODE_A("WRITE_FIRST"),
     .C_WRITE_WIDTH_A(7),
     .C_READ_WIDTH_A(7),
-    .C_WRITE_DEPTH_A(786432),
-    .C_READ_DEPTH_A(786432),
-    .C_ADDRA_WIDTH(20),
+    .C_WRITE_DEPTH_A(196608),
+    .C_READ_DEPTH_A(196608),
+    .C_ADDRA_WIDTH(18),
     .C_HAS_RSTB(0),
     .C_RST_PRIORITY_B("CE"),
     .C_RSTRAM_B(0),
@@ -135,9 +135,9 @@ output wire [6 : 0] doutb;
     .C_WRITE_MODE_B("WRITE_FIRST"),
     .C_WRITE_WIDTH_B(7),
     .C_READ_WIDTH_B(7),
-    .C_WRITE_DEPTH_B(786432),
-    .C_READ_DEPTH_B(786432),
-    .C_ADDRB_WIDTH(20),
+    .C_WRITE_DEPTH_B(196608),
+    .C_READ_DEPTH_B(196608),
+    .C_ADDRB_WIDTH(18),
     .C_HAS_MEM_OUTPUT_REGS_A(0),
     .C_HAS_MEM_OUTPUT_REGS_B(0),
     .C_HAS_MUX_OUTPUT_REGS_A(0),
@@ -162,7 +162,7 @@ output wire [6 : 0] doutb;
     .C_EN_SHUTDOWN_PIN(0),
     .C_EN_SAFETY_CKT(0),
     .C_DISABLE_WARN_BHV_RANGE(0),
-    .C_COUNT_36K_BRAM("168"),
+    .C_COUNT_36K_BRAM("42"),
     .C_COUNT_18K_BRAM("0"),
     .C_EST_POWER_SUMMARY("Estimated Power for IP     :     32.496102 mW")
   ) inst (

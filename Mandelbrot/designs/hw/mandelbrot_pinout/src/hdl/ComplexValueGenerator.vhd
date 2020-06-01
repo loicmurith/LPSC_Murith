@@ -38,6 +38,9 @@ architecture Behavioral of ComplexValueGenerator is
     -- signaux internes
     signal c_re_i, c_im_i : std_logic_vector (SIZE-1 downto 0);
     signal posx_i, posy_i : std_logic_vector (SCREEN_RES-1 downto 0);
+    
+    -- constant
+    constant quatre_c : unsigned(SCREEN_RES-1 downto 0) := to_unsigned(4,SCREEN_RES);
 
 begin
 
@@ -56,10 +59,10 @@ begin
 
                 -- balayage de l'espace complexe 
                 c_re_i <= std_logic_vector(unsigned(c_re_i) + unsigned(c_inc_RE));
-                posx_i <= std_logic_vector(unsigned(posx_i) + 1);
+                posx_i <= std_logic_vector(unsigned(posx_i) + quatre_c);
 
                 -- fin de ligne
-                if posx_i = std_logic_vector(to_unsigned((X_SIZE - 1), SCREEN_RES)) then
+                if posx_i = std_logic_vector(to_unsigned((X_SIZE - 4), SCREEN_RES)) then
                     c_re_i <= c_top_left_RE;
                     c_im_i <= std_logic_vector(unsigned(c_im_i) - unsigned(c_inc_IM));
                     posy_i <= std_logic_vector(unsigned(posy_i) + 1);
@@ -77,7 +80,7 @@ begin
     -- sorties pour le module calculateur de Mandelbrot ----------------------
     c_real      <= c_re_i;
     c_imaginary <= c_im_i;
-    X_screen    <= posx_i;
+    X_screen    <= "00" & posx_i(SCREEN_RES-1 downto 2);
     Y_screen    <= posy_i;
 
 end Behavioral;

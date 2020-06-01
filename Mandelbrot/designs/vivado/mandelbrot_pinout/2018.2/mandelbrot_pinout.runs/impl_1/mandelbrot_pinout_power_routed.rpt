@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Tue May 19 16:46:06 2020
+| Date             : Mon Jun  1 21:25:15 2020
 | Host             : xilinx-vm running 64-bit unknown
 | Command          : report_power -file mandelbrot_pinout_power_routed.rpt -pb mandelbrot_pinout_power_summary_routed.pb -rpx mandelbrot_pinout_power_routed.rpx
 | Design           : mandelbrot_pinout
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.573        |
+| Total On-Chip Power (W)  | 0.659        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.424        |
+| Dynamic (W)              | 0.510        |
 | Device Static (W)        | 0.149        |
 | Effective TJA (C/W)      | 3.3          |
-| Max Ambient (C)          | 83.1         |
-| Junction Temperature (C) | 26.9         |
+| Max Ambient (C)          | 82.8         |
+| Junction Temperature (C) | 27.2         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.017 |       10 |       --- |             --- |
-| Slice Logic    |     0.001 |     1210 |       --- |             --- |
-|   LUT as Logic |     0.001 |      541 |    133800 |            0.40 |
-|   CARRY4       |    <0.001 |       38 |     33450 |            0.11 |
-|   Register     |    <0.001 |      272 |    267600 |            0.10 |
-|   Others       |     0.000 |      238 |       --- |             --- |
-| Signals        |     0.006 |     1246 |       --- |             --- |
-| Block RAM      |     0.022 |      168 |       365 |           46.03 |
+| Clocks         |     0.020 |       10 |       --- |             --- |
+| Slice Logic    |     0.005 |     2514 |       --- |             --- |
+|   LUT as Logic |     0.004 |      832 |    133800 |            0.62 |
+|   CARRY4       |    <0.001 |      122 |     33450 |            0.36 |
+|   Register     |    <0.001 |      801 |    267600 |            0.30 |
+|   Others       |     0.000 |      302 |       --- |             --- |
+| Signals        |     0.009 |     2539 |       --- |             --- |
+| Block RAM      |     0.084 |      168 |       365 |           46.03 |
 | MMCM           |     0.227 |        2 |        10 |           20.00 |
-| DSPs           |     0.005 |        5 |       740 |            0.68 |
-| I/O            |     0.146 |       19 |       285 |            6.67 |
+| DSPs           |     0.018 |       20 |       740 |            2.70 |
+| I/O            |     0.147 |       19 |       285 |            6.67 |
 | Static Power   |     0.149 |          |           |                 |
-| Total          |     0.573 |          |           |                 |
+| Total          |     0.659 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.088 |       0.052 |      0.036 |
+| Vccint    |       1.000 |     0.168 |       0.131 |      0.036 |
 | Vccaux    |       1.800 |     0.157 |       0.127 |      0.031 |
 | Vcco33    |       3.300 |     0.048 |       0.043 |      0.005 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -83,7 +83,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.007 |       0.002 |      0.005 |
+| Vccbram   |       1.000 |     0.012 |       0.007 |      0.005 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -150,28 +150,61 @@ Table of Contents
 +-----------------------------------------------+-----------+
 | Name                                          | Power (W) |
 +-----------------------------------------------+-----------+
-| mandelbrot_pinout                             |     0.424 |
+| mandelbrot_pinout                             |     0.510 |
 |   FpgaUserCDxB.ClkMandelbrotxI                |     0.107 |
 |     inst                                      |     0.107 |
-|   FpgaUserCDxB.ComplexValueGeneratorxI        |     0.005 |
-|   FpgaUserCDxB.mandelBrot_computer            |     0.009 |
-|     ZIm                                       |     0.001 |
-|       U0                                      |     0.001 |
+|   FpgaUserCDxB.ComplexValueGeneratorxI_1      |     0.002 |
+|   FpgaUserCDxB.ComplexValueGeneratorxI_2      |     0.002 |
+|   FpgaUserCDxB.ComplexValueGeneratorxI_3      |     0.002 |
+|   FpgaUserCDxB.ComplexValueGeneratorxI_4      |     0.002 |
+|   FpgaUserCDxB.mandelBrot_computer_1          |     0.007 |
 |     ZIm2_plus_ZRe2                            |     0.001 |
 |       U0                                      |     0.001 |
 |     ZIm_times_ZIm                             |     0.001 |
 |       U0                                      |     0.001 |
 |     ZRe_step2                                 |     0.001 |
 |       U0                                      |     0.001 |
-|   VgaHdmiCDxB.HdmixI                          |     0.276 |
+|   FpgaUserCDxB.mandelBrot_computer_2          |     0.007 |
+|     ZIm2_plus_ZRe2                            |     0.001 |
+|       U0                                      |     0.001 |
+|     ZIm_times_ZIm                             |     0.001 |
+|       U0                                      |     0.001 |
+|     ZRe_step2                                 |     0.001 |
+|       U0                                      |     0.001 |
+|   FpgaUserCDxB.mandelBrot_computer_3          |     0.007 |
+|     ZIm                                       |     0.001 |
+|       U0                                      |     0.001 |
+|     ZIm2_plus_ZRe2                            |     0.001 |
+|       U0                                      |     0.001 |
+|     ZIm_times_ZIm                             |     0.001 |
+|       U0                                      |     0.001 |
+|     ZRe_step2                                 |     0.002 |
+|       U0                                      |     0.002 |
+|   FpgaUserCDxB.mandelBrot_computer_4          |     0.007 |
+|     ZIm2_plus_ZRe2                            |     0.001 |
+|       U0                                      |     0.001 |
+|     ZIm_times_ZIm                             |     0.001 |
+|       U0                                      |     0.001 |
+|     ZRe_step2                                 |     0.001 |
+|       U0                                      |     0.001 |
+|   VgaHdmiCDxB.HdmixI                          |     0.279 |
 |     ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI |     0.124 |
 |       inst                                    |     0.124 |
-|     VgaToHdmixI                               |     0.149 |
-|     VgaxI                                     |     0.003 |
-|       VgaControlerxI                          |     0.003 |
-|   VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI    |     0.028 |
-|     U0                                        |     0.028 |
-|       inst_blk_mem_gen                        |     0.028 |
+|     VgaToHdmixI                               |     0.150 |
+|     VgaxI                                     |     0.005 |
+|       VgaControlerxI                          |     0.005 |
+|   VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_1  |     0.022 |
+|     U0                                        |     0.022 |
+|       inst_blk_mem_gen                        |     0.022 |
+|   VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_2  |     0.022 |
+|     U0                                        |     0.022 |
+|       inst_blk_mem_gen                        |     0.022 |
+|   VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_3  |     0.022 |
+|     U0                                        |     0.022 |
+|       inst_blk_mem_gen                        |     0.022 |
+|   VgaHdmiToFpgaUserCDCxB.BramVideoMemoryxI_4  |     0.022 |
+|     U0                                        |     0.022 |
+|       inst_blk_mem_gen                        |     0.022 |
 +-----------------------------------------------+-----------+
 
 
