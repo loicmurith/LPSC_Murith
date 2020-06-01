@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Tue May 19 14:48:05 2020
+| Date             : Tue May 19 16:46:06 2020
 | Host             : xilinx-vm running 64-bit unknown
 | Command          : report_power -file mandelbrot_pinout_power_routed.rpt -pb mandelbrot_pinout_power_summary_routed.pb -rpx mandelbrot_pinout_power_routed.rpx
 | Design           : mandelbrot_pinout
@@ -52,13 +52,13 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.016 |       10 |       --- |             --- |
-| Slice Logic    |     0.001 |     1194 |       --- |             --- |
-|   LUT as Logic |     0.001 |      531 |    133800 |            0.40 |
-|   CARRY4       |    <0.001 |       37 |     33450 |            0.11 |
-|   Register     |    <0.001 |      264 |    267600 |            0.10 |
+| Clocks         |     0.017 |       10 |       --- |             --- |
+| Slice Logic    |     0.001 |     1210 |       --- |             --- |
+|   LUT as Logic |     0.001 |      541 |    133800 |            0.40 |
+|   CARRY4       |    <0.001 |       38 |     33450 |            0.11 |
+|   Register     |    <0.001 |      272 |    267600 |            0.10 |
 |   Others       |     0.000 |      238 |       --- |             --- |
-| Signals        |     0.008 |     1236 |       --- |             --- |
+| Signals        |     0.006 |     1246 |       --- |             --- |
 | Block RAM      |     0.022 |      168 |       365 |           46.03 |
 | MMCM           |     0.227 |        2 |        10 |           20.00 |
 | DSPs           |     0.005 |        5 |       740 |            0.68 |
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.089 |       0.053 |      0.036 |
+| Vccint    |       1.000 |     0.088 |       0.052 |      0.036 |
 | Vccaux    |       1.800 |     0.157 |       0.127 |      0.031 |
 | Vcco33    |       3.300 |     0.048 |       0.043 |      0.005 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -154,7 +154,7 @@ Table of Contents
 |   FpgaUserCDxB.ClkMandelbrotxI                |     0.107 |
 |     inst                                      |     0.107 |
 |   FpgaUserCDxB.ComplexValueGeneratorxI        |     0.005 |
-|   FpgaUserCDxB.mandelBrot_computer            |     0.008 |
+|   FpgaUserCDxB.mandelBrot_computer            |     0.009 |
 |     ZIm                                       |     0.001 |
 |       U0                                      |     0.001 |
 |     ZIm2_plus_ZRe2                            |     0.001 |

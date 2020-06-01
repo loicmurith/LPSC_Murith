@@ -174,7 +174,7 @@ architecture rtl of mandelbrot_pinout is
             Color1xDI    : in  std_logic_vector(((C_PIXEL_SIZE * 3) - 1) downto 0));
     end component image_generator;
 
--- Old BRAM IP (before IP upgrade)
+    -- Old BRAM IP (before IP upgrade) --
 --     component bram_video_memory_wauto_dauto_rdclk1_wrclk1
 --         port (
 --             clka  : in  std_logic;
@@ -422,10 +422,11 @@ begin  -- architecture rtl
     VgaHdmiCDxB : block is
     begin  -- block VgaHdmiCDxB
 
-        -- next two assignations were commented
+        -- old assignation
 --        DataBramMV2HdmixAS : DataBramMV2HdmixD <= BramVideoMemoryReadDataxD(8 downto 6) & "00000" &
 --                                                   BramVideoMemoryReadDataxD(5 downto 3) & "00000" &
 --                                                   BramVideoMemoryReadDataxD(2 downto 0) & "00000";
+        -- new assignation --> displays fractal in grey levels
         DataBramMV2HdmixAS : DataBramMV2HdmixD <= BramVideoMemoryReadDataxD & "0" &
                                                    BramVideoMemoryReadDataxD & "0" &
                                                    BramVideoMemoryReadDataxD & "0";
@@ -450,8 +451,8 @@ begin  -- architecture rtl
                 ClkVgaxCO       => ClkVgaxC,
                 HCountxDO       => HCountxD,
                 VCountxDO       => VCountxD,
-                VidOnxSO        => open,           --,VidOnxS
-                DataxDI         => DataBramMV2HdmixD,  --,DataImGen2HDMIxD
+                VidOnxSO        => open,         
+                DataxDI         => DataBramMV2HdmixD,
                 HdmiTxRsclxSO   => HdmiSourcexD.HdmiSourceOutxD.HdmiTxRsclxS,
                 HdmiTxRsdaxSIO  => HdmiSourcexD.HdmiSourceInOutxS.HdmiTxRsdaxS,
                 HdmiTxHpdxSI    => HdmiSourcexD.HdmiSourceInxS.HdmiTxHpdxS,
@@ -472,8 +473,8 @@ begin  -- architecture rtl
          BramVideoMemoryxI : bram_video_memory_wauto_dauto_rdclk1_wrclk1
              port map (
                  -- Port A (Write)
-                 clka  => ClkMandelxC,                 --,ClkVgaxC
-                 wea   => PllLockedxD,          --PllLockedxD,
+                 clka  => ClkMandelxC,               
+                 wea   => PllLockedxD,         
                  addra => BramVideoMemoryWriteAddrxD,
                  dina  => BramVideoMemoryWriteDataxD,
                  douta => open,
@@ -495,7 +496,7 @@ begin  -- architecture rtl
 
     FpgaUserCDxB : block is
 
-        -- 3 sub signals were commented
+        
          signal ClkSys100MhzBufgxC : std_logic                                    := '0';
          signal HCountIntxD        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := "00" & std_logic_vector(C_VGA_CONFIG.HActivexD - 1);
          signal VCountIntxD        : std_logic_vector((C_DATA_SIZE - 1) downto 0) := (others => '0');
@@ -517,9 +518,7 @@ begin  -- architecture rtl
          PllNotLockedxAS : PllNotLockedxS <= not PllLockedxS;
          PllLockedxAS    : PllLockedxD(0) <= PllLockedxS;
          
---         BramVideoMemoryWriteDataxAS : BramVideoMemoryWriteDataxD <= DataImGen2BramMVxD(23 downto 21) &
---                                                                     DataImGen2BramMVxD(15 downto 13) &
---                                                                     DataImGen2BramMVxD(7 downto 5);
+        -- link mandelbrot computer's output to BRAM's input
         BramVideoMemoryWriteDataxAS : BramVideoMemoryWriteDataxD <= Nb_iter_s((C_BRAM_VIDEO_MEMORY_DATA_SIZE - 1) downto 0);
 
          BramVMWrAddrxAS : BramVideoMemoryWriteAddrxD <= VCountIntxD((C_BRAM_VIDEO_MEMORY_HIGH_ADDR_SIZE - 1) downto 0) &
@@ -536,9 +535,6 @@ begin  -- architecture rtl
                  reset           => ResetxR,
                  PllLockedxSO    => PllLockedxS,
                  ClkSys100MhzxCI => ClkSys100MhzBufgxC);
-        --------------------------------------------------------------------------------------------------------------
-        -- This bloc was commented (ABOVE)
-        --------------------------------------------------------------------------------------------------------------
 
 --        ImageGeneratorxI : entity work.image_generator
 --            generic map (
@@ -557,7 +553,7 @@ begin  -- architecture rtl
                 
         -- COmplex value generator
         ComplexValueGeneratorxI : entity work.ComplexValueGenerator
-            generic map (       --TODO : map
+            generic map (      
                 SIZE       => C_DATA_SIZE,
                 X_SIZE     => 1024,
                 Y_SIZE     => 768,
@@ -566,7 +562,7 @@ begin  -- architecture rtl
                 clk           => ClkMandelxC,
                 reset         => ResetxR,
                 next_value    => computerRdy_s,
-                c_inc_RE      => "000" & x"00" & "1100000", -- 3/1024 = 0.0029296875
+                c_inc_RE      => "000" & x"00" & "1011111", -- 3/1024 = 0.0029296875
                 c_inc_IM      => "000" & x"00" & "1010101", -- 2/768 = 0.00260416667
                 c_top_left_RE => "110000" & x"000",
                 c_top_left_IM => "001000" & x"000",
@@ -622,7 +618,7 @@ begin  -- architecture rtl
             end if;
         end process syncProcess;
 
-        -- The process below was commented
+        -- used for image generator
 --         HVCountIntxP : process (all) is
 --         begin  -- process HVCountxP
 
