@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Tue May 12 16:14:44 2020
+// Date        : Tue Jun  2 17:07:40 2020
 // Host        : xilinx-vm running 64-bit unknown
-// Command     : write_verilog -force -mode synth_stub
-//               /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/clk_mandelbrot_synth_1/clk_mandelbrot_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top clk_mandelbrot -prefix
+//               clk_mandelbrot_ clk_mandelbrot_stub.v
 // Design      : clk_mandelbrot
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a200tsbg484-1

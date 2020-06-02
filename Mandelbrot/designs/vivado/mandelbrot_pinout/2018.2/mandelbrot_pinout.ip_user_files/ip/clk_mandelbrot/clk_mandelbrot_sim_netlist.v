@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Tue May 12 16:14:44 2020
+// Date        : Tue Jun  2 17:07:40 2020
 // Host        : xilinx-vm running 64-bit unknown
-// Command     : write_verilog -force -mode funcsim
-//               /home/xilinx/LPSC_project/Mandelbrot/designs/vivado/mandelbrot_pinout/2018.2/mandelbrot_pinout.runs/clk_mandelbrot_synth_1/clk_mandelbrot_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top clk_mandelbrot -prefix
+//               clk_mandelbrot_ clk_mandelbrot_sim_netlist.v
 // Design      : clk_mandelbrot
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,7 +35,6 @@ module clk_mandelbrot
         .reset(reset));
 endmodule
 
-(* ORIG_REF_NAME = "clk_mandelbrot_clk_wiz" *) 
 module clk_mandelbrot_clk_mandelbrot_clk_wiz
    (ClkMandelxCO,
     reset,
@@ -91,12 +90,12 @@ module clk_mandelbrot_clk_mandelbrot_clk_wiz
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(10.000000),
+    .CLKFBOUT_MULT_F(49.500000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(10.000000),
+    .CLKOUT0_DIVIDE_F(5.500000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
@@ -126,7 +125,7 @@ module clk_mandelbrot_clk_mandelbrot_clk_wiz
     .CLKOUT6_PHASE(0.000000),
     .CLKOUT6_USE_FINE_PS("FALSE"),
     .COMPENSATION("ZHOLD"),
-    .DIVCLK_DIVIDE(1),
+    .DIVCLK_DIVIDE(5),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PSEN_INVERTED(1'b0),
     .IS_PSINCDEC_INVERTED(1'b0),

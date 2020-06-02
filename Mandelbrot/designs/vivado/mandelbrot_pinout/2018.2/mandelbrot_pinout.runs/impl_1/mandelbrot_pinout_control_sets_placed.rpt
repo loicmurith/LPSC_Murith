@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Mon Jun  1 21:22:35 2020
+| Date         : Tue Jun  2 17:58:07 2020
 | Host         : xilinx-vm running 64-bit unknown
 | Command      : report_control_sets -verbose -file mandelbrot_pinout_control_sets_placed.rpt
 | Design       : mandelbrot_pinout
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              40 |           29 |
-| No           | No                    | Yes                    |              45 |           19 |
-| No           | Yes                   | No                     |              22 |           12 |
+| No           | No                    | No                     |              40 |           25 |
+| No           | No                    | Yes                    |              45 |           23 |
+| No           | Yes                   | No                     |              22 |           15 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             694 |          181 |
+| Yes          | No                    | Yes                    |             694 |          198 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -73,35 +73,35 @@ Table of Contents
 +------------------------------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 |                                 Clock Signal                                 |                          Enable Signal                         |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
 +------------------------------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/iterations_o[6]_i_1__0_n_0  | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                3 |              7 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/iterations_o[6]_i_1_n_0     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                1 |              7 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/iterations_o[6]_i_1__2_n_0  | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                2 |              7 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/iterations_o[6]_i_1__1_n_0  | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                2 |              7 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/iterations_o[6]_i_1_n_0     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                3 |              7 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/iterations_o[6]_i_1__0_n_0  | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                2 |              7 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/iterations_o[6]_i_1__2_n_0  | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                3 |              7 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/iterations_o[6]_i_1__1_n_0  | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                1 |              7 |
 |  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/VCountxD               | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/bbstub_PllLockedxSO |                7 |             18 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/next_zReal_s[17]_i_1__0_n_0 | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                3 |             18 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/next_zReal_s[17]_i_1__1_n_0 | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                4 |             18 |
 |  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/next_zReal_s[17]_i_1_n_0    | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                3 |             18 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/next_zReal_s[17]_i_1__2_n_0 | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                4 |             18 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/next_zReal_s[17]_i_1__1_n_0 | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                5 |             18 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/next_zReal_s[17]_i_1__0_n_0 | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                4 |             18 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/next_zReal_s[17]_i_1__2_n_0 | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                3 |             18 |
 |  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                                | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/bbstub_PllLockedxSO |                8 |             21 |
-|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                                | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/VidOnxS_reg_8       |               12 |             22 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |                                                                | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               11 |             24 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             35 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             35 |
+|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                                | VgaHdmiCDxB.HdmixI/VgaxI/VgaControlerxI/VidOnxS_reg_8       |               15 |             22 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              |                                                                | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               15 |             24 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               10 |             35 |
 |  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                7 |             35 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                7 |             35 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             36 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             36 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               11 |             36 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               12 |             36 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               12 |             36 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               14 |             36 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               11 |             36 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                8 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             35 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/ready_o                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             35 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               13 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               12 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               15 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               10 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               10 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               12 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/E[0]                        | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               13 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/cReal_s                     | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               11 |             36 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/cnt_iter_s[17]_i_1__0_n_0   | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             37 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/cnt_iter_s[17]_i_1__1_n_0   | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                9 |             37 |
 |  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_4/cnt_iter_s[17]_i_1__2_n_0   | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                8 |             37 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/cnt_iter_s[17]_i_1_n_0      | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                8 |             37 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_3/cnt_iter_s[17]_i_1__1_n_0   | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               10 |             37 |
-|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_2/cnt_iter_s[17]_i_1__0_n_0   | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |                8 |             37 |
-|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                                |                                                             |               29 |             40 |
+|  FpgaUserCDxB.ClkMandelbrotxI/inst/ClkMandelxCO                              | FpgaUserCDxB.mandelBrot_computer_1/cnt_iter_s[17]_i_1_n_0      | FpgaUserCDxB.mandelBrot_computer_4/ResetxR                  |               10 |             37 |
+|  VgaHdmiCDxB.HdmixI/ClkVgaHdmi1024x768xG.ClkVgaHdmi1024x768xI/inst/ClkVgaxCO |                                                                |                                                             |               25 |             40 |
 +------------------------------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 
 

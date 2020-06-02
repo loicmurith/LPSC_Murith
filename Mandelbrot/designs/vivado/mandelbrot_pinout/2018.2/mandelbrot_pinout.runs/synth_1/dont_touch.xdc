@@ -3,5 +3,5 @@
 
 # XDC: /home/xilinx/LPSC_project/Mandelbrot/designs/hw/mandelbrot_pinout/src/constrs/mandelbrot_pinout.xdc
 
-# IP: ip/bram_video_memory_wauto_dauto_rdclk1_wrclk1/bram_video_memory_wauto_dauto_rdclk1_wrclk1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bram_video_memory_wauto_dauto_rdclk1_wrclk1 || ORIG_REF_NAME==bram_video_memory_wauto_dauto_rdclk1_wrclk1} -quiet] -quiet
+# IP: ip/clk_mandelbrot/clk_mandelbrot.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==clk_mandelbrot || ORIG_REF_NAME==clk_mandelbrot} -quiet] -quiet
