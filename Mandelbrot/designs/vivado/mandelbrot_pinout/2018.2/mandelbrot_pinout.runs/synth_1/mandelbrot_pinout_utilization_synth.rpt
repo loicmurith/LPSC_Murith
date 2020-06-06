@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Jun  2 17:53:44 2020
+| Date         : Sat Jun  6 14:43:21 2020
 | Host         : xilinx-vm running 64-bit unknown
 | Command      : report_utilization -file mandelbrot_pinout_utilization_synth.rpt -pb mandelbrot_pinout_utilization_synth.pb
 | Design       : mandelbrot_pinout

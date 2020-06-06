@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Jun  2 18:01:15 2020
+| Date         : Sat Jun  6 14:49:50 2020
 | Host         : xilinx-vm running 64-bit unknown
 | Command      : report_methodology -file mandelbrot_pinout_methodology_drc_routed.rpt -pb mandelbrot_pinout_methodology_drc_routed.pb -rpx mandelbrot_pinout_methodology_drc_routed.rpx
 | Design       : mandelbrot_pinout
@@ -23,14 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 840
-+----------+------------------+----------------------------------------------------+------------+
-| Rule     | Severity         | Description                                        | Violations |
-+----------+------------------+----------------------------------------------------+------------+
-| TIMING-2 | Critical Warning | Invalid primary clock source pin                   | 2          |
-| TIMING-4 | Critical Warning | Invalid primary clock redefinition on a clock tree | 2          |
-| DPIR-1   | Warning          | Asynchronous driver check                          | 836        |
-+----------+------------------+----------------------------------------------------+------------+
+             Violations found: 841
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-2  | Critical Warning | Invalid primary clock source pin                   | 2          |
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 2          |
+| DPIR-1    | Warning          | Asynchronous driver check                          | 836        |
+| TIMING-18 | Warning          | Missing input or output delay                      | 1          |
++-----------+------------------+----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -4232,6 +4233,11 @@ Related violations: <none>
 DPIR-1#836 Warning
 Asynchronous driver check  
 DSP FpgaUserCDxB.mandelBrot_computer_4/ZRe_step2/U0/i_synth/i_synth_option.i_synth_model/opt_7series.i_uniwrap/i_primitive input pin FpgaUserCDxB.mandelBrot_computer_4/ZRe_step2/U0/i_synth/i_synth_option.i_synth_model/opt_7series.i_uniwrap/i_primitive/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on ResetxRNI relative to clock(s) FpgaUserCDxB.ClkMandelbrotxI/inst/ClkSys100MhzxCI
 Related violations: <none>
 
 
